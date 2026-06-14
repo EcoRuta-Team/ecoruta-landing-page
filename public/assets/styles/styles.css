@@ -9,3 +9,175 @@ body{
     text-align:center;
     padding:50px;
 }
+
+/* =========================
+Sección Funcionalidades
+========================= */
+
+.features-section {
+width: 100vw;
+min-height: 100vh;
+margin-left: calc(50% - 50vw);
+padding: 25px 40px 75px;
+color: #16713a;
+background:
+linear-gradient(rgba(246, 250, 247, 0.90), rgba(246, 250, 247, 0.90)),
+radial-gradient(circle at 25% 30%, rgba(190, 225, 195, 0.45), transparent 28%),
+radial-gradient(circle at 75% 70%, rgba(215, 238, 205, 0.55), transparent 30%),
+#f5faf4;
+}
+
+/* Barra superior */
+
+.features-topbar {
+width: 100%;
+max-width: 1180px;
+margin: 0 auto 10px;
+display: flex;
+align-items: flex-start;
+justify-content: space-between;
+}
+
+.features-logo {
+display: flex;
+align-items: center;
+justify-content: center;
+text-decoration: none;
+}
+
+.features-logo img {
+width: 95px;
+height: auto;
+display: block;
+}
+
+/* Menú de navegación */
+
+.features-nav {
+margin-left: auto;
+display: flex;
+gap: 18px;
+padding: 8px 18px;
+border-radius: 28px;
+background-color: rgba(255, 255, 255, 0.86);
+}
+
+.features-nav a {
+min-width: 78px;
+padding: 6px 10px;
+border-radius: 20px;
+text-decoration: none;
+color: #237c45;
+font-weight: 700;
+font-size: 11px;
+text-align: center;
+}
+
+.features-nav a .nav-icon {
+display: block;
+font-size: 17px;
+margin-bottom: 3px;
+}
+
+.features-nav a.active {
+background-color: #dcefd7;
+}
+
+/* Contenido principal */
+
+.features-container {
+max-width: 1180px;
+margin: 0 auto;
+text-align: center;
+}
+
+.features-container h1 {
+font-size: 44px;
+font-weight: 900;
+color: #247b3f;
+margin-bottom: 8px;
+}
+
+.features-subtitle {
+font-size: 17px;
+color: #158244;
+margin-bottom: 12px;
+}
+
+.features-description {
+font-size: 15px;
+color: #158244;
+margin-bottom: 28px;
+}
+
+.features-grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 58px 45px;
+text-align: left;
+}
+
+.feature-card {
+min-height: 150px;
+padding: 22px 20px;
+background-color: rgba(255, 255, 255, 0.94);
+border: 1px solid #cfded0;
+border-radius: 14px;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+}
+
+.feature-icon {
+width: 48px;
+height: 48px;
+margin-bottom: 14px;
+border-radius: 50%;
+background-color: #d8efd7;
+color: #1f7a3f;
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 23px;
+}
+
+.feature-card h3 {
+font-size: 18px;
+color: #16713a;
+margin-bottom: 10px;
+font-weight: 800;
+}
+
+.feature-card p {
+font-size: 14px;
+line-height: 1.7;
+color: #16713a;
+font-weight: 600;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+.features-section {
+padding: 25px 20px 50px;
+}
+
+.features-topbar {
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+}
+
+.features-nav {
+    margin-left: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.features-container h1 {
+    font-size: 34px;
+}
+
+.features-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+}
+}
