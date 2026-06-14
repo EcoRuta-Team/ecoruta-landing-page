@@ -513,3 +513,190 @@ padding: 25px 20px 50px;
 }
 }
 
+/* =========================
+Sección Login
+========================= */
+.login-section{
+    width:100%;
+    min-height:100vh;
+    padding:40px;
+    background:#f5faf4;
+}
+
+.login-topbar{
+    width:100%;
+    max-width:1180px;
+    margin:0 auto 50px;
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+}
+
+.login-logo img{
+    width:95px;
+}
+
+.login-nav{
+    display:flex;
+    gap:18px;
+    padding:8px 18px;
+    border-radius:28px;
+    background:white;
+}
+
+.login-nav a{
+    min-width:78px;
+    padding:6px 10px;
+    border-radius:20px;
+    text-decoration:none;
+    color:#237c45;
+    font-size:11px;
+    font-weight:700;
+    text-align:center;
+}
+
+.login-nav .nav-icon{
+    display:block;
+    font-size:17px;
+    margin-bottom:3px;
+}
+
+.login-nav .active{
+    background:#dcefd7;
+}
+
+.login-container{
+    display:flex;
+    justify-content:center;
+}
+
+.login-card{
+
+    width:100%;
+    max-width:900px;
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:50px;
+
+    display:flex;
+
+    gap:50px;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,0.08);
+}
+
+.login-left{
+    flex:1;
+}
+
+.login-left h2{
+
+    font-size:48px;
+
+    color:#237c45;
+
+    margin-bottom:20px;
+}
+
+.login-left p{
+
+    font-size:20px;
+
+    line-height:1.7;
+
+    color:#237c45;
+}
+
+.login-right{
+    flex:1;
+}
+
+.login-right form{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+.login-right input{
+
+    padding:15px;
+
+    border:1px solid #d6d6d6;
+
+    border-radius:10px;
+
+    font-size:16px;
+}
+
+.login-right button{
+
+    border:none;
+
+    padding:15px;
+
+    border-radius:10px;
+
+    background:#5d8f58;
+
+    color:white;
+
+    font-size:17px;
+
+    font-weight:700;
+
+    cursor:pointer;
+}
+
+.register-link{
+
+    margin-top:25px;
+
+    text-align:center;
+}
+
+.register-link p{
+
+    margin-bottom:10px;
+
+    color:#237c45;
+}
+
+.register-link a{
+
+    text-decoration:none;
+
+    color:#237c45;
+
+    font-weight:bold;
+}
+
+@media(max-width:900px){
+
+    .login-card{
+
+        flex-direction:column;
+
+        padding:30px;
+    }
+
+    .login-nav{
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+    }
+
+    .login-topbar{
+
+        flex-direction:column;
+
+        align-items:center;
+
+        gap:20px;
+    }
+}
+
