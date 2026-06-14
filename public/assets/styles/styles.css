@@ -1,11 +1,331 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    font-family: Arial, sans-serif;
-    text-align:center;
-    padding:50px;
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  background-color: #f5f8f3;
+  color: #2e6b45;
+}
+
+header {
+  display: none;
+}
+
+.community-section {
+  position: relative;
+  min-height: 100vh;
+  padding: 42px 58px 62px;
+  overflow: hidden;
+  background: #f5f8f3;
+}
+
+.community-background {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(rgba(245, 248, 243, 0.84), rgba(245, 248, 243, 0.84)),
+    url("https://tile.openstreetmap.org/12/1162/1977.png");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.85;
+  z-index: 0;
+}
+
+.community-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(247, 250, 246, 0.38);
+  z-index: 1;
+}
+
+.community-logo,
+.community-nav,
+.community-content {
+  position: relative;
+  z-index: 2;
+}
+
+.community-logo {
+  position: absolute;
+  top: 46px;
+  left: 62px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-circle {
+  width: 86px;
+  height: 86px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #8bcf73, #2e6b45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 42px;
+  color: white;
+  margin-bottom: 8px;
+  box-shadow: 0 10px 25px rgba(46, 107, 69, 0.22);
+}
+
+.community-logo span {
+  color: #2e6b45;
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.community-nav {
+  width: fit-content;
+  margin-left: auto;
+  margin-bottom: 36px;
+  padding: 14px 22px;
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 999px;
+}
+
+.community-nav a {
+  min-width: 98px;
+  padding: 6px 8px;
+  text-align: center;
+  color: #087238;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.community-nav .nav-icon {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 6px;
+  line-height: 1;
+}
+
+.community-nav .active {
+  padding: 10px 20px;
+  background: #d5ebcc;
+  border-radius: 999px;
+}
+
+.community-content {
+  max-width: 1380px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.community-content h2 {
+  color: #2e6b45;
+  font-size: 50px;
+  line-height: 1.12;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+  margin-top: 34px;
+  margin-bottom: 12px;
+}
+
+.community-description {
+  max-width: 980px;
+  margin: 0 auto 28px;
+  color: #007039;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.65;
+}
+
+.community-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 52px;
+  margin: 6px 0 28px;
+}
+
+.community-card {
+  min-height: 286px;
+  padding: 38px 36px 30px;
+  background: rgba(255, 255, 255, 0.94);
+  border-radius: 24px;
+  box-shadow: 0 12px 28px rgba(38, 82, 50, 0.06);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.community-icon {
+  width: 104px;
+  height: 104px;
+  margin: 0 auto 24px;
+  border-radius: 50%;
+  background: #cfe6c7;
+  color: #2e6b45;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 44px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.community-card h3 {
+  color: #2e6b45;
+  font-size: 24px;
+  font-weight: 900;
+  margin-bottom: 16px;
+  min-height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.community-card p {
+  color: #16663c;
+  font-size: 19px;
+  font-weight: 500;
+  line-height: 1.55;
+  margin-bottom: 20px;
+  min-height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.community-card a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 26px;
+  min-width: 236px;
+  height: 52px;
+  border: 1.7px solid #2e6b45;
+  border-radius: 8px;
+  color: #2e6b45;
+  background: #ffffff;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 900;
+  margin-top: auto;
+}
+
+.community-card a span {
+  color: #000000;
+  font-size: 32px;
+  line-height: 1;
+}
+
+.community-testimonials {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 52px;
+  margin-bottom: 18px;
+}
+
+.testimonial-card {
+  min-height: 178px;
+  padding: 24px 30px;
+  background: rgba(255, 255, 255, 0.94);
+  border-radius: 18px;
+  text-align: left;
+  box-shadow: 0 12px 28px rgba(38, 82, 50, 0.06);
+}
+
+.stars {
+  color: #000000;
+  font-size: 33px;
+  letter-spacing: 7px;
+  line-height: 1;
+  margin-bottom: 18px;
+}
+
+.testimonial-card p {
+  color: #16663c;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.55;
+  margin-bottom: 18px;
+}
+
+.testimonial-user {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.avatar-img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.testimonial-user strong {
+  display: block;
+  color: #111111;
+  font-size: 17px;
+  font-weight: 900;
+}
+
+.testimonial-user span {
+  display: block;
+  color: #2e6b45;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.community-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 330px;
+  height: 72px;
+  padding: 0 44px;
+  border-radius: 999px;
+  background: #4e864f;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: 800;
+  box-shadow: 0 12px 26px rgba(46, 125, 50, 0.22);
+}
+
+@media (max-width: 900px) {
+  .community-section {
+    padding: 34px 20px 60px;
+  }
+
+  .community-logo {
+    position: static;
+    margin-bottom: 24px;
+  }
+
+  .community-nav {
+    margin: 0 auto 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-radius: 24px;
+  }
+
+  .community-content h2 {
+    font-size: 34px;
+  }
+
+  .community-description {
+    font-size: 17px;
+  }
+
+  .community-cards,
+  .community-testimonials {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
 }
