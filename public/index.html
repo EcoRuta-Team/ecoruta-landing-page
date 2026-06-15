@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>EcoRuta</title>
+
 
   <link rel="icon" href="favicon.ico">
   <link rel="stylesheet" href="assets/styles/styles.css">
@@ -15,6 +16,200 @@
 </header>
 
 <main>
+
+    <!-- Sección: Home -->
+    <section class="inicio-section" id="home">
+        <div class="container">
+
+            <!-- Navbar propio de esta sección -->
+            <div class="inicio-topbar">
+                <a href="#home" class="inicio-logo">
+                    <img src="assets/images/ecoruta-logo.png" alt="Logo de EcoRuta">
+                </a>
+
+                <nav class="inicio-nav">
+                    <a href="#home" class="active">
+                        <span class="nav-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M3 11l9-7 9 7"/>
+                                <path d="M5 10v9h14v-9"/>
+                            </svg>
+                        </span>
+                        <span>Inicio</span>
+                    </a>
+
+                    <a href="#features">
+                        <span class="nav-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="5" y="3" width="14" height="18" rx="2"/>
+                                <path d="M9 8h6M9 12h6M9 16h4"/>
+                            </svg>
+                        </span>
+                        <span>Funcionalidades</span>
+                    </a>
+
+                    <a href="#how-it-works">
+                        <span class="nav-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round">
+                                <polygon points="12,2 14.7,8.5 21.8,9 16.5,13.5 18.2,20.5 12,16.8 5.8,20.5 7.5,13.5 2.2,9 9.3,8.5"/>
+                            </svg>
+                        </span>
+                        <span>Cómo funciona</span>
+                    </a>
+
+                    <a href="#benefits">
+                        <span class="nav-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="9"/>
+                                <path d="M8 14c1 1.5 2.5 2.3 4 2.3s3-0.8 4-2.3"/>
+                                <circle cx="9" cy="10" r="0.6" fill="currentColor"/>
+                                <circle cx="15" cy="10" r="0.6" fill="currentColor"/>
+                            </svg>
+                        </span>
+                        <span>Beneficios</span>
+                    </a>
+
+                    <a href="#community">
+                        <span class="nav-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="9" cy="8" r="3"/>
+                                <path d="M3 20c0-3 2.5-5 6-5s6 2 6 5"/>
+                                <circle cx="17" cy="9" r="2.5"/>
+                                <path d="M15 20c0.3-2.3 1.8-4 4-4.3"/>
+                            </svg>
+                        </span>
+                        <span>Comunidad</span>
+                    </a>
+                </nav>
+
+                <a href="#perfil" class="inicio-profile" aria-label="Perfil">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="9" r="3.5"/>
+                        <path d="M5 20c0.5-4 3-6 7-6s6.5 2 7 6"/>
+                    </svg>
+                </a>
+            </div>
+
+            <!-- Contenido principal -->
+            <div class="inicio-content">
+                <div class="inicio-text">
+                    <h1 class="inicio-title">Respira mejor mientras recorres la ciudad</h1>
+                    <p class="inicio-description">Descubre rutas más seguras y saludables con información sobre calidad del aire en tiempo real</p>
+
+                    <a href="#descargar" class="download-button">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" aria-hidden="true">
+                            <path d="M12 3v12m0 0l-4-4m4 4l4-4"/>
+                            <path d="M5 19h14"/>
+                        </svg>
+                        Descargar App
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22" aria-hidden="true">
+                            <path d="M6 11a6 6 0 1112 0v5a1 1 0 01-1 1H7a1 1 0 01-1-1v-5z"/>
+                            <rect x="3" y="12" width="2.5" height="6" rx="1.25"/>
+                            <rect x="18.5" y="12" width="2.5" height="6" rx="1.25"/>
+                            <rect x="8.5" y="19" width="2.5" height="4" rx="1.25"/>
+                            <rect x="13" y="19" width="2.5" height="4" rx="1.25"/>
+                            <line x1="8" y1="2" x2="9.5" y2="5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            <line x1="16" y1="2" x2="14.5" y2="5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                    </a>
+
+                    <p class="inicio-caption">Consulta rutas saludables en tiempo real</p>
+                </div>
+
+                <div class="inicio-phone">
+                    <div class="phone-frame">
+                        <img src="assets/images/app-mockup.png" alt="Vista previa de la app EcoRuta mostrando el índice de calidad del aire">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+ <!-- Fin Sección Home -->
+
+<!-- Sección Funcionalidades -->
+<section id="features" class="features-section">
+    <div class="features-topbar">
+        <a href="#home" class="features-logo">
+            <img src="assets/images/ecoruta-logo.png" alt="Logo de EcoRuta">
+        </a>
+
+    <nav class="features-nav">
+        <a href="#home">
+            <span class="nav-icon">☰</span>
+            <span>Inicio</span>
+        </a>
+
+        <a href="#features" class="active">
+            <span class="nav-icon">▣</span>
+            <span>Funcionalidades</span>
+        </a>
+
+        <a href="#how-it-works">
+            <span class="nav-icon">★</span>
+            <span>Cómo funciona</span>
+        </a>
+
+        <a href="#benefits">
+            <span class="nav-icon">☻</span>
+            <span>Beneficios</span>
+        </a>
+
+        <a href="#community">
+            <span class="nav-icon">♣</span>
+            <span>Comunidad</span>
+        </a>
+    </nav>
+</div>
+
+<div class="features-container">
+    <h1>Funcionalidades</h1>
+    <p class="features-subtitle">Todo lo que necesitas para respirar mejor en la ciudad</p>
+    <p class="features-description">Una plataforma colaborativa que pone la salud respiratoria primero</p>
+
+    <div class="features-grid">
+        <article class="feature-card">
+            <div class="feature-icon">📍</div>
+            <h3>Mapa de Calor en Tiempo Real</h3>
+            <p>Calidad del aire en Lima cuadra por cuadra. Datos en tiempo real de SENAMHI y vecinos.</p>
+        </article>
+
+        <article class="feature-card">
+            <div class="feature-icon">🚲</div>
+            <h3>Ruteo Ecológico Activo</h3>
+            <p>Rutas que priorizan aire limpio sobre velocidad. Ideal para deportistas y personas sensibles.</p>
+        </article>
+
+        <article class="feature-card">
+            <div class="feature-icon">🔔</div>
+            <h3>Alertas Preventivas</h3>
+            <p>Alertas de contaminación en tu ruta. Te avisamos sobre incendios u obras para que cambies de camino a tiempo.</p>
+        </article>
+
+        <article class="feature-card">
+            <div class="feature-icon">👥</div>
+            <h3>Crowdsourcing Ciudadano</h3>
+            <p>Reporta incidentes y mejora el mapa. Información hiperlocal en tiempo real donde los sensores oficiales no llegan.</p>
+        </article>
+
+        <article class="feature-card">
+            <div class="feature-icon">👤</div>
+            <h3>Perfil de Salud Personalizado</h3>
+            <p>Personaliza tu protección. Dinos tu sensibilidad y adaptaremos las rutas y alertas a tus necesidades.</p>
+        </article>
+
+        <article class="feature-card">
+            <div class="feature-icon">📊</div>
+            <h3>Dashboard Ambiental</h3>
+            <p>Planifica tu semana con el historial del aire. Compara tendencias y descarga reportes detallados.</p>
+        </article>
+    </div>
+</div>
+
+</section>
+<!-- Fin Sección Funcionalidades -->
+
+
 <!-- Sección Comunidad -->
   <section id="community" class="community-section">
     <div class="community-background"></div>
@@ -119,92 +314,16 @@
       <a href="#home" class="community-button">Ver rutas seguras ↓</a>
     </div>
   </section>
-</main>
-<!-- Fin Sección Comunidad -->
 
-<!-- Sección Funcionalidades -->
-<section id="features" class="features-section">
-    <div class="features-topbar">
-        <a href="#home" class="features-logo">
-            <img src="assets/images/ecoruta-logo.png" alt="Logo de EcoRuta">
-        </a>
+    <link rel="icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles/styles.css">
+</head>
+<body>
 
-    <nav class="features-nav">
-        <a href="#home">
-            <span class="nav-icon">☰</span>
-            <span>Inicio</span>
-        </a>
 
-        <a href="#features" class="active">
-            <span class="nav-icon">▣</span>
-            <span>Funcionalidades</span>
-        </a>
-
-        <a href="#how-it-works">
-            <span class="nav-icon">★</span>
-            <span>Cómo funciona</span>
-        </a>
-
-        <a href="#benefits">
-            <span class="nav-icon">☻</span>
-            <span>Beneficios</span>
-        </a>
-
-        <a href="#community">
-            <span class="nav-icon">♣</span>
-            <span>Comunidad</span>
-        </a>
-    </nav>
-</div>
-
-<div class="features-container">
-    <h1>Funcionalidades</h1>
-    <p class="features-subtitle">Todo lo que necesitas para respirar mejor en la ciudad</p>
-    <p class="features-description">Una plataforma colaborativa que pone la salud respiratoria primero</p>
-
-    <div class="features-grid">
-        <article class="feature-card">
-            <div class="feature-icon">📍</div>
-            <h3>Mapa de Calor en Tiempo Real</h3>
-            <p>Calidad del aire en Lima cuadra por cuadra. Datos en tiempo real de SENAMHI y vecinos.</p>
-        </article>
-
-        <article class="feature-card">
-            <div class="feature-icon">🚲</div>
-            <h3>Ruteo Ecológico Activo</h3>
-            <p>Rutas que priorizan aire limpio sobre velocidad. Ideal para deportistas y personas sensibles.</p>
-        </article>
-
-        <article class="feature-card">
-            <div class="feature-icon">🔔</div>
-            <h3>Alertas Preventivas</h3>
-            <p>Alertas de contaminación en tu ruta. Te avisamos sobre incendios u obras para que cambies de camino a tiempo.</p>
-        </article>
-
-        <article class="feature-card">
-            <div class="feature-icon">👥</div>
-            <h3>Crowdsourcing Ciudadano</h3>
-            <p>Reporta incidentes y mejora el mapa. Información hiperlocal en tiempo real donde los sensores oficiales no llegan.</p>
-        </article>
-
-        <article class="feature-card">
-            <div class="feature-icon">👤</div>
-            <h3>Perfil de Salud Personalizado</h3>
-            <p>Personaliza tu protección. Dinos tu sensibilidad y adaptaremos las rutas y alertas a tus necesidades.</p>
-        </article>
-
-        <article class="feature-card">
-            <div class="feature-icon">📊</div>
-            <h3>Dashboard Ambiental</h3>
-            <p>Planifica tu semana con el historial del aire. Compara tendencias y descarga reportes detallados.</p>
-        </article>
-    </div>
-</div>
-
-</section>
-<!-- Fin Sección Funcionalidades -->
-
-<!-- Sección Login -->
 <!-- Sección Login -->
 <section id="login" class="login-section">
 
@@ -301,8 +420,10 @@
 
     </div>
 
-</section>
-<!-- Fin Sección Login -->
+ </section>
+ <!-- Fin Sección Login -->
+
+</main>
 
 
 <script src="assets/scripts/main.js"></script>
