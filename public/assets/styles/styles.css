@@ -425,6 +425,229 @@ padding: 25px 20px 50px;
 }
 }
 
+/* ============================================
+Sección: Cómo funciona
+============================================ */
+
+:root {
+--color-heading: #2D5C3D;
+--color-button: #457F4C;
+--color-button-dark: #355F3A;
+--color-primary-light: #CDE2C7;
+--color-accent: #5C8059;
+--color-text: #182921;
+--color-text-muted: #3A6350;
+--color-bg-section: #F4F4F4;
+--font-heading: 'Poppins', sans-serif;
+}
+
+.how-it-works {
+position: relative;
+background-color: var(--color-bg-section);
+padding: 80px 24px;
+text-align: center;
+overflow: hidden;
+}
+
+.how-it-works::before {
+content: '';
+position: absolute;
+inset: 0;
+background:
+linear-gradient(rgba(244, 244, 244, 0.85), rgba(244, 244, 244, 0.85)),
+url('../images/mapa-lima.jpg');
+background-size: cover;
+background-position: center;
+z-index: 0;
+}
+
+.how-it-works .container {
+position: relative;
+z-index: 1;
+max-width: 1100px;
+margin: 0 auto;
+}
+
+/* Barra de navegación de Cómo funciona */
+
+.hiw-topbar {
+display: flex;
+align-items: center;
+justify-content: space-between;
+flex-wrap: wrap;
+gap: 16px;
+margin-bottom: 40px;
+}
+
+.hiw-logo img {
+height: 56px;
+width: auto;
+display: block;
+}
+
+.hiw-nav {
+display: flex;
+gap: 18px;
+padding: 8px 18px;
+border-radius: 999px;
+background-color: rgba(255, 255, 255, 0.9);
+}
+
+.hiw-nav a {
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 4px;
+min-width: 78px;
+padding: 6px 10px;
+border-radius: 20px;
+text-decoration: none;
+color: var(--color-text-muted);
+font-size: 0.7rem;
+font-weight: 700;
+}
+
+.hiw-nav .nav-icon {
+width: 18px;
+height: 18px;
+}
+
+.hiw-nav a.active {
+background-color: var(--color-primary-light);
+color: var(--color-heading);
+}
+
+.how-it-works .section-title {
+font-family: var(--font-heading);
+font-size: 2.25rem;
+font-weight: 700;
+color: var(--color-heading);
+margin-bottom: 12px;
+}
+
+.how-it-works .section-subtitle {
+font-size: 1.1rem;
+color: var(--color-text-muted);
+margin-bottom: 56px;
+}
+
+/* Pasos */
+
+.steps {
+position: relative;
+display: flex;
+justify-content: space-between;
+gap: 32px;
+margin-bottom: 56px;
+}
+
+.steps::before {
+content: '';
+position: absolute;
+top: 40px;
+left: 16%;
+right: 16%;
+border-top: 2px dashed var(--color-accent);
+z-index: 0;
+}
+
+.step {
+position: relative;
+z-index: 1;
+flex: 1;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.step-number {
+width: 80px;
+height: 80px;
+border-radius: 50%;
+background-color: var(--color-primary-light);
+color: var(--color-text);
+font-family: var(--font-heading);
+font-size: 1.75rem;
+font-weight: 700;
+display: flex;
+align-items: center;
+justify-content: center;
+margin-bottom: 24px;
+}
+
+.step-icon {
+width: 40px;
+height: 40px;
+color: var(--color-accent);
+margin-bottom: 16px;
+}
+
+.step-icon svg {
+width: 100%;
+height: 100%;
+}
+
+.step-text {
+font-size: 0.95rem;
+color: var(--color-text-muted);
+max-width: 260px;
+}
+
+/* Botón */
+
+.cta-button {
+display: inline-flex;
+align-items: center;
+gap: 8px;
+background-color: var(--color-button);
+color: #ffffff;
+text-decoration: none;
+padding: 14px 32px;
+border-radius: 50px;
+font-weight: 600;
+font-size: 1rem;
+transition: background-color 0.2s ease;
+}
+
+.cta-button:hover,
+.cta-button:focus-visible {
+background-color: var(--color-button-dark);
+}
+
+.cta-button:focus-visible {
+outline: 2px solid var(--color-button-dark);
+outline-offset: 3px;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+.hiw-topbar {
+flex-direction: column;
+}
+
+```
+.hiw-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.steps {
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+}
+
+.steps::before {
+    display: none;
+}
+
+.how-it-works .section-title {
+    font-size: 1.75rem;
+}
+```
+
+}
 
 
 /* =========================
