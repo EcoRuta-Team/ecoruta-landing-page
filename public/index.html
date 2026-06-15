@@ -1,22 +1,135 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EcoRuta</title>
-
-    <link rel="icon" href="favicon.ico">
+    <title>EcoRuta - Beneficios</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/styles/styles.css">
 </head>
 <body>
 
-<header>
-    <h1>EcoRuta</h1>
-</header>
+<section id="benefits" class="benefits-section">
+    <div class="benefits-topbar">
+        <a href="#home" class="benefits-logo">
+            <img src="assets/images/ecoruta-logo.png" alt="Logo de EcoRuta">
+        </a>
 
-<main>
-    <h2>Landing Page Work in Progress</h2>
-</main>
+        <nav class="benefits-nav">
+            <a href="#home" class="nav-link">
+                <span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></span>
+                <span>Inicio</span>
+            </a>
+
+            <a href="#features" class="nav-link">
+                <span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M10.5 18.5h3"/></svg></span>
+                <span>Funcionalidades</span>
+            </a>
+
+            <a href="#how-it-works" class="nav-link">
+                <span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 17l-5.2 2.6 1-5.8L3.5 9.7l5.9-.9z"/></svg></span>
+                <span>Cómo funciona</span>
+            </a>
+
+            <a href="#benefits" class="nav-link active">
+                <span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 14s1.4 2 4 2 4-2 4-2"/><circle cx="9" cy="10" r=".9" fill="currentColor" stroke="none"/><circle cx="15" cy="10" r=".9" fill="currentColor" stroke="none"/></svg></span>
+                <span>Beneficios</span>
+            </a>
+
+            <a href="#community" class="nav-link">
+                <span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M3.5 19.5c0-3 2.5-5 5.5-5s5.5 2 5.5 5"/><circle cx="17" cy="9" r="2.3"/><path d="M16.5 14.4c2.6.2 4.5 2.1 4.5 5.1"/></svg></span>
+                <span>Comunidad</span>
+            </a>
+        </nav>
+    </div>
+
+    <div class="benefits-container">
+        <h1>Tus beneficios en EcoRuta</h1>
+        <div class="points-card">
+            <h2>Puntos Acumulados</h2>
+            <div class="points-display">
+                <span class="points-number" id="pointsNumber">12,500</span>
+                <span class="points-label">Puntos Eco</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressBar" style="width: 97%"></div>
+            </div>
+            <p class="progress-text" id="progressText">Faltan 300 ptos para desbloquear tu próximo beneficio</p>
+        </div>
+
+        <div class="benefits-grid" id="benefitsGrid">
+            <article class="benefit-card movilidad" data-category="movilidad">
+                <h3>Movilidad</h3>
+                <div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="16" r="3.5"/><circle cx="18" cy="16" r="3.5"/><path d="M6 16l3.5-6.5H15"/><path d="M9.5 9.5L8 6.5H6.2"/><path d="M15 9.5l3 6.5"/><circle cx="12.5" cy="5.2" r="1" fill="currentColor" stroke="none"/></svg></div>
+                <p>1 hora bicicleta pública gratis</p>
+                <span class="benefit-points">500 pts. Eco</span>
+                <button class="reclaim-btn" data-benefit="movilidad"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4h10v4.5a5 5 0 0 1-10 0z"/><path d="M7 5.5H4.5a2 2 0 0 0 0 4H7M17 5.5h2.5a2 2 0 0 1 0 4H17"/><path d="M12 13.5V17"/><path d="M9 20.5h6"/><path d="M9.8 17h4.4l.5 3.5H9.3z"/></svg><span>Reclamar</span></button>
+            </article>
+
+            <article class="benefit-card reparaciones" data-category="descuentos">
+                <h3>Reparaciones</h3>
+                <div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5.5a3.8 3.8 0 0 0-5 4.9L4 16.4 7.6 20l6-6a3.8 3.8 0 0 0 4.9-5l-2.5 2.5-2.2-.6-.6-2.2z"/></svg></div>
+                <p>Descuento en mantenimiento básico</p>
+                <span class="benefit-points">800 pts. Eco</span>
+                <button class="reclaim-btn" data-benefit="reparaciones"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4h10v4.5a5 5 0 0 1-10 0z"/><path d="M7 5.5H4.5a2 2 0 0 0 0 4H7M17 5.5h2.5a2 2 0 0 1 0 4H17"/><path d="M12 13.5V17"/><path d="M9 20.5h6"/><path d="M9.8 17h4.4l.5 3.5H9.3z"/></svg><span>Reclamar</span></button>
+            </article>
+
+            <article class="benefit-card transporte" data-category="movilidad">
+                <h3>Transporte</h3>
+                <div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="4" width="15" height="13" rx="2.5"/><path d="M4.5 11h15"/><circle cx="8.5" cy="20" r="1.2"/><circle cx="15.5" cy="20" r="1.2"/><path d="M7 17v1.6M17 17v1.6"/></svg></div>
+                <p>Descuento en corredor o metropolitano</p>
+                <span class="benefit-points">800 pts. Eco</span>
+                <button class="reclaim-btn" data-benefit="transporte"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4h10v4.5a5 5 0 0 1-10 0z"/><path d="M7 5.5H4.5a2 2 0 0 0 0 4H7M17 5.5h2.5a2 2 0 0 1 0 4H17"/><path d="M12 13.5V17"/><path d="M9 20.5h6"/><path d="M9.8 17h4.4l.5 3.5H9.3z"/></svg><span>Reclamar</span></button>
+            </article>
+
+            <article class="benefit-card bienestar" data-category="salud">
+                <h3>Bienestar</h3>
+                <div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v6a2.2 2.2 0 0 0 4.4 0V3"/><path d="M9.2 9.4V21"/><path d="M16 3v18"/><path d="M16 3c2 0 3.2 2 3.2 4.3S18 11.5 16 11.5"/></svg></div>
+                <p>Descuento en bebidas saludables</p>
+                <span class="benefit-points">950 pts. Eco</span>
+                <button class="reclaim-btn" data-benefit="bienestar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4h10v4.5a5 5 0 0 1-10 0z"/><path d="M7 5.5H4.5a2 2 0 0 0 0 4H7M17 5.5h2.5a2 2 0 0 1 0 4H17"/><path d="M12 13.5V17"/><path d="M9 20.5h6"/><path d="M9.8 17h4.4l.5 3.5H9.3z"/></svg><span>Reclamar</span></button>
+            </article>
+
+            <article class="benefit-card alimentacion extra hidden" data-category="descuentos">
+                <h3>Alimentación</h3>
+                <div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="7.5"/><circle cx="12" cy="12" r="3"/></svg></div>
+                <p>Descuento en restaurantes eco-friendly</p>
+                <span class="benefit-points">600 pts. Eco</span>
+                <button class="reclaim-btn" data-benefit="alimentacion"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4h10v4.5a5 5 0 0 1-10 0z"/><path d="M7 5.5H4.5a2 2 0 0 0 0 4H7M17 5.5h2.5a2 2 0 0 1 0 4H17"/><path d="M12 13.5V17"/><path d="M9 20.5h6"/><path d="M9.8 17h4.4l.5 3.5H9.3z"/></svg><span>Reclamar</span></button>
+            </article>
+
+            <article class="benefit-card fitness extra hidden" data-category="salud">
+                <h3>Fitness</h3>
+                <div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 7v10M3.5 9.5v5M17.5 7v10M20.5 9.5v5M6.5 12h11"/></svg></div>
+                <p>1 mes de acceso a gimnasio premium</p>
+                <span class="benefit-points">1,200 pts. Eco</span>
+                <button class="reclaim-btn" data-benefit="fitness"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4h10v4.5a5 5 0 0 1-10 0z"/><path d="M7 5.5H4.5a2 2 0 0 0 0 4H7M17 5.5h2.5a2 2 0 0 1 0 4H17"/><path d="M12 13.5V17"/><path d="M9 20.5h6"/><path d="M9.8 17h4.4l.5 3.5H9.3z"/></svg><span>Reclamar</span></button>
+            </article>
+        </div>
+
+        <div class="see-all-benefits">
+            <button class="see-all-btn" id="seeAllBtn"><span id="seeAllLabel">Ver todos los beneficios</span> <span class="see-all-star">☆</span></button>
+        </div>
+    </div>
+</section>
+
+<div class="modal" id="confirmModal">
+    <div class="modal-content">
+        <button class="modal-close" id="closeModal">&times;</button>
+        <h2 id="modalTitle">¿Reclamar beneficio?</h2>
+        <p id="modalMessage">Estás a punto de reclamar este beneficio.</p>
+        <div class="modal-buttons">
+            <button class="modal-btn cancel" id="cancelBtn">Cancelar</button>
+            <button class="modal-btn confirm" id="confirmBtn">Confirmar</button>
+        </div>
+    </div>
+</div>
+
+<div class="toast" id="toast">
+    <span id="toastMessage"></span>
+</div>
 
 <script src="assets/scripts/main.js"></script>
 
