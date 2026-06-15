@@ -1,21 +1,139 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EcoRuta</title>
 
     <link rel="icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/styles/styles.css">
 </head>
 <body>
 
-<header>
-    <h1>EcoRuta</h1>
-</header>
-
 <main>
-    <h2>Landing Page Work in Progress</h2>
+
+    <!-- sección: how it works -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="container">
+
+            <!-- navbar -->
+            <div class="hiw-topbar">
+                <a href="#home" class="hiw-logo">
+                    <img src="assets/images/ecoruta-logo.png" alt="Logo de EcoRuta">
+                </a>
+
+                <nav class="hiw-nav">
+                    <a href="#home">
+                        <span class="nav-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M3 11l9-7 9 7"/>
+                                <path d="M5 10v9h14v-9"/>
+                            </svg>
+                        </span>
+                        <span>Inicio</span>
+                    </a>
+
+                    <a href="#features">
+                        <span class="nav-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="5" y="3" width="14" height="18" rx="2"/>
+                                <path d="M9 8h6M9 12h6M9 16h4"/>
+                            </svg>
+                        </span>
+                        <span>Funcionalidades</span>
+                    </a>
+
+                    <a href="#how-it-works" class="active">
+                        <span class="nav-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round">
+                                <polygon points="12,2 14.7,8.5 21.8,9 16.5,13.5 18.2,20.5 12,16.8 5.8,20.5 7.5,13.5 2.2,9 9.3,8.5"/>
+                            </svg>
+                        </span>
+                        <span>Cómo funciona</span>
+                    </a>
+
+                    <a href="#benefits">
+                        <span class="nav-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="9"/>
+                                <path d="M8 14c1 1.5 2.5 2.3 4 2.3s3-0.8 4-2.3"/>
+                                <circle cx="9" cy="10" r="0.6" fill="currentColor"/>
+                                <circle cx="15" cy="10" r="0.6" fill="currentColor"/>
+                            </svg>
+                        </span>
+                        <span>Beneficios</span>
+                    </a>
+
+                    <a href="#community">
+                        <span class="nav-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="9" cy="8" r="3"/>
+                                <path d="M3 20c0-3 2.5-5 6-5s6 2 6 5"/>
+                                <circle cx="17" cy="9" r="2.5"/>
+                                <path d="M15 20c0.3-2.3 1.8-4 4-4.3"/>
+                            </svg>
+                        </span>
+                        <span>Comunidad</span>
+                    </a>
+                </nav>
+            </div>
+
+            <h2 class="section-title">¿Cómo funciona EcoRuta?</h2>
+            <p class="section-subtitle">Encuentra tu ruta más saludable en solo 3 pasos.</p>
+
+            <div class="steps">
+
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-icon" aria-hidden="true">
+                        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M24 4C16 4 10 10 10 18c0 10 14 24 14 24s14-14 14-24c0-8-6-14-14-14z"/>
+                            <circle cx="24" cy="18" r="5"/>
+                            <line x1="24" y1="14" x2="24" y2="22"/>
+                            <line x1="20" y1="18" x2="28" y2="18"/>
+                        </svg>
+                    </div>
+                    <p class="step-text">Ingresa tu ubicación y destino para encontrar las rutas más saludables disponibles</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-icon" aria-hidden="true">
+                        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="24" cy="24" r="6"/>
+                            <path d="M24 4v6M24 38v6M44 24h-6M10 24H4M37.5 10.5l-4.2 4.2M14.7 33.3l-4.2 4.2M37.5 37.5l-4.2-4.2M14.7 14.7l-4.2-4.2"/>
+                        </svg>
+                    </div>
+                    <p class="step-text">Compara rutas según contaminación, tráfico y calidad ambiental en tiempo real</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-icon" aria-hidden="true">
+                        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M24 4l16 6v10c0 12-8 20-16 24-8-4-16-12-16-24V10z"/>
+                            <path d="M17 24l5 5 9-11"/>
+                        </svg>
+                    </div>
+                    <p class="step-text">Sigue la ruta recomendada y reduce tu exposición a zonas contaminadas</p>
+                </div>
+
+            </div>
+
+            <a href="#rutas" class="cta-button">
+                Ver rutas seguras
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true">
+                    <path d="M12 3v12m0 0l-4-4m4 4l4-4"/>
+                    <path d="M5 19h14"/>
+                </svg>
+            </a>
+
+        </div>
+    </section>
+
 </main>
 
 <script src="assets/scripts/main.js"></script>
