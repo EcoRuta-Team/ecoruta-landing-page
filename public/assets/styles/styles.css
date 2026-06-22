@@ -10,7 +10,13 @@
 
 body {
   font-family: 'Poppins', Arial, sans-serif;
-  background-color: #f5f8f3;
+    background:
+        linear-gradient(
+            rgba(247,250,247,0.66),
+            rgba(247,250,247,0.70)
+        ),
+        url("../images/mapa-lima.jpg") center center / cover fixed;
+    background-size: cover;
   color: #2e6b45;
 }
 /* ============================================
@@ -30,59 +36,36 @@ body {
 }
 
 header {
-  display: none;
+    width: 100%;
+    min-height: 78%;
+    background-color: #ffffff;
+    padding: 0 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 18px rgb(31, 41, 51, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
-
-
-body {
-    font-family: 'Poppins', Arial, sans-serif;
-    background-color: #f5f8f3;
-    color: #2e6b45;
-}
-
-/* ============================================
-   sección: home
-   ============================================ */
-.inicio-section {
-    position: relative;
-    background-color: var(--color-bg-section);
-    padding: 40px 24px 80px;
-    overflow: hidden;
-}
-
-.inicio-section::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background:
-        linear-gradient(rgba(244, 244, 244, 0.85), rgba(244, 244, 244, 0.85)),
-        url('../images/mapa-lima.jpg');
-    background-size: cover;
-    background-position: center;
-    z-index: 0;
-}
-
-.inicio-section .container {
-    position: relative;
-    z-index: 1;
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
 /* barra de navegación */
 .inicio-topbar {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+
     flex-wrap: wrap;
-    gap: 16px;
-    margin-bottom: 56px;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+.inicio-logo{
+    margin-right:auto;
 }
 
 .inicio-logo img {
-    height: 56px;
+    height: 96px;
     width: auto;
     display: block;
+
 }
 
 .inicio-nav {
@@ -91,6 +74,7 @@ body {
     padding: 8px 18px;
     border-radius: 999px;
     background-color: rgba(255, 255, 255, 0.9);
+    margin-right: 20px;
 }
 
 .inicio-nav a {
@@ -133,6 +117,51 @@ body {
     width: 22px;
     height: 22px;
 }
+
+
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background-color: #f5f8f3;
+    color: #2e6b45;
+}
+
+/* ============================================
+   sección: home
+   ============================================ */
+.inicio-section {
+    position: relative;
+    background-color: transparent;
+    padding: 40px 24px 80px;
+    overflow: hidden;
+}
+
+.inicio-section::before {
+    width: 100vw;
+    min-height: 100vh;
+    margin-left: calc(50% - 50vw);
+    padding: 28px 48px 80px;
+    color: #16713a;
+
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    background:
+        linear-gradient(rgba(247, 250, 247, 0.66), rgba(247, 250, 247, 0.70)),
+        url("../images/mapa-lima.jpg") center center / cover no-repeat,
+        #eef4ef;
+    background-attachment: fixed, fixed, scroll;
+
+}
+
+.inicio-section .container {
+    position: relative;
+    z-index: 1;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
 
 /* contenido principal */
 .inicio-content {
@@ -220,36 +249,7 @@ body {
     border-radius: 22px;
 }
 
-/* ============================================
-   responsive web design
-   ============================================ */
-@media (max-width: 768px) {
-    .inicio-topbar {
-        flex-direction: column;
-    }
 
-    .inicio-nav {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .inicio-content {
-        flex-direction: column-reverse;
-        text-align: center;
-    }
-
-    .inicio-text {
-        max-width: 100%;
-    }
-
-    .inicio-title {
-        font-size: 2rem;
-    }
-
-    .phone-frame {
-        width: 220px;
-    }
-}
 
 
 
@@ -263,11 +263,7 @@ min-height: 100vh;
 margin-left: calc(50% - 50vw);
 padding: 25px 40px 75px;
 color: #16713a;
-background:
-linear-gradient(rgba(246, 250, 247, 0.90), rgba(246, 250, 247, 0.90)),
-radial-gradient(circle at 25% 30%, rgba(190, 225, 195, 0.45), transparent 28%),
-radial-gradient(circle at 75% 70%, rgba(215, 238, 205, 0.55), transparent 30%),
-#f5faf4;
+background:transparent;
 }
 
 /* Barra superior */
@@ -294,37 +290,6 @@ height: auto;
 display: block;
 }
 
-/* Menú de navegación */
-
-.features-nav {
-margin-left: auto;
-display: flex;
-gap: 18px;
-padding: 8px 18px;
-border-radius: 28px;
-background-color: rgba(255, 255, 255, 0.86);
-}
-
-.features-nav a {
-min-width: 78px;
-padding: 6px 10px;
-border-radius: 20px;
-text-decoration: none;
-color: #237c45;
-font-weight: 700;
-font-size: 11px;
-text-align: center;
-}
-
-.features-nav a .nav-icon {
-display: block;
-font-size: 17px;
-margin-bottom: 3px;
-}
-
-.features-nav a.active {
-background-color: #dcefd7;
-}
 
 /* Contenido principal */
 
@@ -396,34 +361,7 @@ color: #16713a;
 font-weight: 600;
 }
 
-/* Responsive */
 
-@media (max-width: 900px) {
-.features-section {
-padding: 25px 20px 50px;
-}
-
-.features-topbar {
-    flex-direction: column;
-    align-items: center;
-    gap: 18px;
-}
-
-.features-nav {
-    margin-left: 0;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.features-container h1 {
-    font-size: 34px;
-}
-
-.features-grid {
-    grid-template-columns: 1fr;
-    gap: 25px;
-}
-}
 
 /* ============================================
 Sección: Cómo funciona
@@ -443,23 +381,13 @@ Sección: Cómo funciona
 
 .how-it-works {
 position: relative;
-background-color: var(--color-bg-section);
+background-color: transparent;
 padding: 80px 24px;
 text-align: center;
 overflow: hidden;
 }
 
-.how-it-works::before {
-content: '';
-position: absolute;
-inset: 0;
-background:
-linear-gradient(rgba(244, 244, 244, 0.85), rgba(244, 244, 244, 0.85)),
-url('../images/mapa-lima.jpg');
-background-size: cover;
-background-position: center;
-z-index: 0;
-}
+
 
 .how-it-works .container {
 position: relative;
@@ -468,54 +396,7 @@ max-width: 1100px;
 margin: 0 auto;
 }
 
-/* Barra de navegación de Cómo funciona */
-
-.hiw-topbar {
-display: flex;
-align-items: center;
-justify-content: space-between;
-flex-wrap: wrap;
-gap: 16px;
-margin-bottom: 40px;
-}
-
-.hiw-logo img {
-height: 56px;
-width: auto;
-display: block;
-}
-
-.hiw-nav {
-display: flex;
-gap: 18px;
-padding: 8px 18px;
-border-radius: 999px;
-background-color: rgba(255, 255, 255, 0.9);
-}
-
-.hiw-nav a {
-display: flex;
-flex-direction: column;
-align-items: center;
-gap: 4px;
-min-width: 78px;
-padding: 6px 10px;
-border-radius: 20px;
-text-decoration: none;
-color: var(--color-text-muted);
-font-size: 0.7rem;
-font-weight: 700;
-}
-
-.hiw-nav .nav-icon {
-width: 18px;
-height: 18px;
-}
-
-.hiw-nav a.active {
-background-color: var(--color-primary-light);
-color: var(--color-heading);
-}
+/* Cómo funciona */
 
 .how-it-works .section-title {
 font-family: var(--font-heading);
@@ -619,32 +500,7 @@ outline: 2px solid var(--color-button-dark);
 outline-offset: 3px;
 }
 
-/* Responsive */
 
-@media (max-width: 768px) {
-.hiw-topbar {
-flex-direction: column;
-}
-
-.hiw-nav {
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.steps {
-    flex-direction: column;
-    align-items: center;
-    gap: 48px;
-}
-
-.steps::before {
-    display: none;
-}
-
-.how-it-works .section-title {
-    font-size: 1.75rem;
-}
-}
 
 /* =========================
 Sección Beneficios
@@ -656,89 +512,9 @@ Sección Beneficios
     margin-left: calc(50% - 50vw);
     padding: 28px 48px 80px;
     color: #16713a;
-    background:
-        linear-gradient(rgba(247, 250, 247, 0.66), rgba(247, 250, 247, 0.70)),
-        url("../images/mapa-lima.jpg") center center / cover no-repeat,
-        #eef4ef;
-    background-attachment: fixed, fixed, scroll;
+    background:transparent;
 }
 
-.benefits-topbar {
-    width: 100%;
-    max-width: 1280px;
-    margin: 0 auto 6px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.benefits-logo {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-}
-
-.benefits-logo img {
-    width: 92px;
-    height: auto;
-    display: block;
-}
-
-.benefits-nav {
-    display: flex;
-    gap: 6px;
-    padding: 8px 14px;
-    border-radius: 40px;
-    background-color: rgba(255, 255, 255, 0.95);
-    box-shadow: 0 8px 28px rgba(28, 90, 54, 0.12);
-}
-
-.benefits-nav a {
-    min-width: 80px;
-    padding: 8px 12px 6px;
-    border-radius: 22px;
-    text-decoration: none;
-    color: #2c7a4c;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-    font-size: 12px;
-    text-align: center;
-    transition: all 0.25s ease;
-    cursor: pointer;
-}
-
-.benefits-nav a .nav-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 34px;
-    height: 34px;
-    margin: 0 auto 4px;
-    border-radius: 50%;
-    transition: all 0.25s ease;
-}
-
-.benefits-nav a .nav-icon svg {
-    width: 21px;
-    height: 21px;
-}
-
-.benefits-nav a:hover {
-    color: #1f6639;
-}
-
-.benefits-nav a:hover .nav-icon {
-    background-color: #eef7ec;
-}
-
-.benefits-nav a.active {
-    color: #1f7a45;
-}
-
-.benefits-nav a.active .nav-icon {
-    background-color: #cdeccb;
-    color: #1f7a45;
-}
 
 .benefits-container {
     max-width: 1280px;
@@ -1119,198 +895,15 @@ Sección Beneficios
 .toast.error   { background-color: #E5533D; }
 .toast.success { background-color: #247b3f; }
 
-@media (max-width: 1100px) {
-    .benefits-grid {
-        grid-template-columns: repeat(2, 1fr);
-        max-width: 720px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-
-@media (max-width: 900px) {
-    .benefits-section {
-        padding: 24px 22px 56px;
-    }
-
-    .benefits-topbar {
-        flex-direction: column;
-        align-items: center;
-        gap: 16px;
-    }
-
-    .benefits-nav {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .benefits-container h1 {
-        font-size: 38px;
-    }
-
-    .points-card {
-        padding: 26px 28px;
-    }
-
-    .points-number {
-        font-size: 42px;
-    }
-}
-
-@media (max-width: 600px) {
-    .benefits-section {
-        padding: 18px 16px 44px;
-    }
-
-    .benefits-container h1 {
-        font-size: 28px;
-        margin: 14px 0 22px;
-    }
-
-    .benefits-grid {
-        grid-template-columns: 1fr;
-        gap: 18px;
-        max-width: 420px;
-    }
-
-    .points-display { gap: 8px; }
-    .points-number { font-size: 38px; }
-    .points-label { font-size: 18px; }
-    .benefits-nav {
-        gap: 4px;
-        padding: 6px 10px;
-    }
-
-    .benefits-nav a {
-        min-width: 64px;
-        font-size: 10.5px;
-    }
-
-    .benefits-logo img { width: 76px; }
-    .see-all-btn {
-        padding: 14px 32px;
-        font-size: 15px;
-    }
-
-    .modal-content {
-        padding: 30px;
-        max-width: 90%;
-    }
-
-    .toast {
-        right: 12px;
-        left: 12px;
-    }
-}
-
 /* =========================
 Sección Comunidad
 ========================= */
-
-.community-section {
-  position: relative;
-  min-height: 100vh;
-  padding: 42px 58px 62px;
-  overflow: hidden;
-  background: #f5f8f3;
-}
-
-.community-background {
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(rgba(245, 248, 243, 0.84), rgba(245, 248, 243, 0.84)),
-    url("https://tile.openstreetmap.org/12/1162/1977.png");
-  background-size: cover;
-  background-position: center;
-  opacity: 0.85;
-  z-index: 0;
-}
-
-.community-section::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(247, 250, 246, 0.38);
-  z-index: 1;
-}
-
-.community-logo,
-.community-nav,
-.community-content {
-  position: relative;
-  z-index: 2;
-}
-
-.community-logo {
-  position: absolute;
-  top: 46px;
-  left: 62px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.logo-circle {
-  width: 86px;
-  height: 86px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #8bcf73, #2e6b45);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 42px;
-  color: white;
-  margin-bottom: 8px;
-  box-shadow: 0 10px 25px rgba(46, 107, 69, 0.22);
-}
-
-.community-logo span {
-  color: #2e6b45;
-  font-size: 28px;
-  font-weight: 800;
-  line-height: 1;
-}
-
-.community-nav {
-  width: fit-content;
-  margin-left: auto;
-  margin-bottom: 36px;
-  padding: 14px 22px;
-  display: flex;
-  align-items: center;
-  gap: 26px;
-  background: rgba(255, 255, 255, 0.92);
-  border-radius: 999px;
-}
-
-.community-nav a {
-  min-width: 98px;
-  padding: 6px 8px;
-  text-align: center;
-  color: #087238;
-  text-decoration: none;
-  font-size: 13px;
-  font-weight: 800;
-}
-
-.community-nav .nav-icon {
-  display: block;
-  font-size: 18px;
-  margin-bottom: 6px;
-  line-height: 1;
-}
-
-.community-nav .active {
-  padding: 10px 20px;
-  background: #d5ebcc;
-  border-radius: 999px;
-}
 
 .community-content {
   max-width: 1380px;
   margin: 0 auto;
   text-align: center;
+  
 }
 
 .community-content h2 {
@@ -1321,6 +914,7 @@ Sección Comunidad
   letter-spacing: 0.5px;
   margin-top: 34px;
   margin-bottom: 12px;
+
 }
 
 .community-description {
@@ -1479,7 +1073,7 @@ Sección Comunidad
   justify-content: center;
   min-width: 330px;
   height: 72px;
-  padding: 0 44px;
+  padding: 20px 44px;
   border-radius: 999px;
   background: #4e864f;
   color: #ffffff;
@@ -1487,7 +1081,188 @@ Sección Comunidad
   font-size: 24px;
   font-weight: 800;
   box-shadow: 0 12px 26px rgba(46, 125, 50, 0.22);
+  margin-bottom:60px;
 }
+
+/* ============================================
+   RESPONSIVE DESIGNE
+   ============================================ */
+
+/* ============================================
+   responsive HOME
+   ============================================ */
+@media (max-width: 768px) {
+    .inicio-topbar {
+        flex-direction: column;
+    }
+
+    .inicio-nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .inicio-content {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .inicio-text {
+        max-width: 100%;
+    }
+
+    .inicio-title {
+        font-size: 2rem;
+    }
+
+    .phone-frame {
+        width: 220px;
+    }
+}
+
+/* Responsive FUNCIONALIDADES*/
+
+@media (max-width: 900px) {
+.features-section {
+padding: 25px 20px 50px;
+}
+
+.features-topbar {
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+}
+
+.features-nav {
+    margin-left: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.features-container h1 {
+    font-size: 34px;
+}
+
+.features-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+}
+}
+
+/* Responsive COMO FUNCIONA*/
+
+@media (max-width: 768px) {
+.hiw-topbar {
+flex-direction: column;
+}
+
+.hiw-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.steps {
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+}
+
+.steps::before {
+    display: none;
+}
+
+.how-it-works .section-title {
+    font-size: 1.75rem;
+}
+}
+
+/* Responsive BENEFICIOS*/
+
+@media (max-width: 1100px) {
+    .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 720px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 900px) {
+    .benefits-section {
+        padding: 24px 22px 56px;
+    }
+
+    .benefits-topbar {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
+
+    .benefits-nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .benefits-container h1 {
+        font-size: 38px;
+    }
+
+    .points-card {
+        padding: 26px 28px;
+    }
+
+    .points-number {
+        font-size: 42px;
+    }
+}
+
+@media (max-width: 600px) {
+    .benefits-section {
+        padding: 18px 16px 44px;
+    }
+
+    .benefits-container h1 {
+        font-size: 28px;
+        margin: 14px 0 22px;
+    }
+
+    .benefits-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        max-width: 420px;
+    }
+
+    .points-display { gap: 8px; }
+    .points-number { font-size: 38px; }
+    .points-label { font-size: 18px; }
+    .benefits-nav {
+        gap: 4px;
+        padding: 6px 10px;
+    }
+
+    .benefits-nav a {
+        min-width: 64px;
+        font-size: 10.5px;
+    }
+
+    .benefits-logo img { width: 76px; }
+    .see-all-btn {
+        padding: 14px 32px;
+        font-size: 15px;
+    }
+
+    .modal-content {
+        padding: 30px;
+        max-width: 90%;
+    }
+
+    .toast {
+        right: 12px;
+        left: 12px;
+    }
+}
+
+
+/* Responsive COMUNIDAD*/
 
 @media (max-width: 900px) {
   .community-section {
@@ -1520,189 +1295,8 @@ Sección Comunidad
     gap: 22px;
   }
  } 
-/* =========================
-Sección Login
-========================= */
-.login-section{
-    width:100%;
-    min-height:100vh;
-    padding:40px;
-    background:#f5faf4;
-}
 
-.login-topbar{
-    width:100%;
-    max-width:1180px;
-    margin:0 auto 50px;
-    display:flex;
-    justify-content:space-between;
-    align-items:flex-start;
-}
 
-.login-logo img{
-    width:95px;
-}
 
-.login-nav{
-    display:flex;
-    gap:18px;
-    padding:8px 18px;
-    border-radius:28px;
-    background:white;
-}
 
-.login-nav a{
-    min-width:78px;
-    padding:6px 10px;
-    border-radius:20px;
-    text-decoration:none;
-    color:#237c45;
-    font-size:11px;
-    font-weight:700;
-    text-align:center;
-}
 
-.login-nav .nav-icon{
-    display:block;
-    font-size:17px;
-    margin-bottom:3px;
-}
-
-.login-nav .active{
-    background:#dcefd7;
-}
-
-.login-container{
-    display:flex;
-    justify-content:center;
-}
-
-.login-card{
-
-    width:100%;
-    max-width:900px;
-
-    background:white;
-
-    border-radius:20px;
-
-    padding:50px;
-
-    display:flex;
-
-    gap:50px;
-
-    box-shadow:
-    0 10px 25px rgba(0,0,0,0.08);
-}
-
-.login-left{
-    flex:1;
-}
-
-.login-left h2{
-
-    font-size:48px;
-
-    color:#237c45;
-
-    margin-bottom:20px;
-}
-
-.login-left p{
-
-    font-size:20px;
-
-    line-height:1.7;
-
-    color:#237c45;
-}
-
-.login-right{
-    flex:1;
-}
-
-.login-right form{
-    display:flex;
-    flex-direction:column;
-    gap:18px;
-}
-
-.login-right input{
-
-    padding:15px;
-
-    border:1px solid #d6d6d6;
-
-    border-radius:10px;
-
-    font-size:16px;
-}
-
-.login-right button{
-
-    border:none;
-
-    padding:15px;
-
-    border-radius:10px;
-
-    background:#5d8f58;
-
-    color:white;
-
-    font-size:17px;
-
-    font-weight:700;
-
-    cursor:pointer;
-}
-
-.register-link{
-
-    margin-top:25px;
-
-    text-align:center;
-}
-
-.register-link p{
-
-    margin-bottom:10px;
-
-    color:#237c45;
-}
-
-.register-link a{
-
-    text-decoration:none;
-
-    color:#237c45;
-
-    font-weight:bold;
-}
-
-@media(max-width:900px){
-
-    .login-card{
-
-        flex-direction:column;
-
-        padding:30px;
-    }
-
-    .login-nav{
-
-        flex-wrap:wrap;
-
-        justify-content:center;
-    }
-
-    .login-topbar{
-
-        flex-direction:column;
-
-        align-items:center;
-
-        gap:20px;
-    }
-}

@@ -4,27 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>EcoRuta</title>
-
-
   <link rel="icon" href="favicon.ico">
   <link rel="stylesheet" href="assets/styles/styles.css">
 </head>
 <body>
 
 <header>
-  <h1>EcoRuta</h1>
-</header>
 
-<main>
-
-    <!-- Sección: Home -->
-    <section class="inicio-section" id="home">
-        <div class="container">
-
-            <!-- Navbar propio de esta sección -->
+            <!-- Navbar -->
             <div class="inicio-topbar">
                 <a href="#home" class="inicio-logo">
-                    <img src="assets/images/ecoruta-logo.png" alt="Logo de EcoRuta">
+                    <img src="assets/images/logo_ecoruta_h.png" alt="Logo de EcoRuta">
                 </a>
 
                 <nav class="inicio-nav">
@@ -82,13 +72,23 @@
                     </a>
                 </nav>
 
-                <a href="#perfil" class="inicio-profile" aria-label="Perfil">
+                <a href="login.html" class="inicio-profile" aria-label="Perfil">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <circle cx="12" cy="9" r="3.5"/>
                         <path d="M5 20c0.5-4 3-6 7-6s6.5 2 7 6"/>
                     </svg>
                 </a>
             </div>
+
+</header>
+
+<main>
+
+    <!-- Sección: Home -->
+    <section class="inicio-section" id="home">
+        <div class="container">
+
+
 
             <!-- Contenido principal -->
             <div class="inicio-content">
@@ -128,39 +128,6 @@
  <!-- Fin Sección Home -->
 
 <!-- Sección Funcionalidades -->
-<section id="features" class="features-section">
-    <div class="features-topbar">
-        <a href="#home" class="features-logo">
-            <img src="assets/images/ecoruta-logo.png" alt="Logo de EcoRuta">
-        </a>
-
-    <nav class="features-nav">
-        <a href="#home">
-            <span class="nav-icon">☰</span>
-            <span>Inicio</span>
-        </a>
-
-        <a href="#features" class="active">
-            <span class="nav-icon">▣</span>
-            <span>Funcionalidades</span>
-        </a>
-
-        <a href="#how-it-works">
-            <span class="nav-icon">★</span>
-            <span>Cómo funciona</span>
-        </a>
-
-        <a href="#benefits">
-            <span class="nav-icon">☻</span>
-            <span>Beneficios</span>
-        </a>
-
-        <a href="#community">
-            <span class="nav-icon">♣</span>
-            <span>Comunidad</span>
-        </a>
-    </nav>
-</div>
 
 <div class="features-container">
     <h1>Funcionalidades</h1>
@@ -213,67 +180,7 @@
     <section class="how-it-works" id="how-it-works">
         <div class="container">
 
-            <!-- navbar -->
-            <div class="hiw-topbar">
-                <a href="#home" class="hiw-logo">
-                    <img src="assets/images/ecoruta-logo.png" alt="Logo de EcoRuta">
-                </a>
-
-                <nav class="hiw-nav">
-                    <a href="#home">
-                        <span class="nav-icon" aria-hidden="true">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M3 11l9-7 9 7"/>
-                                <path d="M5 10v9h14v-9"/>
-                            </svg>
-                        </span>
-                        <span>Inicio</span>
-                    </a>
-
-                    <a href="#features">
-                        <span class="nav-icon" aria-hidden="true">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="5" y="3" width="14" height="18" rx="2"/>
-                                <path d="M9 8h6M9 12h6M9 16h4"/>
-                            </svg>
-                        </span>
-                        <span>Funcionalidades</span>
-                    </a>
-
-                    <a href="#how-it-works" class="active">
-                        <span class="nav-icon" aria-hidden="true">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round">
-                                <polygon points="12,2 14.7,8.5 21.8,9 16.5,13.5 18.2,20.5 12,16.8 5.8,20.5 7.5,13.5 2.2,9 9.3,8.5"/>
-                            </svg>
-                        </span>
-                        <span>Cómo funciona</span>
-                    </a>
-
-                    <a href="#benefits">
-                        <span class="nav-icon" aria-hidden="true">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <circle cx="12" cy="12" r="9"/>
-                                <path d="M8 14c1 1.5 2.5 2.3 4 2.3s3-0.8 4-2.3"/>
-                                <circle cx="9" cy="10" r="0.6" fill="currentColor"/>
-                                <circle cx="15" cy="10" r="0.6" fill="currentColor"/>
-                            </svg>
-                        </span>
-                        <span>Beneficios</span>
-                    </a>
-
-                    <a href="#community">
-                        <span class="nav-icon" aria-hidden="true">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <circle cx="9" cy="8" r="3"/>
-                                <path d="M3 20c0-3 2.5-5 6-5s6 2 6 5"/>
-                                <circle cx="17" cy="9" r="2.5"/>
-                                <path d="M15 20c0.3-2.3 1.8-4 4-4.3"/>
-                            </svg>
-                        </span>
-                        <span>Comunidad</span>
-                    </a>
-                </nav>
-            </div>
+           
 
             <h2 class="section-title">¿Cómo funciona EcoRuta?</h2>
             <p class="section-subtitle">Encuentra tu ruta más saludable en solo 3 pasos.</p>
@@ -331,39 +238,7 @@
 <!-- Sección Beneficios -->
 
 <section id="benefits" class="benefits-section">
-    <div class="benefits-topbar">
-        <a href="#home" class="benefits-logo">
-            <img src="assets/images/ecoruta-logo.png" alt="Logo de EcoRuta">
-        </a>
-
-    <nav class="benefits-nav">
-        <a href="#home" class="nav-link">
-            <span class="nav-icon">☰</span>
-            <span>Inicio</span>
-        </a>
-
-        <a href="#features" class="nav-link">
-            <span class="nav-icon">▣</span>
-            <span>Funcionalidades</span>
-        </a>
-
-        <a href="#how-it-works" class="nav-link">
-            <span class="nav-icon">★</span>
-            <span>Cómo funciona</span>
-        </a>
-
-        <a href="#benefits" class="nav-link active">
-            <span class="nav-icon">☻</span>
-            <span>Beneficios</span>
-        </a>
-
-        <a href="#community" class="nav-link">
-            <span class="nav-icon">♣</span>
-            <span>Comunidad</span>
-        </a>
-    </nav>
-</div>
-
+   
 <div class="benefits-container">
     <h1>Tus beneficios en EcoRuta</h1>
 
@@ -483,37 +358,12 @@
 </div>
 <!-- Fin Sección Beneficios -->
     
+
+
+
 <!-- Sección Comunidad -->
   <section id="community" class="community-section">
-    <div class="community-background"></div>
-
-    <div class="community-logo">
-      <div class="logo-circle">🌿</div>
-      <span>EcoRuta</span>
-    </div>
-
-    <nav class="community-nav">
-      <a href="#home">
-        <span class="nav-icon">☰</span>
-        <span>Inicio</span>
-      </a>
-      <a href="#features">
-        <span class="nav-icon">▣</span>
-        <span>Funcionalidades</span>
-      </a>
-      <a href="#how-it-works">
-        <span class="nav-icon">★</span>
-        <span>Cómo funciona</span>
-      </a>
-      <a href="#benefits">
-        <span class="nav-icon">☻</span>
-        <span>Beneficios</span>
-      </a>
-      <a href="#community" class="active">
-        <span class="nav-icon">👥</span>
-        <span>Comunidad</span>
-      </a>
-    </nav>
+   
 
     <div class="community-content">
       <h2>Únete a la comunidad EcoRuta</h2>
@@ -588,104 +438,7 @@
     </div>
   </section>
 
-<!-- Sección Login -->
-<section id="login" class="login-section">
 
-    <div class="login-topbar">
-
-        <a href="#home" class="login-logo">
-            <img src="assets/images/ecoruta-logo.png" alt="EcoRuta">
-        </a>
-
-        <nav class="login-nav">
-
-            <a href="#home">
-                <span class="nav-icon">☰</span>
-                <span>Inicio</span>
-            </a>
-
-            <a href="#features">
-                <span class="nav-icon">▣</span>
-                <span>Funcionalidades</span>
-            </a>
-
-            <a href="#how-it-works">
-                <span class="nav-icon">★</span>
-                <span>Cómo funciona</span>
-            </a>
-
-            <a href="#benefits">
-                <span class="nav-icon">☻</span>
-                <span>Beneficios</span>
-            </a>
-
-            <a href="#community">
-                <span class="nav-icon">👥</span>
-                <span>Comunidad</span>
-            </a>
-
-            <a href="#login" class="active">
-                <span class="nav-icon">🔒</span>
-                <span>Login</span>
-            </a>
-
-        </nav>
-
-    </div>
-
-    <div class="login-container">
-
-        <div class="login-card">
-
-            <div class="login-left">
-
-                <h2>Bienvenido a EcoRuta</h2>
-
-                <p>
-                    Inicia sesión para acceder a rutas saludables,
-                    alertas ambientales y recomendaciones personalizadas.
-                </p>
-
-            </div>
-
-            <div class="login-right">
-
-                <form>
-
-                    <input
-                        type="email"
-                        placeholder="Correo electrónico"
-                    >
-
-                    <input
-                        type="password"
-                        placeholder="Contraseña"
-                    >
-
-                    <button type="submit">
-                        Iniciar sesión
-                    </button>
-
-                </form>
-
-                <div class="register-link">
-
-                    <p>¿No tienes una cuenta?</p>
-
-                    <a href="#">
-                        Regístrate aquí
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
- </section>
- <!-- Fin Sección Login -->
 
 </main>
 
