@@ -189,3 +189,218 @@ benefitCards.forEach(function (card, index) {
 });
 
 });
+
+/* =========================
+   Rutas - US01
+========================= */
+
+(() => {
+  const rutaOrigen = document.getElementById('rutaOrigen');
+  const rutaDestino = document.getElementById('rutaDestino');
+  const routeError = document.getElementById('routeError');
+
+  const btnBuscarRuta = document.getElementById('btnBuscarRuta');
+  const btnNuevaBusqueda = document.getElementById('btnNuevaBusqueda');
+
+  const screenRutasOpciones = document.getElementById('screenRutasOpciones');
+  const screenRutaPreferida = document.getElementById('screenRutaPreferida');
+
+  const origenTexto = document.getElementById('origenTexto');
+  const destinoTexto = document.getElementById('destinoTexto');
+
+  const btnRutaRecomendada = document.querySelector('.btnRutaRecomendada');
+  const btnRutaAlternativa = document.querySelector('.btnRutaAlternativa');
+  const btnRutaEspecifica = document.querySelector('.btnRutaEspecifica');
+
+  const btnVolverRutas = document.getElementById('btnVolverRutas');
+  const btnIniciarRutaPreferida = document.getElementById('btnIniciarRutaPreferida');
+
+  function ocultarError() {
+    if (routeError) {
+      routeError.style.display = 'none';
+    }
+  }
+
+  function mostrarError() {
+    if (routeError) {
+      routeError.style.display = 'block';
+    }
+  }
+
+  function activarNavRutas() {
+    const navLinks = document.querySelectorAll('.inicio-nav a');
+
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+    });
+
+    const rutasLink = document.querySelector('.inicio-nav a[href="#rutas"]');
+
+    if (rutasLink) {
+      rutasLink.classList.add('active');
+    }
+  }
+
+  function mostrarPantallaOpciones() {
+    const origen = rutaOrigen.value.trim();
+    const destino = rutaDestino.value.trim();
+
+    if (origen === '' || destino === '') {
+      mostrarError();
+      return;
+    }
+
+    ocultarError();
+    activarNavRutas();
+
+    if (origenTexto) {
+      origenTexto.textContent = origen;
+    }
+
+    if (destinoTexto) {
+      destinoTexto.textContent = destino;
+    }
+
+    if (screenRutaPreferida) {
+      screenRutaPreferida.style.display = 'none';
+    }
+
+    if (screenRutasOpciones) {
+      screenRutasOpciones.style.display = 'flex';
+      screenRutasOpciones.scrollIntoView({
+        behavior: 'smooth',
+        block: 'center'
+      });
+    }
+  }
+
+  function mostrarPantallaRutaPreferida() {
+    activarNavRutas();
+
+    if (screenRutasOpciones) {
+      screenRutasOpciones.style.display = 'none';
+    }
+
+    if (screenRutaPreferida) {
+      screenRutaPreferida.style.display = 'block';
+      screenRutaPreferida.scrollIntoView({
+        behavior: 'smooth',
+        block: 'center'
+      });
+    }
+  }
+
+  function volverAOpciones() {
+    activarNavRutas();
+
+    if (screenRutaPreferida) {
+      screenRutaPreferida.style.display = 'none';
+    }
+
+    if (screenRutasOpciones) {
+      screenRutasOpciones.style.display = 'flex';
+      screenRutasOpciones.scrollIntoView({
+        behavior: 'smooth',
+        block: 'center'
+      });
+    }
+  }
+
+  function nuevaBusqueda() {
+    activarNavRutas();
+
+    if (screenRutasOpciones) {
+      screenRutasOpciones.style.display = 'none';
+    }
+
+    if (screenRutaPreferida) {
+      screenRutaPreferida.style.display = 'none';
+    }
+
+    if (rutaOrigen) {
+      rutaOrigen.focus();
+    }
+  }
+
+  if (btnBuscarRuta) {
+    btnBuscarRuta.addEventListener('click', mostrarPantallaOpciones);
+  }
+
+  if (rutaOrigen) {
+    rutaOrigen.addEventListener('input', ocultarError);
+  }
+
+  if (rutaDestino) {
+    rutaDestino.addEventListener('input', ocultarError);
+  }
+
+  if (btnRutaRecomendada) {
+    btnRutaRecomendada.addEventListener('click', () => {
+      alert('Ruta recomendada seleccionada. Esta ruta prioriza mejor calidad del aire.');
+    });
+  }
+
+  if (btnRutaAlternativa) {
+    btnRutaAlternativa.addEventListener('click', () => {
+      alert('Ruta alternativa 2 seleccionada. Puedes continuar con esta ruta manteniendo la información ambiental visible.');
+    });
+  }
+
+  if (btnRutaEspecifica) {
+    btnRutaEspecifica.addEventListener('click', mostrarPantallaRutaPreferida);
+  }
+
+  if (btnVolverRutas) {
+    btnVolverRutas.addEventListener('click', volverAOpciones);
+  }
+
+  if (btnNuevaBusqueda) {
+    btnNuevaBusqueda.addEventListener('click', nuevaBusqueda);
+  }
+
+  if (btnIniciarRutaPreferida) {
+    btnIniciarRutaPreferida.addEventListener('click', () => {
+      alert('Recorrido iniciado. La información ambiental seguirá visible durante la ruta.');
+    });
+  }
+})();
+
+/* =========================
+   Navbar activo por sección
+========================= */
+
+(() => {
+  const navLinks = document.querySelectorAll('.inicio-nav a[href^="#"]');
+  const sections = document.querySelectorAll('section[id]');
+
+  function activarLink(id) {
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+
+      if (link.getAttribute('href') === `#${id}`) {
+        link.classList.add('active');
+      }
+    });
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        activarLink(entry.target.id);
+      }
+    });
+  }, {
+    threshold: 0.45
+  });
+
+  sections.forEach(section => {
+    observer.observe(section);
+  });
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      const id = link.getAttribute('href').replace('#', '');
+      activarLink(id);
+    });
+  });
+})();
