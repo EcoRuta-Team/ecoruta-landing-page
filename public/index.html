@@ -138,7 +138,7 @@
     </section>
  <!-- Fin Sección Home -->
 
-<!-- Sección Rutas - US01 y US02-->
+<!-- Sección Rutas - US01, US02 y US03-->
 <section id="rutas" class="rutas-section">
   <div class="rutas-container">
 
@@ -432,10 +432,91 @@
     </div>
     <!-- Fin Pantalla sin resultados - US02 -->
 
+    <!-- Pantalla ruta en curso - US03 -->
+     <div class="ruta-en-curso-screen hidden-route-screen" id="screenRutaEnCurso">
+      <div class="phone-status-bar">
+        <span>9:40</span>
+        <span>◥  5G  🔋</span>
+      </div>
+      
+      <div class="route-navigation-header">
+        <span class="navigation-arrow">↑</span>
+        <div>
+          <small>en dirección a</small>
+          <strong>Parque de las leyendas</strong>
+        </div>
+      </div>
+      
+      <div class="route-live-map">
+        <div class="live-map-zone safe-zone-one"></div>
+        <div class="live-map-zone safe-zone-two"></div>
+        <div class="live-map-zone safe-zone-three"></div>
+        <div class="live-map-zone polluted-zone" id="zonaContaminada"></div>
+        
+        <div class="live-route-line" id="rutaOriginalLine"></div>
+        <div class="live-route-line alternative-line hidden-route-screen" id="rutaAlternativaLine"></div>
+        
+        <span class="route-pin start-pin">●</span>
+        <span class="route-pin end-pin">📍</span>
+        <span class="warning-map-icon" id="warningMapIcon">⚠️</span>
+
+        <div class="recalculating-box hidden-route-screen" id="recalculatingBox">
+          Recalculando ruta...
+        </div>
+        
+        <div class="route-updated-message hidden-route-screen" id="routeUpdatedMessage">
+          ¡Se actualizó el tiempo estimado!
+        </div>
+        
+        <div class="environment-warning-message hidden-route-screen" id="environmentWarningMessage">
+          Zona contaminada en la ruta original
+        </div>
+      </div>
+      
+      <div class="route-bottom-panel">
+        <button class="route-cancel-btn" id="btnCancelarRutaCurso">
+          ✕
+          <span>Cancelar</span>
+        </button>
+        
+        <div class="route-time-info">
+          <strong id="routeLiveTime">39 min</strong>
+          <span id="routeLiveDetails">19km · 10:09 a.m.</span>
+        </div>
+        
+        <button class="route-save-btn">
+          🔖
+          <span>Guardar ruta</span>
+        </button>
+      </div>
+      
+      <div class="route-mobile-menu">
+        <span>☁️<small>Inicio</small></span>
+        <span class="active">🚶<small>Rutas</small></span>
+        <span>💡<small>Consejos</small></span>
+        <span>🔔<small>Alertas</small></span>
+        <span>👤<small>Perfil</small></span>
+      </div>
+      
+      <div class="environment-alert-modal" id="environmentAlertModal">
+        <div class="alert-icon">⚠️</div>
+        <h3>Actualización ambiental</h3>
+        <p>La contaminación aumentó significativamente en tu ruta. Se sugiere desviar el tramo.</p>
+        
+        <button class="ignore-alert-btn" id="btnIgnorarAlerta">
+          Ignorar
+        </button>
+        
+        <button class="deviate-route-btn" id="btnDesviarRuta">
+          Desviar ruta (+100m)
+        </button>
+      </div>
+    </div>
+
     </div>
   </div>
 </section>
-<!-- Fin Sección Rutas - US01 y US02 -->
+<!-- Fin Sección Rutas - US01, US02 y US03 -->
 
 <!-- Sección Funcionalidades -->
 

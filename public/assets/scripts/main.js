@@ -191,7 +191,7 @@ benefitCards.forEach(function (card, index) {
 });
 
 /* =========================
-   Rutas - US01 y US02
+   Rutas - US01, US02 y US03
 ========================= */
 
 (() => {
@@ -207,6 +207,7 @@ benefitCards.forEach(function (card, index) {
   const screenRutaPreferida = document.getElementById('screenRutaPreferida');
   const screenFiltros = document.getElementById('screenFiltros');
   const screenSinResultados = document.getElementById('screenSinResultados');
+  const screenRutaEnCurso = document.getElementById('screenRutaEnCurso');
 
   const origenTexto = document.getElementById('origenTexto');
   const destinoTexto = document.getElementById('destinoTexto');
@@ -228,6 +229,23 @@ benefitCards.forEach(function (card, index) {
   const btnCerrarFiltros = document.getElementById('btnCerrarFiltros');
   const btnBuscarOtrasRutas = document.getElementById('btnBuscarOtrasRutas');
   const btnVolverDesdeSinResultados = document.getElementById('btnVolverDesdeSinResultados');
+
+  const environmentAlertModal = document.getElementById('environmentAlertModal');
+  const recalculatingBox = document.getElementById('recalculatingBox');
+  const routeUpdatedMessage = document.getElementById('routeUpdatedMessage');
+  const environmentWarningMessage = document.getElementById('environmentWarningMessage');
+
+  const rutaOriginalLine = document.getElementById('rutaOriginalLine');
+  const rutaAlternativaLine = document.getElementById('rutaAlternativaLine');
+  const zonaContaminada = document.getElementById('zonaContaminada');
+  const warningMapIcon = document.getElementById('warningMapIcon');
+
+  const routeLiveTime = document.getElementById('routeLiveTime');
+  const routeLiveDetails = document.getElementById('routeLiveDetails');
+
+  const btnIgnorarAlerta = document.getElementById('btnIgnorarAlerta');
+  const btnDesviarRuta = document.getElementById('btnDesviarRuta');
+  const btnCancelarRutaCurso = document.getElementById('btnCancelarRutaCurso');
 
   function ocultarError() {
     if (routeError) {
@@ -260,9 +278,12 @@ benefitCards.forEach(function (card, index) {
     if (screenRutaPreferida) screenRutaPreferida.style.display = 'none';
     if (screenFiltros) screenFiltros.style.display = 'none';
     if (screenSinResultados) screenSinResultados.style.display = 'none';
+    if (screenRutaEnCurso) screenRutaEnCurso.style.display = 'none';
   }
 
   function validarOrigenDestino() {
+    if (!rutaOrigen || !rutaDestino) return false;
+
     const origen = rutaOrigen.value.trim();
     const destino = rutaDestino.value.trim();
 
@@ -380,6 +401,68 @@ benefitCards.forEach(function (card, index) {
     }
   }
 
+  function iniciarRutaEnCurso() {
+    activarNavRutas();
+    ocultarPantallasSecundarias();
+
+    if (environmentAlertModal) environmentAlertModal.style.display = 'block';
+    if (recalculatingBox) recalculatingBox.style.display = 'none';
+    if (routeUpdatedMessage) routeUpdatedMessage.style.display = 'none';
+    if (environmentWarningMessage) environmentWarningMessage.style.display = 'none';
+
+    if (rutaOriginalLine) rutaOriginalLine.style.display = 'block';
+    if (rutaAlternativaLine) rutaAlternativaLine.style.display = 'none';
+    if (zonaContaminada) zonaContaminada.style.display = 'block';
+    if (warningMapIcon) warningMapIcon.style.display = 'block';
+
+    if (routeLiveTime) routeLiveTime.textContent = '39 min';
+    if (routeLiveDetails) routeLiveDetails.textContent = '19km · 10:09 a.m.';
+
+    if (screenRutaEnCurso) {
+      screenRutaEnCurso.style.display = 'block';
+      screenRutaEnCurso.scrollIntoView({
+        behavior: 'smooth',
+        block: 'center'
+      });
+    }
+  }
+
+  function desviarRutaContaminada() {
+    if (environmentAlertModal) environmentAlertModal.style.display = 'none';
+    if (environmentWarningMessage) environmentWarningMessage.style.display = 'none';
+    if (recalculatingBox) recalculatingBox.style.display = 'block';
+
+    setTimeout(() => {
+      if (recalculatingBox) recalculatingBox.style.display = 'none';
+
+      if (rutaOriginalLine) rutaOriginalLine.style.display = 'none';
+      if (rutaAlternativaLine) rutaAlternativaLine.style.display = 'block';
+
+      if (zonaContaminada) zonaContaminada.style.display = 'none';
+      if (warningMapIcon) warningMapIcon.style.display = 'none';
+
+      if (routeLiveTime) routeLiveTime.textContent = '32 min';
+      if (routeLiveDetails) routeLiveDetails.textContent = '19km · 10:13 a.m.';
+
+      if (routeUpdatedMessage) routeUpdatedMessage.style.display = 'block';
+    }, 1300);
+  }
+
+  function ignorarAlertaAmbiental() {
+    if (environmentAlertModal) environmentAlertModal.style.display = 'none';
+
+    if (rutaOriginalLine) rutaOriginalLine.style.display = 'block';
+    if (rutaAlternativaLine) rutaAlternativaLine.style.display = 'none';
+
+    if (zonaContaminada) zonaContaminada.style.display = 'block';
+    if (warningMapIcon) warningMapIcon.style.display = 'block';
+
+    if (environmentWarningMessage) environmentWarningMessage.style.display = 'block';
+
+    if (routeLiveTime) routeLiveTime.textContent = '29 min';
+    if (routeLiveDetails) routeLiveDetails.textContent = '19km · 10:09 a.m.';
+  }
+
   if (btnBuscarRuta) {
     btnBuscarRuta.addEventListener('click', mostrarPantallaOpciones);
   }
@@ -421,9 +504,7 @@ benefitCards.forEach(function (card, index) {
   }
 
   if (btnIniciarRutaPreferida) {
-    btnIniciarRutaPreferida.addEventListener('click', () => {
-      alert('Recorrido iniciado. La información ambiental seguirá visible durante la ruta.');
-    });
+    btnIniciarRutaPreferida.addEventListener('click', iniciarRutaEnCurso);
   }
 
   if (btnAplicarFiltros) {
@@ -444,6 +525,18 @@ benefitCards.forEach(function (card, index) {
 
   if (btnVolverDesdeSinResultados) {
     btnVolverDesdeSinResultados.addEventListener('click', mostrarPantallaFiltros);
+  }
+
+  if (btnIgnorarAlerta) {
+    btnIgnorarAlerta.addEventListener('click', ignorarAlertaAmbiental);
+  }
+
+  if (btnDesviarRuta) {
+    btnDesviarRuta.addEventListener('click', desviarRutaContaminada);
+  }
+
+  if (btnCancelarRutaCurso) {
+    btnCancelarRutaCurso.addEventListener('click', volverAOpciones);
   }
 })();
 
@@ -486,4 +579,5 @@ benefitCards.forEach(function (card, index) {
     });
   });
 })();
+
 
