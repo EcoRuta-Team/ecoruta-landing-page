@@ -138,7 +138,7 @@
     </section>
  <!-- Fin Sección Home -->
 
-<!-- Sección Rutas - US01 -->
+<!-- Sección Rutas - US01 y US02-->
 <section id="rutas" class="rutas-section">
   <div class="rutas-container">
 
@@ -181,7 +181,13 @@
           Debes ingresar origen y destino para buscar una ruta.
         </p>
 
-        <button class="route-search-btn" id="btnBuscarRuta">Buscar ruta</button>
+        <div class="route-actions-row">
+            <button class="route-search-btn" id="btnBuscarRuta">Buscar ruta</button>
+
+            <button class="route-filter-btn" id="btnAbrirFiltros" aria-label="Filtrar rutas">
+                Filtrar
+            </button>
+        </div>
 
         <div class="route-map">
           <div class="map-zone green-zone"></div>
@@ -210,7 +216,15 @@
           </p>
         </div>
 
-        <article class="ruta-option recommended">
+        <div class="filter-success-message" id="filterSuccessMessage">
+            <strong>¡Buenas noticias!</strong>
+            <p>
+                Encontramos rutas con condiciones favorables para tu salud. Te recomendamos elegir
+                una de ellas para reducir tu exposición a contaminantes.
+            </p>
+        </div>
+
+        <article class="ruta-option recommended" id="cardRutaRecomendada">
           <div>
             <h3>Ruta Recomendada <span>(28 min)</span></h3>
             <p>Variedad de áreas verdes y menor exposición a contaminación.</p>
@@ -220,7 +234,7 @@
           <button class="btnRutaRecomendada">Seleccionar</button>
         </article>
 
-        <article class="ruta-option moderate">
+        <article class="ruta-option moderate" id="cardRutaAlternativa2">
           <div>
             <h3>Ruta alternativa 2 <span>(32 min)</span></h3>
             <p>Trayecto con escasas áreas verdes y calidad de aire regular.</p>
@@ -230,7 +244,7 @@
           <button class="btnRutaAlternativa">Seleccionar</button>
         </article>
 
-        <article class="ruta-option risky">
+        <article class="ruta-option risky" id="cardRutaAlternativa3">
           <div>
             <h3>Ruta alternativa 3 <span>(25 min)</span></h3>
             <p>Ruta más corta, pero con mayor exposición a zonas contaminadas.</p>
@@ -250,6 +264,89 @@
 
         <button class="route-more-btn" id="btnNuevaBusqueda">Realizar nueva búsqueda</button>
       </div>
+
+<!-- Pantalla filtros de contaminación - US02 -->
+<div class="rutas-filter-panel hidden-route-screen" id="screenFiltros">
+  <div class="filter-panel-header">
+    <span>Rutas</span>
+    <h3>Filtrar rutas por contaminación</h3>
+    <p>
+      Ajusta los filtros para encontrar rutas con menor exposición a contaminantes.
+    </p>
+  </div>
+
+  <div class="filter-list">
+    <label class="filter-item">
+      <div>
+        <strong>Tiempo</strong>
+        <p>Quiero la ruta más rápida</p>
+      </div>
+      <input type="checkbox" id="filtroTiempo">
+      <span class="toggle-slider"></span>
+    </label>
+
+    <label class="filter-item">
+      <div>
+        <strong>Distancia</strong>
+        <p>Quiero la ruta más corta</p>
+      </div>
+      <input type="checkbox" id="filtroDistancia" checked>
+      <span class="toggle-slider"></span>
+    </label>
+
+    <label class="filter-item">
+      <div>
+        <strong>AQI</strong>
+        <p>Quiero la ruta más saludable</p>
+      </div>
+      <input type="checkbox" id="filtroAqi" checked>
+      <span class="toggle-slider"></span>
+    </label>
+
+    <label class="filter-item">
+      <div>
+        <strong>PM2.5</strong>
+        <p>Menores niveles de humo y emisiones industriales</p>
+      </div>
+      <input type="checkbox" id="filtroPm25" checked>
+      <span class="toggle-slider"></span>
+    </label>
+
+    <label class="filter-item">
+      <div>
+        <strong>PM10</strong>
+        <p>Menores niveles de polvo, cenizas y partículas</p>
+      </div>
+      <input type="checkbox" id="filtroPm10" checked>
+      <span class="toggle-slider"></span>
+    </label>
+
+    <label class="filter-item">
+      <div>
+        <strong>Polen</strong>
+        <p>Menores niveles de polen en la ruta</p>
+      </div>
+      <input type="checkbox" id="filtroPolen" checked>
+      <span class="toggle-slider"></span>
+    </label>
+
+    <label class="filter-item">
+      <div>
+        <strong>Áreas verdes</strong>
+        <p>Quiero la ruta con más áreas verdes</p>
+      </div>
+      <input type="checkbox" id="filtroAreasVerdes" checked>
+      <span class="toggle-slider"></span>
+    </label>
+  </div>
+
+  <div class="filter-actions">
+    <button id="btnAplicarFiltros">Aplicar filtros</button>
+    <button id="btnFiltroEstricto">Aplicar filtro estricto</button>
+    <button id="btnCerrarFiltros">Volver</button>
+  </div>
+</div>
+<!-- Fin Pantalla filtros de contaminación - US02 -->
 
       <!-- Pantalla 3: usuario prefiere una ruta específica -->
       <div class="ruta-preferida-screen hidden-route-screen" id="screenRutaPreferida">
@@ -308,10 +405,37 @@
         </div>
       </div>
 
+      <!-- Pantalla sin resultados - US02 -->
+       <div class="rutas-no-results hidden-route-screen" id="screenSinResultados">
+        <div class="no-results-icon">🗺️</div>
+
+        <h3>No encontramos rutas que cumplan el filtro actual</h3>
+        <p>
+            Prueba desactivando el nivel de restricción de contaminación o ajustando tus filtros
+            para encontrar nuevas opciones.
+        </p>
+
+        <div class="no-results-card">
+            <label>
+                <span>⊙</span>
+                <input type="text" value="Tu ubicación" readonly>
+            </label>
+            
+            <label>
+                <span>⌖</span>
+                <input type="text" value="Universidad UPC" readonly>
+            </label>
+
+            <button id="btnBuscarOtrasRutas">Buscar otras rutas</button>
+            <button id="btnVolverDesdeSinResultados">Volver</button>
+        </div>
+    </div>
+    <!-- Fin Pantalla sin resultados - US02 -->
+
     </div>
   </div>
 </section>
-<!-- Fin Sección Rutas - US01 -->
+<!-- Fin Sección Rutas - US01 y US02 -->
 
 <!-- Sección Funcionalidades -->
 
