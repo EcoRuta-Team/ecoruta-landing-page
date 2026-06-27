@@ -138,7 +138,7 @@
     </section>
  <!-- Fin Sección Home -->
 
-<!-- Sección Rutas - US01, US02 y US03-->
+<!-- Sección Rutas - US01, US02, US03 y US04-->
 <section id="rutas" class="rutas-section">
   <div class="rutas-container">
 
@@ -253,6 +253,10 @@
           </div>
           <button class="btnRutaEspecifica">Detalles</button>
         </article>
+
+        <button class="route-compare-btn" id="btnCompararRutas">
+          Comparar rutas
+        </button>
 
         <div class="ruta-alert">
           <h3>Zona de construcción activa en una ruta alternativa</h3>
@@ -405,6 +409,168 @@
         </div>
       </div>
 
+      <!-- Pantalla comparación de rutas - US04 -->
+<div class="rutas-comparison-panel hidden-route-screen" id="screenCompararRutas">
+  <div class="comparison-header">
+    <span>Comparación de rutas</span>
+    <h3>Compara las rutas disponibles</h3>
+    <p>
+      Selecciona la ruta que más se acomode a tus preferencias. EcoRuta resalta
+      la mejor opción considerando calidad del aire, áreas verdes y exposición a contaminantes.
+    </p>
+  </div>
+
+  <div class="comparison-layout">
+
+    <article class="comparison-card best-route">
+      <div class="comparison-check">✓</div>
+
+      <div class="comparison-card-header">
+        <div>
+          <h4>Ruta Recomendada</h4>
+          <p>Mejor calidad ambiental</p>
+        </div>
+        <strong>28 min</strong>
+      </div>
+
+      <div class="comparison-metrics">
+        <div>
+          <span>📍</span>
+          <strong>4.2 km</strong>
+          <p>Distancia</p>
+        </div>
+
+        <div>
+          <span>☁️</span>
+          <strong>AQI 12</strong>
+          <p>Excelente</p>
+        </div>
+
+        <div>
+          <span>🌫️</span>
+          <strong>PM2.5</strong>
+          <p>12 µg/m³</p>
+        </div>
+
+        <div>
+          <span>🌾</span>
+          <strong>PM10</strong>
+          <p>5 µg/m³</p>
+        </div>
+
+        <div>
+          <span>🌿</span>
+          <strong>Polen</strong>
+          <p>Bajo</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="comparison-card">
+      <div class="comparison-check gray-check">✓</div>
+
+      <div class="comparison-card-header">
+        <div>
+          <h4>Ruta Alternativa 2</h4>
+          <p>Calidad ambiental regular</p>
+        </div>
+        <strong>38 min</strong>
+      </div>
+
+      <div class="comparison-metrics">
+        <div>
+          <span>📍</span>
+          <strong>5.2 km</strong>
+          <p>Distancia</p>
+        </div>
+
+        <div>
+          <span>☁️</span>
+          <strong>AQI 51</strong>
+          <p>Moderado</p>
+        </div>
+
+        <div>
+          <span>🌫️</span>
+          <strong>PM2.5</strong>
+          <p>22 µg/m³</p>
+        </div>
+
+        <div>
+          <span>🌾</span>
+          <strong>PM10</strong>
+          <p>40 µg/m³</p>
+        </div>
+
+        <div>
+          <span>🌿</span>
+          <strong>Polen</strong>
+          <p>Bajo</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="comparison-card risky-comparison">
+      <div class="comparison-check gray-check">✓</div>
+
+      <div class="comparison-card-header">
+        <div>
+          <h4>Ruta Alternativa 3</h4>
+          <p>Ruta rápida con mayor contaminación</p>
+        </div>
+        <strong>18 min</strong>
+      </div>
+
+      <div class="comparison-metrics">
+        <div>
+          <span>📍</span>
+          <strong>3.5 km</strong>
+          <p>Distancia</p>
+        </div>
+
+        <div>
+          <span>☁️</span>
+          <strong>AQI 82</strong>
+          <p>Insalubre</p>
+        </div>
+
+        <div>
+          <span>🌫️</span>
+          <strong>PM2.5</strong>
+          <p>32 µg/m³</p>
+        </div>
+
+        <div>
+          <span>🌾</span>
+          <strong>PM10</strong>
+          <p>35 µg/m³</p>
+        </div>
+
+        <div>
+          <span>🌿</span>
+          <strong>Polen</strong>
+          <p>Bajo</p>
+        </div>
+      </div>
+    </article>
+
+  </div>
+
+  <div class="comparison-note">
+    <h4>Mejor opción recomendada</h4>
+    <p>
+      La Ruta Recomendada presenta menor AQI, menor PM2.5 y menor exposición a partículas.
+      Por eso EcoRuta la resalta como la opción más saludable.
+    </p>
+  </div>
+
+  <div class="comparison-actions">
+    <button id="btnIniciarRutaComparada">Iniciar recorrido</button>
+    <button id="btnVolverComparacion">Volver a rutas</button>
+  </div>
+</div>
+<!-- Fin Pantalla comparación de rutas - US04 -->
+
       <!-- Pantalla sin resultados - US02 -->
        <div class="rutas-no-results hidden-route-screen" id="screenSinResultados">
         <div class="no-results-icon">🗺️</div>
@@ -516,7 +682,7 @@
     </div>
   </div>
 </section>
-<!-- Fin Sección Rutas - US01, US02 y US03 -->
+<!-- Fin Sección Rutas - US01, US02, US03 y US04 -->
 
 <!-- Sección Funcionalidades -->
 

@@ -191,7 +191,7 @@ benefitCards.forEach(function (card, index) {
 });
 
 /* =========================
-   Rutas - US01, US02 y US03
+   Rutas - US01, US02, US03 y US04
 ========================= */
 
 (() => {
@@ -208,6 +208,7 @@ benefitCards.forEach(function (card, index) {
   const screenFiltros = document.getElementById('screenFiltros');
   const screenSinResultados = document.getElementById('screenSinResultados');
   const screenRutaEnCurso = document.getElementById('screenRutaEnCurso');
+  const screenCompararRutas = document.getElementById('screenCompararRutas');
 
   const origenTexto = document.getElementById('origenTexto');
   const destinoTexto = document.getElementById('destinoTexto');
@@ -229,6 +230,10 @@ benefitCards.forEach(function (card, index) {
   const btnCerrarFiltros = document.getElementById('btnCerrarFiltros');
   const btnBuscarOtrasRutas = document.getElementById('btnBuscarOtrasRutas');
   const btnVolverDesdeSinResultados = document.getElementById('btnVolverDesdeSinResultados');
+
+  const btnCompararRutas = document.getElementById('btnCompararRutas');
+  const btnIniciarRutaComparada = document.getElementById('btnIniciarRutaComparada');
+  const btnVolverComparacion = document.getElementById('btnVolverComparacion');
 
   const environmentAlertModal = document.getElementById('environmentAlertModal');
   const recalculatingBox = document.getElementById('recalculatingBox');
@@ -279,6 +284,7 @@ benefitCards.forEach(function (card, index) {
     if (screenFiltros) screenFiltros.style.display = 'none';
     if (screenSinResultados) screenSinResultados.style.display = 'none';
     if (screenRutaEnCurso) screenRutaEnCurso.style.display = 'none';
+    if (screenCompararRutas) screenCompararRutas.style.display = 'none';
   }
 
   function validarOrigenDestino() {
@@ -373,6 +379,19 @@ benefitCards.forEach(function (card, index) {
     if (screenRutaPreferida) {
       screenRutaPreferida.style.display = 'block';
       screenRutaPreferida.scrollIntoView({
+        behavior: 'smooth',
+        block: 'center'
+      });
+    }
+  }
+
+  function mostrarComparacionRutas() {
+    activarNavRutas();
+    ocultarPantallasSecundarias();
+
+    if (screenCompararRutas) {
+      screenCompararRutas.style.display = 'block';
+      screenCompararRutas.scrollIntoView({
         behavior: 'smooth',
         block: 'center'
       });
@@ -495,6 +514,10 @@ benefitCards.forEach(function (card, index) {
     btnRutaEspecifica.addEventListener('click', mostrarPantallaRutaPreferida);
   }
 
+  if (btnCompararRutas) {
+    btnCompararRutas.addEventListener('click', mostrarComparacionRutas);
+  }
+
   if (btnVolverRutas) {
     btnVolverRutas.addEventListener('click', volverAOpciones);
   }
@@ -505,6 +528,14 @@ benefitCards.forEach(function (card, index) {
 
   if (btnIniciarRutaPreferida) {
     btnIniciarRutaPreferida.addEventListener('click', iniciarRutaEnCurso);
+  }
+
+  if (btnIniciarRutaComparada) {
+    btnIniciarRutaComparada.addEventListener('click', iniciarRutaEnCurso);
+  }
+
+  if (btnVolverComparacion) {
+    btnVolverComparacion.addEventListener('click', volverAOpciones);
   }
 
   if (btnAplicarFiltros) {
