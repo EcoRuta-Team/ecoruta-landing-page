@@ -1641,6 +1641,283 @@ Sección Rutas - US01
     border: 2px solid #247b3f;
 }
 
+/* =========================
+US02 - Filtros de contaminación
+========================= */
+
+.route-actions-row {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 12px;
+    align-items: center;
+}
+
+.route-filter-btn {
+    border: none;
+    border-radius: 999px;
+    padding: 14px 20px;
+    background-color: #ffffff;
+    color: #247b3f;
+    border: 2px solid #247b3f;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 900;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.route-filter-btn:hover {
+    background-color: #d8efd7;
+    transform: translateY(-2px);
+}
+
+.filter-success-message {
+    display: none;
+    padding: 18px;
+    border-radius: 18px;
+    border: 2px solid #22c55e;
+    background-color: #ffffff;
+    color: #16663c;
+}
+
+.filter-success-message strong {
+    display: block;
+    color: #247b3f;
+    font-size: 18px;
+    font-weight: 900;
+    margin-bottom: 6px;
+}
+
+.filter-success-message p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.6;
+    font-weight: 600;
+}
+
+.rutas-filter-panel,
+.rutas-no-results {
+    background-color: rgba(255, 255, 255, 0.96);
+    border: 1px solid #cfded0;
+    border-radius: 28px;
+    box-shadow: 0 14px 34px rgba(38, 82, 50, 0.10);
+    padding: 26px;
+}
+
+.filter-panel-header {
+    margin-bottom: 20px;
+}
+
+.filter-panel-header span {
+    display: inline-block;
+    margin-bottom: 8px;
+    padding: 6px 14px;
+    border-radius: 999px;
+    background-color: #d8efd7;
+    color: #247b3f;
+    font-size: 13px;
+    font-weight: 900;
+}
+
+.filter-panel-header h3 {
+    color: #247b3f;
+    font-size: 26px;
+    font-weight: 900;
+    margin-bottom: 6px;
+}
+
+.filter-panel-header p {
+    color: #16663c;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+.filter-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.filter-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    padding: 16px 18px;
+    border-radius: 16px;
+    border: 1.8px solid #16341c;
+    background-color: #ffffff;
+    cursor: pointer;
+}
+
+.filter-item strong {
+    color: #16341c;
+    font-size: 15px;
+    font-weight: 900;
+}
+
+.filter-item p {
+    color: #16663c;
+    font-size: 13px;
+    font-weight: 600;
+    margin-top: 3px;
+}
+
+.filter-item input {
+    display: none;
+}
+
+.toggle-slider {
+    width: 48px;
+    height: 26px;
+    border-radius: 999px;
+    background-color: #999999;
+    position: relative;
+    flex-shrink: 0;
+    transition: background-color 0.2s ease;
+}
+
+.toggle-slider::before {
+    content: "";
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    transition: transform 0.2s ease;
+}
+
+.filter-item input:checked + .toggle-slider {
+    background-color: #2f7d4c;
+}
+
+.filter-item input:checked + .toggle-slider::before {
+    transform: translateX(22px);
+}
+
+.filter-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.filter-actions button {
+    border: none;
+    border-radius: 999px;
+    padding: 14px 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+#btnAplicarFiltros {
+    background-color: #457F4C;
+    color: #ffffff;
+}
+
+#btnFiltroEstricto {
+    background-color: #ffd4d6;
+    color: #d9362b;
+}
+
+#btnCerrarFiltros {
+    background-color: #ffffff;
+    color: #247b3f;
+    border: 2px solid #247b3f;
+}
+
+.rutas-no-results {
+    text-align: center;
+}
+
+.no-results-icon {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 22px;
+    border-radius: 50%;
+    background-color: #d8efd7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 52px;
+}
+
+.rutas-no-results h3 {
+    color: #16341c;
+    font-size: 28px;
+    font-weight: 900;
+    line-height: 1.2;
+    margin-bottom: 14px;
+}
+
+.rutas-no-results > p {
+    max-width: 520px;
+    margin: 0 auto 24px;
+    color: #16663c;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+.no-results-card {
+    max-width: 430px;
+    margin: 0 auto;
+    padding: 22px;
+    border-radius: 22px;
+    background-color: #bff0ca;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.no-results-card label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 12px;
+}
+
+.no-results-card label span {
+    color: #247b3f;
+    font-weight: 900;
+}
+
+.no-results-card input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #16663c;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+
+.no-results-card button {
+    border: none;
+    border-radius: 999px;
+    padding: 14px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+#btnBuscarOtrasRutas {
+    background-color: #2f7d4c;
+    color: #ffffff;
+}
+
+#btnVolverDesdeSinResultados {
+    background-color: #ffffff;
+    color: #16341c;
+}
+
 /* ============================================
    RESPONSIVE DESIGNE
    ============================================ */
@@ -1920,3 +2197,118 @@ flex-direction: column;
     }
 }
 
+/* Responsive US02 - Filtros de contaminación */
+
+@media (max-width: 900px) {
+    .route-actions-row {
+        grid-template-columns: 1fr;
+    }
+
+    .route-filter-btn {
+        width: 100%;
+    }
+
+    .rutas-filter-panel,
+    .rutas-no-results {
+        padding: 22px;
+    }
+
+    .filter-panel-header h3 {
+        font-size: 24px;
+    }
+
+    .filter-item {
+        align-items: center;
+        padding: 14px 16px;
+    }
+
+    .filter-item strong {
+        font-size: 14px;
+    }
+
+    .filter-item p {
+        font-size: 12.5px;
+    }
+
+    .toggle-slider {
+        width: 44px;
+        height: 24px;
+    }
+
+    .toggle-slider::before {
+        width: 16px;
+        height: 16px;
+    }
+
+    .filter-item input:checked + .toggle-slider::before {
+        transform: translateX(20px);
+    }
+
+    .rutas-no-results h3 {
+        font-size: 24px;
+    }
+
+    .no-results-card {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .filter-panel-header h3 {
+        font-size: 21px;
+    }
+
+    .filter-panel-header p {
+        font-size: 13.5px;
+    }
+
+    .filter-list {
+        gap: 10px;
+    }
+
+    .filter-item {
+        gap: 12px;
+        padding: 12px 14px;
+    }
+
+    .filter-item strong {
+        font-size: 13.5px;
+    }
+
+    .filter-item p {
+        font-size: 12px;
+        line-height: 1.4;
+    }
+
+    .filter-actions button {
+        padding: 13px 16px;
+        font-size: 13px;
+    }
+
+    .no-results-icon {
+        width: 95px;
+        height: 95px;
+        font-size: 42px;
+    }
+
+    .rutas-no-results h3 {
+        font-size: 21px;
+    }
+
+    .rutas-no-results > p {
+        font-size: 13.5px;
+    }
+
+    .no-results-card {
+        padding: 18px;
+    }
+
+    .no-results-card label {
+        padding: 11px;
+    }
+
+    .no-results-card button {
+        padding: 13px;
+        font-size: 13px;
+    }
+}
