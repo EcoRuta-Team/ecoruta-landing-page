@@ -28,6 +28,17 @@
                         <span>Inicio</span>
                     </a>
 
+                    <a href="#rutas">
+                        <span class="nav-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M9 18l-6 3V6l6-3 6 3 6-3v15l-6 3-6-3z"/>
+                                <path d="M9 3v15"/>
+                                <path d="M15 6v15"/>
+                            </svg>
+                        </span>
+                        <span>Rutas</span>
+                    </a>
+
                     <a href="#features">
                         <span class="nav-icon" aria-hidden="true">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -127,9 +138,185 @@
     </section>
  <!-- Fin Sección Home -->
 
+<!-- Sección Rutas - US01 -->
+<section id="rutas" class="rutas-section">
+  <div class="rutas-container">
+
+    <div class="rutas-header">
+      <span class="rutas-label">Rutas</span>
+      <h2>Selecciona tu ruta saludable</h2>
+      <p>
+        EcoRuta permite buscar rutas según tu ubicación y destino, comparar la calidad del aire
+        y elegir el trayecto más seguro para reducir la exposición a zonas contaminadas.
+      </p>
+    </div>
+
+    <div class="rutas-content">
+
+      <!-- Pantalla inicial: búsqueda de ruta -->
+      <div class="rutas-phone">
+        <div class="phone-status">
+          <span>9:30</span>
+          <span>● ● ●</span>
+        </div>
+
+        <div class="phone-title">
+          <h3>Rutas</h3>
+          <p>Ingresa tu punto de partida y destino para encontrar rutas saludables.</p>
+        </div>
+
+        <div class="route-form">
+          <label class="route-input" for="rutaOrigen">
+            <span>⊙</span>
+            <input type="text" id="rutaOrigen" placeholder="Ingresa tu ubicación actual">
+          </label>
+
+          <label class="route-input" for="rutaDestino">
+            <span>⌖</span>
+            <input type="text" id="rutaDestino" placeholder="Ingresa tu destino">
+          </label>
+        </div>
+
+        <p class="route-error" id="routeError">
+          Debes ingresar origen y destino para buscar una ruta.
+        </p>
+
+        <button class="route-search-btn" id="btnBuscarRuta">Buscar ruta</button>
+
+        <div class="route-map">
+          <div class="map-zone green-zone"></div>
+          <div class="map-zone orange-zone"></div>
+          <div class="map-zone red-zone"></div>
+          <div class="map-user"></div>
+
+          <div class="map-legend">
+            <strong>Leyenda:</strong>
+            <p><span class="legend-red"></span> Riesgoso</p>
+            <p><span class="legend-orange"></span> Moderado</p>
+            <p><span class="legend-green"></span> Saludable</p>
+            <p><span class="legend-gray"></span> No disponible</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pantalla 2: rutas disponibles -->
+      <div class="rutas-options hidden-route-screen" id="screenRutasOpciones">
+        <div class="routes-result-header">
+          <span>Resultados encontrados</span>
+          <h3>Rutas disponibles</h3>
+          <p>
+            De <strong id="origenTexto">tu ubicación</strong> hacia
+            <strong id="destinoTexto">tu destino</strong>.
+          </p>
+        </div>
+
+        <article class="ruta-option recommended">
+          <div>
+            <h3>Ruta Recomendada <span>(28 min)</span></h3>
+            <p>Variedad de áreas verdes y menor exposición a contaminación.</p>
+            <strong>AQI: 12 Excelente</strong>
+            <strong>PM2.5: 12 µg/m³ Muy bueno</strong>
+          </div>
+          <button class="btnRutaRecomendada">Seleccionar</button>
+        </article>
+
+        <article class="ruta-option moderate">
+          <div>
+            <h3>Ruta alternativa 2 <span>(32 min)</span></h3>
+            <p>Trayecto con escasas áreas verdes y calidad de aire regular.</p>
+            <strong>AQI: 52 Regular</strong>
+            <strong>PM2.5: 22 µg/m³ Moderado</strong>
+          </div>
+          <button class="btnRutaAlternativa">Seleccionar</button>
+        </article>
+
+        <article class="ruta-option risky">
+          <div>
+            <h3>Ruta alternativa 3 <span>(25 min)</span></h3>
+            <p>Ruta más corta, pero con mayor exposición a zonas contaminadas.</p>
+            <strong>AQI: 85 Peligroso</strong>
+            <strong>PM2.5: 32 µg/m³ Moderado</strong>
+          </div>
+          <button class="btnRutaEspecifica">Detalles</button>
+        </article>
+
+        <div class="ruta-alert">
+          <h3>Zona de construcción activa en una ruta alternativa</h3>
+          <p>
+            Se detectó una zona de construcción que puede generar polvo, esmog y riesgo respiratorio.
+            EcoRuta recomienda revisar la información ambiental antes de continuar.
+          </p>
+        </div>
+
+        <button class="route-more-btn" id="btnNuevaBusqueda">Realizar nueva búsqueda</button>
+      </div>
+
+      <!-- Pantalla 3: usuario prefiere una ruta específica -->
+      <div class="ruta-preferida-screen hidden-route-screen" id="screenRutaPreferida">
+        <div class="ruta-preferida-header">
+          <span class="ruta-tag-warning">Ruta elegida por el usuario</span>
+          <h3>Has seleccionado una ruta alternativa</h3>
+          <p>
+            Esta no es la ruta recomendada por EcoRuta, pero puedes continuar si prefieres
+            este trayecto. La información ambiental se mantiene visible para que tomes una
+            decisión informada.
+          </p>
+        </div>
+
+        <div class="ruta-preferida-card">
+          <div>
+            <h3>Ruta alternativa 3 <span>(25 min)</span></h3>
+            <p>Trayecto más corto, pero con menor presencia de áreas verdes.</p>
+          </div>
+
+          <div class="ruta-status risky-status">
+            Riesgo ambiental alto
+          </div>
+        </div>
+
+        <div class="environment-info-grid">
+          <article>
+            <span>AQI</span>
+            <strong>85</strong>
+            <p>Peligroso</p>
+          </article>
+
+          <article>
+            <span>PM2.5</span>
+            <strong>32 µg/m³</strong>
+            <p>Moderado</p>
+          </article>
+
+          <article>
+            <span>Zona crítica</span>
+            <strong>Construcción activa</strong>
+            <p>Posible presencia de polvo y esmog.</p>
+          </article>
+        </div>
+
+        <div class="ruta-preferida-alert">
+          <h4>Recomendación de EcoRuta</h4>
+          <p>
+            Se recomienda tomar la ruta saludable sugerida. Sin embargo, puedes continuar
+            con esta ruta manteniendo visible el estado ambiental durante el recorrido.
+          </p>
+        </div>
+
+        <div class="ruta-preferida-actions">
+          <button id="btnIniciarRutaPreferida">Iniciar recorrido</button>
+          <button id="btnVolverRutas">Ver más rutas</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- Fin Sección Rutas - US01 -->
+
 <!-- Sección Funcionalidades -->
 
-<div class="features-container">
+<section id="features" class="features-section">
+  <div class="features-container">
     <h1>Funcionalidades</h1>
     <p class="features-subtitle">Todo lo que necesitas para respirar mejor en la ciudad</p>
     <p class="features-description">Una plataforma colaborativa que pone la salud respiratoria primero</p>
@@ -171,8 +358,7 @@
             <p>Planifica tu semana con el historial del aire. Compara tendencias y descarga reportes detallados.</p>
         </article>
     </div>
-</div>
-
+  </div>
 </section>
 <!-- Fin Sección Funcionalidades -->
 
