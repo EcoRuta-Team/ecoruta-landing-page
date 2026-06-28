@@ -1011,6 +1011,264 @@
 </section>
 <!-- Fin Sección Rutas - US12 -->
 
+<!-- Sección Rutas - US13 -->
+<section id="rutas-us13" class="us13-section">
+  <div class="us13-container">
+
+    <div class="us13-header">
+      <span class="us13-label">US13 - Rutas</span>
+      <h2>Guardado de rutas frecuentes de aire limpio</h2>
+      <p>
+        EcoRuta permite guardar trayectos con buena calidad de aire para que el usuario
+        pueda repetirlos en sus próximos entrenamientos sin configurarlos desde cero.
+      </p>
+    </div>
+
+    <div class="us13-grid">
+
+      <article class="us13-panel">
+        <div class="us13-title">
+          <span class="us13-icon">🔖</span>
+          <div>
+            <h3>Escenario 1: Guardar nueva ruta favorita</h3>
+            <p>
+              El usuario termina un recorrido excelente, presiona guardar favorito,
+              asigna un nombre y la ruta se almacena en su biblioteca personal.
+            </p>
+          </div>
+        </div>
+
+        <div class="us13-navigation-phone">
+          <div class="us13-nav-top">
+            <span>↑</span>
+            <div>
+              <small>en dirección a</small>
+              <strong>Parque de las Leyendas</strong>
+            </div>
+          </div>
+
+          <div class="us13-live-map">
+            <div class="us13-green-area one"></div>
+            <div class="us13-green-area two"></div>
+            <div class="us13-green-area three"></div>
+            <div class="us13-route-line"></div>
+            <div class="us13-blue-dot"></div>
+            <div class="us13-red-pin">📍</div>
+
+            <div class="us13-save-modal">
+              <h4>Nueva ruta favorita</h4>
+              <p>Agrega un nombre para guardar este trayecto.</p>
+              <input type="text" value="Ruta Parque de las Leyendas" readonly>
+              <div>
+                <button>Cancelar</button>
+                <button class="active">OK</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="us13-nav-bottom">
+            <button>✕<span>Cancelar</span></button>
+            <div>
+              <strong>29 min</strong>
+              <small>19km · 10:09 a.m.</small>
+            </div>
+            <button class="saved">▣<span>Guardar ruta</span></button>
+          </div>
+        </div>
+
+        <div class="us13-result">
+          <h4>Resultado del escenario</h4>
+          <p>
+            El sistema solicita un nombre para la ruta y luego la registra como favorita
+            dentro de la biblioteca personal del usuario.
+          </p>
+        </div>
+      </article>
+
+      <article class="us13-panel">
+        <div class="us13-title">
+          <span class="us13-icon">✅</span>
+          <div>
+            <h3>Escenario 2: Acceder a ruta guardada</h3>
+            <p>
+              El usuario ingresa a Mis Rutas, revisa sus trayectos guardados y puede iniciar
+              la navegación con un solo clic.
+            </p>
+          </div>
+        </div>
+
+        <div class="us13-saved-routes-phone">
+          <div class="us13-status">
+            <span>9:30</span>
+            <span>● ● ●</span>
+          </div>
+
+          <div class="us13-list-header">
+            <span>‹</span>
+            <div>
+              <h4>Mis Rutas</h4>
+              <p>Selecciona una ruta para consultar sus detalles, modificarla o iniciar el recorrido.</p>
+            </div>
+            <span>🗑</span>
+          </div>
+
+          <div class="us13-route-list">
+            <div class="us13-saved-route active">
+              <span>✓</span>
+              <div>
+                <strong>Ruta Parque de las Leyendas</strong>
+                <p>15 min recorrido · AQI 22 Bueno</p>
+              </div>
+              <button>Ver Detalle</button>
+            </div>
+
+            <div class="us13-saved-route">
+              <span>✓</span>
+              <div>
+                <strong>Ruta UPC San Miguel</strong>
+                <p>28 min recorrido · AQI 12 Excelente</p>
+              </div>
+              <button>Ver Detalle</button>
+            </div>
+
+            <div class="us13-saved-route">
+              <span>✓</span>
+              <div>
+                <strong>Ruta UPC Monterrico</strong>
+                <p>58 min recorrido · AQI 52 Moderado</p>
+              </div>
+              <button>Ver Detalle</button>
+            </div>
+
+            <div class="us13-saved-route">
+              <span>✓</span>
+              <div>
+                <strong>Ruta Trabajo</strong>
+                <p>70 min recorrido · AQI 52 Moderado</p>
+              </div>
+              <button>Ver Detalle</button>
+            </div>
+
+            <div class="us13-saved-route">
+              <span>✓</span>
+              <div>
+                <strong>Ruta Parque Kennedy</strong>
+                <p>23 min recorrido · AQI 22 Bueno</p>
+              </div>
+              <button>Ver Detalle</button>
+            </div>
+          </div>
+
+          <button class="us13-outline-button">Editar ruta</button>
+          <button class="us13-main-button">Iniciar recorrido</button>
+        </div>
+
+        <div class="us13-result">
+          <h4>Resultado del escenario</h4>
+          <p>
+            La ruta guardada aparece en la biblioteca personal y muestra si el aire sigue limpio
+            antes de iniciar el entrenamiento.
+          </p>
+        </div>
+      </article>
+
+      <article class="us13-panel us13-wide-panel">
+        <div class="us13-title">
+          <span class="us13-icon">⚠️</span>
+          <div>
+            <h3>Escenario 3: Actualización de estado ambiental</h3>
+            <p>
+              Si una ruta guardada presenta alta contaminación, EcoRuta advierte al usuario,
+              sugiere no tomarla y recomienda desviar el trayecto.
+            </p>
+          </div>
+        </div>
+
+        <div class="us13-warning-layout">
+          <div class="us13-saved-routes-phone compact">
+            <div class="us13-list-header">
+              <span>‹</span>
+              <div>
+                <h4>Mis Rutas</h4>
+                <p>Selecciona una ruta guardada.</p>
+              </div>
+              <span>🗑</span>
+            </div>
+
+            <div class="us13-route-list">
+              <div class="us13-saved-route active">
+                <span>✓</span>
+                <div>
+                  <strong>Ruta Parque de las Leyendas</strong>
+                  <p>15 min recorrido · AQI 22 Bueno</p>
+                </div>
+                <button>Ver Detalle</button>
+              </div>
+
+              <div class="us13-saved-route danger">
+                <span>!</span>
+                <div>
+                  <strong>Ruta UPC Monterrico</strong>
+                  <p>AQI 82 Alto · contaminación elevada</p>
+                </div>
+                <button>Ver Detalle</button>
+              </div>
+            </div>
+
+            <button class="us13-main-button">Iniciar recorrido</button>
+          </div>
+
+          <div class="us13-navigation-phone compact">
+            <div class="us13-nav-top">
+              <span>↑</span>
+              <div>
+                <small>en dirección a</small>
+                <strong>UPC Monterrico</strong>
+              </div>
+            </div>
+
+            <div class="us13-live-map">
+              <div class="us13-green-area one"></div>
+              <div class="us13-polluted-area"></div>
+              <div class="us13-route-line"></div>
+              <div class="us13-blue-dot"></div>
+
+              <div class="us13-warning-modal">
+                <div>⚠️</div>
+                <h4>Actualización ambiental</h4>
+                <p>
+                  La contaminación aumentó significativamente en tu ruta. Se sugiere desviar el tramo.
+                </p>
+                <button>Ignorar</button>
+                <button class="active">Desviar ruta (+100m)</button>
+              </div>
+            </div>
+
+            <div class="us13-nav-bottom">
+              <button>✕<span>Cancelar</span></button>
+              <div>
+                <strong>29 min</strong>
+                <small>19km · 10:08 a.m.</small>
+              </div>
+              <button>▣<span>Guardar ruta</span></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="us13-result">
+          <h4>Resultado del escenario</h4>
+          <p>
+            Al detectar niveles altos de contaminación, la app evita que el usuario inicie una ruta riesgosa
+            sin antes mostrar una recomendación de desvío.
+          </p>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+<!-- Fin Sección Rutas - US13 -->
+
 <!-- Sección Funcionalidades -->
 
 <section id="features" class="features-section">
