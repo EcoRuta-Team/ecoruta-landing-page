@@ -862,6 +862,155 @@
 </section>
 <!-- Fin Sección Rutas - US11 -->
 
+<!-- Sección Rutas - US12 -->
+<section id="rutas-us12" class="us12-section">
+  <div class="us12-container">
+
+    <div class="us12-header">
+      <span class="us12-label">US12 - Rutas</span>
+      <h2>Alerta de zona de construcción en la planificación</h2>
+      <p>
+        EcoRuta advierte al usuario cuando existe una obra vial activa dentro de su trayecto,
+        mostrando el riesgo respiratorio y ofreciendo una ruta alternativa para evitar polvo,
+        escombros y contaminación.
+      </p>
+    </div>
+
+    <div class="us12-grid">
+
+      <article class="us12-panel">
+        <div class="us12-title">
+          <span class="us12-icon">⚠️</span>
+          <div>
+            <h3>Escenario 1: Advertencia de obra en ruta</h3>
+            <p>
+              El sistema detecta una zona de construcción activa y muestra una alerta antes de iniciar el recorrido.
+            </p>
+          </div>
+        </div>
+
+        <div class="us12-phone-card">
+          <div class="us12-status">
+            <span>9:30</span>
+            <span>● ● ●</span>
+          </div>
+
+          <div class="us12-phone-heading">
+            <span>‹</span>
+            <h4>Rutas</h4>
+          </div>
+
+          <div class="us12-inputs">
+            <p>⊙ Universidad UPC</p>
+            <p>⌖ Parque San Miguel</p>
+          </div>
+
+          <div class="us12-small-map">
+            <div class="us12-original-route"></div>
+            <div class="us12-construction-route"></div>
+            <div class="us12-warning-symbol">⚠</div>
+            <div class="us12-map-pin start">●</div>
+            <div class="us12-map-pin end">📍</div>
+          </div>
+
+          <div class="us12-map-legend">
+            <span class="us12-red-line"></span> Ruta original
+            <span class="us12-dotted-line"></span> Zona de construcción
+          </div>
+
+          <div class="us12-risk-card">
+            <div>
+              <h4>Ruta alternativa 3 <span>(25 min)</span></h4>
+              <p>Sin áreas verdes</p>
+              <strong>AQI: 85 Peligroso</strong>
+              <strong>PM2.5: 32 µg/m³ Moderado</strong>
+            </div>
+            <button>Detalles</button>
+          </div>
+
+          <div class="us12-alert-card">
+            <h4>Zona de construcción activa en tu ruta</h4>
+            <p>
+              Se detectó una zona de construcción en el tramo seleccionado que puede generar polvo y riesgo respiratorio.
+            </p>
+          </div>
+
+          <button class="us12-outline-button">Iniciar recorrido</button>
+          <button class="us12-main-button">Ver más rutas</button>
+        </div>
+      </article>
+
+      <article class="us12-panel">
+        <div class="us12-title">
+          <span class="us12-icon">🚧</span>
+          <div>
+            <h3>Escenario 2: Desvío automático</h3>
+            <p>
+              El usuario presiona el botón para desviar la ruta y EcoRuta recalcula un camino más seguro.
+            </p>
+          </div>
+        </div>
+
+        <div class="us12-navigation-phone">
+          <div class="us12-nav-top">
+            <span>↑</span>
+            <div>
+              <small>en dirección a</small>
+              <strong>Parque de las Leyendas</strong>
+            </div>
+          </div>
+
+          <div class="us12-live-map">
+            <div class="us12-green-zone one"></div>
+            <div class="us12-green-zone two"></div>
+            <div class="us12-green-zone three"></div>
+            <div class="us12-dust-zone"></div>
+
+            <div class="us12-live-route"></div>
+            <div class="us12-new-route"></div>
+
+            <div class="us12-blue-dot"></div>
+            <div class="us12-red-pin">📍</div>
+            <div class="us12-work-marker">🚧</div>
+
+            <div class="us12-modal-alert">
+              <div class="us12-modal-icon">⚠</div>
+              <h4>Zona de construcción activa</h4>
+              <p>
+                Se detectó una zona de construcción en tu trayecto que puede generar polvo y riesgo respiratorio.
+              </p>
+              <button>Ignorar</button>
+              <button class="active">Desviar ruta (+100m)</button>
+            </div>
+
+            <div class="us12-recalculating">Recalculando ruta...</div>
+            <div class="us12-updated-message">¡Se actualizó el tiempo estimado!</div>
+          </div>
+
+          <div class="us12-nav-bottom">
+            <button>✕<span>Cancelar</span></button>
+            <div>
+              <strong>32 min</strong>
+              <small>19km · 10:13 a.m.</small>
+            </div>
+            <button>▣<span>Guardar ruta</span></button>
+          </div>
+        </div>
+
+        <div class="us12-result">
+          <h4>Resultado del escenario</h4>
+          <p>
+            Al elegir el desvío, EcoRuta traza un camino alternativo y aleja al usuario al menos
+            100 metros de la zona de polvo, actualizando el tiempo estimado de llegada.
+          </p>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+<!-- Fin Sección Rutas - US12 -->
+
 <!-- Sección Funcionalidades -->
 
 <section id="features" class="features-section">
