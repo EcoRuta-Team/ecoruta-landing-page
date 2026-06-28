@@ -127,6 +127,192 @@
     </section>
  <!-- Fin Sección Home -->
 
+ <!-- Sección: Inicio - Localizador de Estaciones (US-21) -->
+<section class="stations-section" id="estaciones">
+    <div class="container">
+
+        <!-- Hero -->
+        <div class="stations-hero">
+            <div class="stations-hero-text">
+                <span class="stations-hero-tag">📍 Datos en tiempo real</span>
+                <h2 class="stations-title">Estaciones de Monitoreo Cercanas</h2>
+                <p class="stations-subtitle">Consulta las estaciones de calidad del aire más cercanas a tu ubicación y conoce qué estación te está afectando ahora mismo.</p>
+            </div>
+            <div class="stations-hero-cards">
+                <div class="stations-hero-item">
+                    <div class="stations-hero-icon">📡</div>
+                    <div>
+                        <strong>Red de sensores</strong>
+                        <p>Más de 20 estaciones activas monitoreando Lima en tiempo real.</p>
+                    </div>
+                </div>
+                <div class="stations-hero-item">
+                    <div class="stations-hero-icon">📍</div>
+                    <div>
+                        <strong>Ordenadas por cercanía</strong>
+                        <p>La estación más cercana a ti aparece siempre primero.</p>
+                    </div>
+                </div>
+                <div class="stations-hero-item">
+                    <div class="stations-hero-icon">🔄</div>
+                    <div>
+                        <strong>Actualización constante</strong>
+                        <p>Datos actualizados cada 3 minutos desde cada estación.</p>
+                    </div>
+                </div>
+                <div class="stations-hero-item">
+                    <div class="stations-hero-icon">🔍</div>
+                    <div>
+                        <strong>Búsqueda por distrito</strong>
+                        <p>Sin GPS, filtra las estaciones escribiendo tu distrito.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="stations-demo">
+
+            <!-- Tarjeta principal -->
+            <div class="stations-card">
+
+                <h3 class="stations-card-title">Estaciones de monitoreo</h3>
+                <p class="stations-card-subtitle">Consulta las estaciones de calidad del aire más cercanas a tu ubicación</p>
+
+                <!-- Ubicación -->
+                <div class="stations-location">
+                    <strong>Ubicación actual:</strong>
+                    <div class="stations-location-select">
+                        <span class="stations-location-dot"></span>
+                        <select class="stations-select" id="stations-district">
+                            <option value="lince">Lince</option>
+                            <option value="miraflores">Miraflores</option>
+                            <option value="san-isidro">San Isidro</option>
+                            <option value="jesus-maria">Jesús María</option>
+                            <option value="san-borja">San Borja</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Lista estaciones -->
+                <p class="stations-nearby-label">Estaciones cercanas:</p>
+
+                <div class="stations-list" id="stations-list">
+
+                    <div class="station-item">
+                        <div class="station-logo senamhi">
+                            <span>S</span>
+                        </div>
+                        <div class="station-info">
+                            <strong>SENAMHI Lince</strong>
+                            <span class="station-distance">📍 Distancia: 350m</span>
+                            <span class="station-update">Última actualización: Hace 3 min</span>
+                        </div>
+                        <div class="station-aqi good">
+                            <span class="station-smile">😊</span>
+                            <span class="station-aqi-value">AQI actual 22</span>
+                            <span class="station-aqi-label">Saludable</span>
+                        </div>
+                    </div>
+
+                    <div class="station-item">
+                        <div class="station-logo ecoruta">
+                            <span>E</span>
+                        </div>
+                        <div class="station-info">
+                            <strong>EcoRuta Lince</strong>
+                            <span class="station-distance">📍 Distancia: 370m</span>
+                            <span class="station-update">Última actualización: Hace 3 min</span>
+                        </div>
+                        <div class="station-aqi good">
+                            <span class="station-smile">😊</span>
+                            <span class="station-aqi-value">AQI actual 22</span>
+                            <span class="station-aqi-label">Saludable</span>
+                        </div>
+                    </div>
+
+                    <div class="station-item">
+                        <div class="station-logo ecoruta">
+                            <span>E</span>
+                        </div>
+                        <div class="station-info">
+                            <strong>EcoRuta Jesús María</strong>
+                            <span class="station-distance">📍 Distancia: 1.2 km</span>
+                            <span class="station-update">Última actualización: Hace 3 min</span>
+                        </div>
+                        <div class="station-aqi good">
+                            <span class="station-smile">😊</span>
+                            <span class="station-aqi-value">AQI actual 38</span>
+                            <span class="station-aqi-label">Bueno</span>
+                        </div>
+                    </div>
+
+                    <div class="station-item">
+                        <div class="station-logo ecoruta">
+                            <span>E</span>
+                        </div>
+                        <div class="station-info">
+                            <strong>EcoRuta San Isidro</strong>
+                            <span class="station-distance">📍 Distancia: 2.4 km</span>
+                            <span class="station-update">Última actualización: Hace 3 min</span>
+                        </div>
+                        <div class="station-aqi good">
+                            <span class="station-smile">😊</span>
+                            <span class="station-aqi-value">AQI actual 31</span>
+                            <span class="station-aqi-label">Bueno</span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Escenarios -->
+            <div class="stations-scenarios">
+
+                <h3 class="stations-scenarios-title">Simula los escenarios</h3>
+
+                <div class="stations-scenario-item active" id="ss-item-1" onclick="showStationScenario(1)">
+                    <div class="stations-scenario-dot gps-on"></div>
+                    <div class="stations-scenario-content">
+                        <span class="stations-scenario-time">📍 GPS Activo</span>
+                        <h4>Listado por cercanía</h4>
+                        <p>La app detecta tu ubicación y ordena las estaciones desde la más cercana. Muestra la distancia exacta en metros o kilómetros.</p>
+                        <span class="stations-scenario-badge gps-on">GPS activo · Ordenado por distancia</span>
+                    </div>
+                </div>
+
+                <div class="stations-scenario-item" id="ss-item-2" onclick="showStationScenario(2)">
+                    <div class="stations-scenario-dot gps-off"></div>
+                    <div class="stations-scenario-content">
+                        <span class="stations-scenario-time">📵 GPS Apagado</span>
+                        <h4>Búsqueda manual por distrito</h4>
+                        <p>Sin GPS, el sistema ordena las estaciones alfabéticamente y solicita al usuario escribir su distrito para filtrar los resultados.</p>
+                        <span class="stations-scenario-badge gps-off">GPS inactivo · Filtrar por distrito</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+<!-- Fin Sección Localizador Estaciones (US-21) -->
+
+<!-- Modal GPS apagado US-21 -->
+<div class="stations-gps-modal" id="stations-gps-modal">
+    <div class="stations-gps-modal-content">
+        <div class="stations-gps-icon">📵</div>
+        <h3>GPS no disponible</h3>
+        <p>No pudimos detectar tu ubicación. Escribe tu distrito para encontrar las estaciones más cercanas.</p>
+        <input type="text" class="stations-gps-input" id="stations-district-input" placeholder="Ej: Lince, Miraflores...">
+        <div class="stations-gps-buttons">
+            <button class="stations-gps-btn-cancel" onclick="closeStationsModal()">Cancelar</button>
+            <button class="stations-gps-btn-search" onclick="closeStationsModal()">Buscar</button>
+        </div>
+    </div>
+</div>
+
 <!-- Sección Funcionalidades -->
 
 <div class="features-container">
