@@ -1269,6 +1269,230 @@
 </section>
 <!-- Fin Sección Rutas - US13 -->
 
+<!-- Sección Rutas - US14 -->
+<section id="rutas-us14" class="us14-section">
+  <div class="us14-container">
+
+    <div class="us14-header">
+      <span class="us14-label">US14 - Rutas</span>
+      <h2>Comparativa de Tiempo vs Salud</h2>
+      <p>
+        EcoRuta permite comparar el tiempo estimado de llegada frente a la calidad del aire,
+        ayudando al usuario a decidir si prioriza llegar rápido o cuidar su salud respiratoria.
+      </p>
+    </div>
+
+    <div class="us14-grid">
+
+      <article class="us14-panel">
+        <div class="us14-title">
+          <span class="us14-icon">⚖️</span>
+          <div>
+            <h3>Escenario 1: Comparación directa en pantalla</h3>
+            <p>
+              El usuario busca una ruta hacia la universidad y el sistema muestra varias opciones,
+              comparando tiempo, AQI, PM2.5 y nivel de exposición.
+            </p>
+          </div>
+        </div>
+
+        <div class="us14-phone-card">
+          <div class="us14-status">
+            <span>9:30</span>
+            <span>● ● ●</span>
+          </div>
+
+          <div class="us14-phone-heading">
+            <span>‹</span>
+            <h4>Rutas</h4>
+          </div>
+
+          <div class="us14-inputs">
+            <p>⊙ Av. Arequipa 2032</p>
+            <p>⌖ Universidad UPC San Isidro</p>
+          </div>
+
+          <div class="us14-map">
+            <div class="us14-green-zone one"></div>
+            <div class="us14-orange-zone one"></div>
+            <div class="us14-red-zone one"></div>
+            <div class="us14-blue-dot"></div>
+
+            <div class="us14-map-legend">
+              <strong>Leyenda:</strong>
+              <p><span class="risk"></span> Riesgoso</p>
+              <p><span class="moderate"></span> Moderado</p>
+              <p><span class="safe"></span> Saludable</p>
+              <p><span class="gray"></span> No disponible</p>
+            </div>
+          </div>
+
+          <div class="us14-routes-list">
+            <div class="us14-route-card healthy">
+              <div class="us14-route-marker">1</div>
+              <div>
+                <h4>Ruta Recomendada <span>(28 min)</span></h4>
+                <p>Variedad de áreas verdes</p>
+                <strong>AQI: 12 Excelente</strong>
+                <strong>PM2.5: 12 µg/m³ Muy bueno</strong>
+              </div>
+              <button>Seleccionar</button>
+            </div>
+
+            <div class="us14-route-card regular">
+              <div class="us14-route-marker">2</div>
+              <div>
+                <h4>Ruta alternativa 2 <span>(32 min)</span></h4>
+                <p>Escasas áreas verdes</p>
+                <strong>AQI: 52 Regular</strong>
+                <strong>PM2.5: 22 µg/m³ Moderado</strong>
+              </div>
+              <button>Seleccionar</button>
+            </div>
+
+            <div class="us14-route-card risky">
+              <div class="us14-route-marker">3</div>
+              <div>
+                <h4>Ruta alternativa 3 <span>(25 min)</span></h4>
+                <p>Sin áreas verdes</p>
+                <strong>AQI: 85 Peligroso</strong>
+                <strong>PM2.5: 32 µg/m³ Moderado</strong>
+              </div>
+              <button>Seleccionar</button>
+            </div>
+          </div>
+
+          <button class="us14-main-button">Comparar rutas</button>
+        </div>
+
+        <div class="us14-comparison-box">
+          <h4>Tarjeta comparativa</h4>
+          <div class="us14-comparison-table">
+            <div>
+              <strong>Ruta saludable</strong>
+              <span>28 min</span>
+              <p>AQI 12 · baja toxicidad</p>
+            </div>
+            <div>
+              <strong>Ruta rápida</strong>
+              <span>25 min</span>
+              <p>AQI 85 · alta toxicidad</p>
+            </div>
+          </div>
+          <p>
+            Aunque la ruta rápida ahorra 3 minutos, expone al usuario a mayor contaminación.
+            EcoRuta recomienda la ruta saludable.
+          </p>
+        </div>
+      </article>
+
+      <article class="us14-panel">
+        <div class="us14-title">
+          <span class="us14-icon">😷</span>
+          <div>
+            <h3>Escenario 2: Elección de ruta rápida</h3>
+            <p>
+              El usuario está apurado por una clase, activa el modo veloz y selecciona la ruta más rápida.
+              El sistema inicia el viaje y recomienda usar mascarilla.
+            </p>
+          </div>
+        </div>
+
+        <div class="us14-fast-phone">
+          <div class="us14-status">
+            <span>9:30</span>
+            <span>● ● ●</span>
+          </div>
+
+          <div class="us14-phone-heading">
+            <span>‹</span>
+            <h4>Rutas</h4>
+          </div>
+
+          <div class="us14-inputs">
+            <p>⊙ Av. Arequipa 2032</p>
+            <p>⌖ Universidad UPC San Isidro</p>
+          </div>
+
+          <div class="us14-route-preview">
+            <div class="us14-preview-line safe-line"></div>
+            <div class="us14-preview-line fast-line"></div>
+            <div class="us14-preview-pin start"></div>
+            <div class="us14-preview-pin end">📍</div>
+          </div>
+
+          <div class="us14-speed-mode">
+            <strong>Activar modo veloz</strong>
+            <span></span>
+          </div>
+
+          <div class="us14-routes-list">
+            <div class="us14-route-card healthy">
+              <div class="us14-route-marker">1</div>
+              <div>
+                <h4>Ruta Recomendada <span>(28 min)</span></h4>
+                <p>Menor exposición y mejor aire</p>
+                <strong>AQI: 12 Excelente</strong>
+              </div>
+              <button>Seleccionar</button>
+            </div>
+
+            <div class="us14-route-card risky selected">
+              <div class="us14-route-marker">3</div>
+              <div>
+                <h4>Ruta más rápida <span>(25 min)</span></h4>
+                <p>Mayor exposición a contaminación</p>
+                <strong>AQI: 85 Peligroso</strong>
+              </div>
+              <button>Seleccionada</button>
+            </div>
+          </div>
+
+          <button class="us14-main-button">Iniciar ruta rápida</button>
+        </div>
+
+        <div class="us14-navigation-phone">
+          <div class="us14-nav-top">
+            <span>↑</span>
+            <div>
+              <small>en dirección a</small>
+              <strong>Universidad UPC San Isidro</strong>
+            </div>
+          </div>
+
+          <div class="us14-live-map">
+            <div class="us14-live-red-zone"></div>
+            <div class="us14-live-orange-zone"></div>
+            <div class="us14-fast-route-line"></div>
+            <div class="us14-blue-position"></div>
+            <div class="us14-destination-pin">📍</div>
+            <div class="us14-mask-alert">¡Recuerda usar mascarilla!</div>
+          </div>
+
+          <div class="us14-nav-bottom">
+            <button>✕<span>Cancelar</span></button>
+            <div>
+              <strong>25 min</strong>
+              <small>15km · 10:13 a.m.</small>
+            </div>
+            <button>▣<span>Guardar ruta</span></button>
+          </div>
+        </div>
+
+        <div class="us14-result">
+          <h4>Resultado del escenario</h4>
+          <p>
+            Al elegir la ruta veloz, EcoRuta inicia el recorrido, pero advierte que la ruta tiene
+            mayor contaminación y recomienda usar mascarilla.
+          </p>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+<!-- Fin Sección Rutas - US14 -->
+
 <!-- Sección Funcionalidades -->
 
 <section id="features" class="features-section">
