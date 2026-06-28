@@ -1295,7 +1295,368 @@ flex-direction: column;
     gap: 22px;
   }
  } 
+/* =============================
+   US-16: Sección Inicio - AQI
+   ============================= */
 
+.aqi-section {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    padding: 80px 48px;
+    background: transparent;
+    text-align: center;
+}
+
+.aqi-section .container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.aqi-header {
+    margin-bottom: 40px;
+}
+
+.aqi-title {
+    font-family: var(--font-heading);
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: var(--color-heading);
+    margin-bottom: 10px;
+}
+
+.aqi-subtitle {
+    font-size: 1rem;
+    color: var(--color-text-muted);
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* Tabs */
+.aqi-scenario-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 36px;
+    flex-wrap: wrap;
+}
+
+.aqi-tab {
+    padding: 10px 22px;
+    border: 2px solid var(--color-button);
+    background: white;
+    color: var(--color-button);
+    border-radius: 24px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 600;
+    font-family: var(--font-heading);
+    transition: all 0.3s ease;
+}
+
+.aqi-tab.active,
+.aqi-tab:hover {
+    background: var(--color-button);
+    color: white;
+}
+
+/* Layout demo */
+.aqi-demo {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Tarjeta AQI */
+.aqi-card {
+    background: rgba(255, 255, 255, 0.94);
+    border-radius: 24px;
+    padding: 32px 28px;
+    box-shadow: 0 8px 32px rgba(31, 80, 45, 0.12);
+    width: 280px;
+    text-align: center;
+    border: 1px solid var(--color-primary-light);
+}
+
+.aqi-location {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    color: var(--color-text-muted);
+    font-size: 0.85rem;
+    margin-bottom: 24px;
+}
+
+/* Círculo AQI */
+.aqi-circle-wrapper {
+    margin-bottom: 24px;
+}
+
+.aqi-circle {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background: var(--color-button);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 12px;
+    box-shadow: 0 4px 20px rgba(69, 127, 76, 0.4);
+    transition: background 0.4s ease, box-shadow 0.4s ease;
+}
+
+.aqi-circle.moderate {
+    background: #e65100;
+    box-shadow: 0 4px 20px rgba(230, 81, 0, 0.4);
+}
+
+.aqi-circle.bad {
+    background: #c62828;
+    box-shadow: 0 4px 20px rgba(198, 40, 40, 0.4);
+}
+
+.aqi-value {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: white;
+    line-height: 1;
+    font-family: var(--font-heading);
+}
+
+.aqi-label {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.85);
+    font-weight: 600;
+}
+
+.aqi-status {
+    font-size: 0.95rem;
+    color: var(--color-button);
+    font-weight: 600;
+}
+
+.aqi-status.moderate { color: #e65100; }
+.aqi-status.bad { color: #c62828; }
+
+/* Indicadores */
+.aqi-indicators {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    gap: 8px;
+}
+
+.aqi-indicator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    flex: 1;
+}
+
+.indicator-label {
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+    font-weight: 600;
+}
+
+.indicator-value {
+    font-size: 0.8rem;
+    color: var(--color-text);
+    font-weight: 700;
+}
+
+.indicator-badge {
+    font-size: 0.7rem;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-weight: 600;
+}
+
+.indicator-badge.safe {
+    background: var(--color-primary-light);
+    color: var(--color-heading);
+}
+
+.indicator-badge.moderate {
+    background: #fff3e0;
+    color: #e65100;
+}
+
+.indicator-badge.bad {
+    background: #ffebee;
+    color: #c62828;
+}
+
+/* Botón CTA */
+.aqi-cta-button {
+    display: inline-block;
+    background: var(--color-button);
+    color: white;
+    padding: 12px 28px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+    font-family: var(--font-heading);
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.aqi-cta-button:hover {
+    background: var(--color-button-dark);
+    transform: translateY(-2px);
+}
+
+/* Tarjetas de escenarios */
+.aqi-scenarios-info {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 380px;
+    text-align: left;
+}
+
+.aqi-scenario-card {
+    background: rgba(255, 255, 255, 0.94);
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 2px 12px rgba(31, 80, 45, 0.07);
+    border: 1px solid var(--color-primary-light);
+    border-left: 4px solid var(--color-primary-light);
+    opacity: 0.5;
+    transition: all 0.3s ease;
+}
+
+.aqi-scenario-card.active {
+    border-left-color: var(--color-button);
+    opacity: 1;
+}
+
+.scenario-icon {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+}
+
+.aqi-scenario-card h3 {
+    font-size: 0.95rem;
+    color: var(--color-heading);
+    margin-bottom: 6px;
+    font-weight: 700;
+}
+
+.aqi-scenario-card p {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    line-height: 1.5;
+}
+
+/* Modal GPS */
+.aqi-gps-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+}
+
+.aqi-gps-modal.show {
+    display: flex;
+}
+
+.aqi-gps-modal-content {
+    background: white;
+    border-radius: 24px;
+    padding: 40px 32px;
+    text-align: center;
+    max-width: 320px;
+    width: 90%;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.2);
+}
+
+.gps-modal-icon {
+    font-size: 3rem;
+    margin-bottom: 16px;
+}
+
+.aqi-gps-modal-content h3 {
+    font-size: 1.2rem;
+    color: var(--color-heading);
+    margin-bottom: 10px;
+    font-family: var(--font-heading);
+    font-weight: 700;
+}
+
+.aqi-gps-modal-content p {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    margin-bottom: 24px;
+    line-height: 1.5;
+}
+
+.gps-modal-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.gps-btn-manual {
+    padding: 12px;
+    border: 2px solid var(--color-button);
+    background: white;
+    color: var(--color-button);
+    border-radius: 50px;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-family: var(--font-heading);
+    transition: all 0.3s ease;
+}
+
+.gps-btn-manual:hover {
+    background: var(--color-primary-light);
+}
+
+.gps-btn-activate {
+    padding: 12px;
+    border: none;
+    background: var(--color-button);
+    color: white;
+    border-radius: 50px;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-family: var(--font-heading);
+    transition: background 0.3s ease;
+}
+
+.gps-btn-activate:hover {
+    background: var(--color-button-dark);
+}
+
+/* Responsive US-16 */
+@media (max-width: 768px) {
+    .aqi-section {
+        padding: 60px 20px;
+    }
+
+    .aqi-title {
+        font-size: 1.75rem;
+    }
+
+    .aqi-demo {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .aqi-scenarios-info {
+        max-width: 100%;
+    }
+}
 
 
 

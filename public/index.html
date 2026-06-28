@@ -127,6 +127,103 @@
     </section>
  <!-- Fin Sección Home -->
 
+ <!-- Sección: Inicio - AQI Local (US-16) -->
+<section class="aqi-section" id="inicio">
+    <div class="container">
+
+        <div class="aqi-header">
+            <h2 class="aqi-title">Calidad del Aire en tu Ubicación</h2>
+            <p class="aqi-subtitle">Consulta el índice AQI exacto donde estás y toma decisiones saludables</p>
+        </div>
+
+        <div class="aqi-scenario-tabs">
+            <button class="aqi-tab active" data-scenario="good">🟢 Aire Limpio</button>
+            <button class="aqi-tab" data-scenario="moderate">🟡 Aire Moderado</button>
+            <button class="aqi-tab" data-scenario="bad">🔴 Aire Peligroso</button>
+        </div>
+
+        <div class="aqi-demo">
+
+            <div class="aqi-card" id="aqi-card">
+
+                <div class="aqi-location">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16">
+                        <path d="M12 2C8 2 5 5 5 9c0 5 7 13 7 13s7-8 7-13c0-4-3-7-7-7z"/>
+                        <circle cx="12" cy="9" r="2.5"/>
+                    </svg>
+                    <span id="aqi-location-text">Av. Arequipa 260, Lima, Perú</span>
+                </div>
+
+                <div class="aqi-circle-wrapper">
+                    <div class="aqi-circle" id="aqi-circle">
+                        <span class="aqi-value" id="aqi-value">17</span>
+                        <span class="aqi-label">AQI</span>
+                    </div>
+                    <p class="aqi-status" id="aqi-status">Buena calidad de aire</p>
+                </div>
+
+                <div class="aqi-indicators">
+                    <div class="aqi-indicator">
+                        <span class="indicator-label">PM2.5</span>
+                        <span class="indicator-value" id="pm25-value">8 µg/m³</span>
+                        <span class="indicator-badge safe">Favorable</span>
+                    </div>
+                    <div class="aqi-indicator">
+                        <span class="indicator-label">PM10</span>
+                        <span class="indicator-value" id="pm10-value">12 µg/m³</span>
+                        <span class="indicator-badge safe">Favorable</span>
+                    </div>
+                    <div class="aqi-indicator">
+                        <span class="indicator-label">Polen</span>
+                        <span class="indicator-value" id="pollen-value">Bajo</span>
+                        <span class="indicator-badge safe">Favorable</span>
+                    </div>
+                </div>
+
+                <a href="#rutas" class="aqi-cta-button">Ver rutas seguras</a>
+
+            </div>
+
+            <div class="aqi-scenarios-info">
+
+                <div class="aqi-scenario-card active" id="scenario-good">
+                    <div class="scenario-icon">✅</div>
+                    <h3>1: GPS Activo</h3>
+                    <p>La app detecta tu ubicación automáticamente y muestra el AQI en tiempo real con colores según el nivel de riesgo.</p>
+                </div>
+
+                <div class="aqi-scenario-card" id="scenario-moderate">
+                    <div class="scenario-icon">⚠️</div>
+                    <h3>2: Zona de mayor tráfico</h3>
+                    <p>Al moverte a una zona con más contaminación, el AQI se actualiza automáticamente y recibes una notificación de alerta.</p>
+                </div>
+
+                <div class="aqi-scenario-card" id="scenario-bad">
+                    <div class="scenario-icon">🚨</div>
+                    <h3>3: GPS Desactivado</h3>
+                    <p>Si el GPS está apagado, la app solicita permisos de ubicación o te permite ingresar tu distrito manualmente.</p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="aqi-gps-modal" id="aqi-gps-modal">
+            <div class="aqi-gps-modal-content">
+                <div class="gps-modal-icon">📍</div>
+                <h3>Activa tu ubicación</h3>
+                <p>Habilita el acceso a la ubicación para ver el AQI de tu zona y recomendaciones personalizadas.</p>
+                <div class="gps-modal-buttons">
+                    <button class="gps-btn-manual" id="gps-btn-manual">Ingresar manualmente</button>
+                    <button class="gps-btn-activate" id="gps-btn-activate">Activar GPS</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+<!-- Fin Sección Inicio AQI (US-16) -->
+
 <!-- Sección Funcionalidades -->
 
 <div class="features-container">
