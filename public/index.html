@@ -127,6 +127,168 @@
     </section>
  <!-- Fin Sección Home -->
 
+ <!-- Sección: Alertas - Configuración de Alertas (US-19) -->
+<section class="alerts-section" id="alertas">
+    <div class="container">
+
+        <div class="alerts-header">
+            <h2 class="alerts-title">Configuración de Alertas</h2>
+            <p class="alerts-subtitle">Personaliza cuándo y cómo recibir notificaciones sobre la calidad del aire en tu zona</p>
+        </div>
+
+        <div class="alerts-demo">
+
+            <!-- Tarjeta principal -->
+            <div class="alerts-card">
+
+                <h3 class="alerts-card-title">Alertas</h3>
+                <h4 class="alerts-card-subtitle">Preferencias de Alertas</h4>
+
+                <!-- AQI Máximo -->
+                <div class="alerts-aqi-config">
+                    <div class="alerts-aqi-text">
+                        <strong>AQI máximo</strong>
+                        <p>Recibe una alerta cuando el AQI alcance o supere este valor.</p>
+                    </div>
+                    <div class="alerts-aqi-counter">
+                        <button class="counter-btn" onclick="changeAQI(-10)">−</button>
+                        <span id="aqi-max-value">100</span>
+                        <button class="counter-btn" onclick="changeAQI(10)">+</button>
+                    </div>
+                </div>
+
+                <!-- Toggles -->
+                <div class="alerts-toggles">
+
+                    <div class="alerts-toggle-item">
+                        <div class="toggle-text">
+                            <strong>Aire saludable</strong>
+                            <p>Notificar cuando la calidad del aire vuelva a ser saludable.</p>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" checked id="toggle-saludable">
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+
+                    <div class="alerts-toggle-item">
+                        <div class="toggle-text">
+                            <strong>Alertas durante el trayecto</strong>
+                            <p>Avisar cuando una ruta próxima presente zonas con alta contaminación.</p>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" checked id="toggle-trayecto">
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+
+                    <div class="alerts-toggle-item">
+                        <div class="toggle-text">
+                            <strong>No molestar</strong>
+                            <p>Guarda las alertas silenciosas y muéstralas al abrir la aplicación.</p>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="toggle-nomolestar">
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+
+                </div>
+
+                <!-- Historial -->
+                <div class="alerts-history">
+                    <h4>Historial de Alertas</h4>
+                    <div class="alerts-history-list">
+                        <div class="history-item critical">
+                            <span class="history-dot"></span>
+                            <span class="history-label">AQI crítico</span>
+                            <a href="#" class="history-link">Detalles</a>
+                        </div>
+                        <div class="history-item forecast">
+                            <span class="history-dot"></span>
+                            <span class="history-label">Pronóstico</span>
+                            <a href="#" class="history-link">Detalles</a>
+                        </div>
+                        <div class="history-item healthy">
+                            <span class="history-dot"></span>
+                            <span class="history-label">Aire Saludable</span>
+                            <a href="#" class="history-link">Detalles</a>
+                        </div>
+                        <div class="history-item offline">
+                            <span class="history-dot"></span>
+                            <span class="history-label">Sin conexión</span>
+                            <a href="#" class="history-link">Detalles</a>
+                        </div>
+                        <div class="history-item pm25">
+                            <span class="history-dot"></span>
+                            <span class="history-label">PM2.5 elevado</span>
+                            <a href="#" class="history-link">Detalles</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Notificación + Escenarios -->
+            <div class="alerts-right">
+
+                <!-- Notificación push simulada -->
+                <div class="alerts-notification" id="alerts-notification">
+                    <div class="notification-bar">
+                        <span class="notification-time">9:41 AM</span>
+                    </div>
+                    <div class="notification-content">
+                        <div class="notification-icon" id="notification-icon">⚠️</div>
+                        <div class="notification-text">
+                            <strong id="notification-title">¡AQI Máximo alcanzado!</strong>
+                            <p id="notification-body">El nivel de contaminación en tu zona ha alcanzado 100. Evita salir.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Escenarios -->
+                <div class="alerts-scenarios">
+
+                    <div class="alerts-scenario-item active" id="as-item-1" onclick="showAlertScenario(1)">
+                        <div class="alerts-scenario-dot critical"></div>
+                        <div class="alerts-scenario-content">
+                            <span class="alerts-scenario-time">🔴 AQI = 100</span>
+                            <h4>Alerta crítica enviada</h4>
+                            <p>El sistema detecta que el AQI alcanzó el nivel máximo configurado y envía una notificación inmediata.</p>
+                            <span class="alerts-scenario-badge critical">AQI crítico · Notificación push</span>
+                        </div>
+                    </div>
+
+                    <div class="alerts-scenario-item" id="as-item-2" onclick="showAlertScenario(2)">
+                        <div class="alerts-scenario-dot healthy"></div>
+                        <div class="alerts-scenario-content">
+                            <span class="alerts-scenario-time">🟢 Aire mejorado</span>
+                            <h4>Vuelta a la normalidad</h4>
+                            <p>El AQI bajó a nivel saludable. El sistema avisa que ya es seguro realizar actividades fuera.</p>
+                            <span class="alerts-scenario-badge healthy">Aire saludable · Todo en orden</span>
+                        </div>
+                    </div>
+
+                    <div class="alerts-scenario-item" id="as-item-3" onclick="showAlertScenario(3)">
+                        <div class="alerts-scenario-dot silent"></div>
+                        <div class="alerts-scenario-content">
+                            <span class="alerts-scenario-time">🔕 No molestar</span>
+                            <h4>Alerta guardada silenciosa</h4>
+                            <p>Modo "No molestar" activo. La alerta se guarda y se muestra al abrir la app nuevamente.</p>
+                            <span class="alerts-scenario-badge silent">Silenciada · Ver al abrir app</span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+<!-- Fin Sección Alertas (US-19) -->
+
 <!-- Sección Funcionalidades -->
 
 <div class="features-container">
