@@ -2693,6 +2693,145 @@ US02 - Filtros de contaminación
     border-radius: 4px;
 }
 
+/* =========================
+   US05 - Visualizar contaminación en mapa
+========================= */
+
+.rutas-phone {
+    position: relative;
+}
+
+.no-data-zone {
+    width: 165px;
+    height: 165px;
+    top: 190px;
+    left: 48%;
+    border: 2px solid rgba(100, 110, 105, 0.45);
+    background: rgba(150, 158, 154, 0.62);
+    color: #1f2d25;
+    font-size: 13px;
+    font-weight: 900;
+    cursor: pointer;
+    z-index: 5;
+}
+
+.no-data-zone:hover {
+    transform: scale(1.04);
+    background: rgba(128, 137, 132, 0.72);
+}
+
+.map-data-panel {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    z-index: 8;
+    width: 270px;
+    padding: 16px;
+    background: rgba(255, 255, 255, 0.96);
+    border: 1px solid #dce8df;
+    border-radius: 18px;
+    box-shadow: 0 14px 32px rgba(17, 38, 28, 0.14);
+}
+
+.map-data-panel span {
+    display: block;
+    margin-bottom: 4px;
+    color: #2f7547;
+    font-size: 12px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.map-data-panel strong {
+    display: block;
+    margin-bottom: 12px;
+    color: #1f2d25;
+    font-size: 14px;
+}
+
+.map-data-panel button {
+    width: 100%;
+    padding: 10px 12px;
+    border: none;
+    border-radius: 999px;
+    background: #2f7547;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.map-data-panel button:hover {
+    background: #25643b;
+}
+
+.map-update-toast {
+    position: absolute;
+    left: 50%;
+    bottom: 28px;
+    z-index: 12;
+    transform: translateX(-50%);
+    width: min(480px, 88%);
+    padding: 13px 18px;
+    text-align: center;
+    background: #244f32;
+    color: #ffffff;
+    border-radius: 14px;
+    font-size: 14px;
+    font-weight: 800;
+    box-shadow: 0 14px 32px rgba(17, 38, 28, 0.22);
+}
+
+.map-no-data-modal {
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    z-index: 30;
+    transform: translate(-50%, -50%);
+    width: min(430px, 90%);
+    padding: 28px 24px;
+    text-align: center;
+    background: #ffffff;
+    border: 2px solid #f1c45b;
+    border-radius: 22px;
+    box-shadow: 0 26px 70px rgba(0, 0, 0, 0.24);
+}
+
+.map-no-data-icon {
+    margin-bottom: 10px;
+    font-size: 38px;
+}
+
+.map-no-data-modal h3 {
+    margin: 0 0 12px;
+    color: #1f2d25;
+    font-size: 23px;
+}
+
+.map-no-data-modal p {
+    margin: 0 0 20px;
+    color: #4d5d52;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.map-no-data-modal button {
+    width: 100%;
+    padding: 13px 16px;
+    border: 2px solid #5f8d58;
+    border-radius: 999px;
+    background: #d8ecd2;
+    color: #233723;
+    font-size: 15px;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.map-no-data-modal button:hover {
+    background: #c8e4bf;
+}
+
 /* ============================================
    RESPONSIVE DESIGNE
    ============================================ */
@@ -3357,5 +3496,67 @@ flex-direction: column;
         bottom: 16px;
         width: 165px;
         padding: 14px;
+    }
+}
+
+/* Responsive US05 */
+
+@media (max-width: 900px) {
+    .map-data-panel {
+        position: relative;
+        top: auto;
+        right: auto;
+        width: 100%;
+        margin: 18px;
+        max-width: calc(100% - 36px);
+    }
+
+    .no-data-zone {
+        width: 135px;
+        height: 135px;
+        top: 205px;
+        left: 45%;
+    }
+
+    .map-update-toast {
+        bottom: 22px;
+    }
+}
+
+@media (max-width: 600px) {
+    .map-data-panel {
+        margin: 14px;
+        max-width: calc(100% - 28px);
+        padding: 14px;
+    }
+
+    .map-data-panel strong {
+        font-size: 13px;
+    }
+
+    .no-data-zone {
+        width: 105px;
+        height: 105px;
+        top: 185px;
+        left: 42%;
+        font-size: 11px;
+    }
+
+    .map-no-data-modal {
+        padding: 22px 18px;
+        border-radius: 18px;
+    }
+
+    .map-no-data-modal h3 {
+        font-size: 20px;
+    }
+
+    .map-no-data-modal p {
+        font-size: 13px;
+    }
+
+    .map-update-toast {
+        font-size: 13px;
+        padding: 12px 14px;
     }
 }

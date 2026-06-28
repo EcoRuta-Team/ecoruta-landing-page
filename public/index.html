@@ -138,7 +138,7 @@
     </section>
  <!-- Fin Sección Home -->
 
-<!-- Sección Rutas - US01, US02, US03 y US04-->
+<!-- Sección Rutas - US01, US02, US03, US04 y US05-->
 <section id="rutas" class="rutas-section">
   <div class="rutas-container">
 
@@ -193,8 +193,25 @@
           <div class="map-zone green-zone"></div>
           <div class="map-zone orange-zone"></div>
           <div class="map-zone red-zone"></div>
+          
+          <!-- Zona sin datos - US05 -->
+           <button class="map-zone no-data-zone" id="btnZonaNoDisponible" type="button">
+            No disponible
+          </button>
+          
           <div class="map-user"></div>
-
+          
+          <!-- Panel de actualización - US05 -->
+           <div class="map-data-panel">
+            <span>Datos ambientales</span>
+            <strong id="mapUpdateTime">Última actualización: 9:30 a.m.</strong>
+            <button id="btnActualizarMapa" type="button">Actualizar datos</button>
+          </div>
+          
+          <div class="map-update-toast hidden-route-screen" id="mapUpdateToast">
+            Datos de contaminación actualizados correctamente.
+          </div>
+          
           <div class="map-legend">
             <strong>Leyenda:</strong>
             <p><span class="legend-red"></span> Riesgoso</p>
@@ -202,6 +219,23 @@
             <p><span class="legend-green"></span> Saludable</p>
             <p><span class="legend-gray"></span> No disponible</p>
           </div>
+        </div>
+
+        <!-- Modal zona no disponible - US05 -->
+        <div class="map-no-data-modal hidden-route-screen" id="mapNoDataModal">
+          <div class="map-no-data-icon">⚠️</div>
+
+          <h3>Calidad del aire no disponible</h3>
+
+          <p>
+            Esta zona no cuenta con información ambiental actualizada. EcoRuta la identifica
+            como <strong>"No disponible"</strong> y recomienda transitar con precaución hasta
+            obtener nuevos datos.
+          </p>
+
+          <button id="btnCerrarZonaNoDisponible" type="button">
+            Entendido
+          </button>
         </div>
       </div>
 
@@ -682,7 +716,7 @@
     </div>
   </div>
 </section>
-<!-- Fin Sección Rutas - US01, US02, US03 y US04 -->
+<!-- Fin Sección Rutas - US01, US02, US03, US04 y US05 -->
 
 <!-- Sección Funcionalidades -->
 
