@@ -229,56 +229,55 @@
 
             </div>
 
-            <!-- Notificación + Escenarios -->
+            <!-- Derecha: bandeja de notificaciones -->
             <div class="alerts-right">
 
-                <!-- Notificación push simulada -->
-                <div class="alerts-notification" id="alerts-notification">
-                    <div class="notification-bar">
-                        <span class="notification-time">9:41 AM</span>
+                <h3 class="alerts-notif-title">Así llegarán tus alertas</h3>
+                <p class="alerts-notif-subtitle">Simula cómo se ven las notificaciones en tu celular</p>
+
+                <div class="notif-card critical active" id="notif-1" onclick="showAlertScenario(1)">
+                    <div class="notif-card-bar">
+                        <span class="notif-app-name">📍 EcoRuta</span>
+                        <span class="notif-time">9:41 AM</span>
                     </div>
-                    <div class="notification-content">
-                        <div class="notification-icon" id="notification-icon">⚠️</div>
-                        <div class="notification-text">
-                            <strong id="notification-title">¡AQI Máximo alcanzado!</strong>
-                            <p id="notification-body">El nivel de contaminación en tu zona ha alcanzado 100. Evita salir.</p>
+                    <div class="notif-card-body">
+                        <div class="notif-card-icon">⚠️</div>
+                        <div class="notif-card-text">
+                            <strong>¡AQI Máximo alcanzado!</strong>
+                            <p>El nivel de contaminación ha alcanzado 100. Evita salir.</p>
                         </div>
                     </div>
+                    <span class="notif-scenario-label">Escenario 1: Alerta crítica</span>
                 </div>
 
-                <!-- Escenarios -->
-                <div class="alerts-scenarios">
-
-                    <div class="alerts-scenario-item active" id="as-item-1" onclick="showAlertScenario(1)">
-                        <div class="alerts-scenario-dot critical"></div>
-                        <div class="alerts-scenario-content">
-                            <span class="alerts-scenario-time">🔴 AQI = 100</span>
-                            <h4>Alerta crítica enviada</h4>
-                            <p>El sistema detecta que el AQI alcanzó el nivel máximo configurado y envía una notificación inmediata.</p>
-                            <span class="alerts-scenario-badge critical">AQI crítico · Notificación push</span>
+                <div class="notif-card healthy" id="notif-2" onclick="showAlertScenario(2)">
+                    <div class="notif-card-bar">
+                        <span class="notif-app-name">📍 EcoRuta</span>
+                        <span class="notif-time">11:20 AM</span>
+                    </div>
+                    <div class="notif-card-body">
+                        <div class="notif-card-icon">✅</div>
+                        <div class="notif-card-text">
+                            <strong>Aire saludable detectado</strong>
+                            <p>Ya es seguro realizar actividades fuera de casa.</p>
                         </div>
                     </div>
+                    <span class="notif-scenario-label">Escenario 2: Vuelta a la normalidad</span>
+                </div>
 
-                    <div class="alerts-scenario-item" id="as-item-2" onclick="showAlertScenario(2)">
-                        <div class="alerts-scenario-dot healthy"></div>
-                        <div class="alerts-scenario-content">
-                            <span class="alerts-scenario-time">🟢 Aire mejorado</span>
-                            <h4>Vuelta a la normalidad</h4>
-                            <p>El AQI bajó a nivel saludable. El sistema avisa que ya es seguro realizar actividades fuera.</p>
-                            <span class="alerts-scenario-badge healthy">Aire saludable · Todo en orden</span>
+                <div class="notif-card silent" id="notif-3" onclick="showAlertScenario(3)">
+                    <div class="notif-card-bar">
+                        <span class="notif-app-name">📍 EcoRuta</span>
+                        <span class="notif-time">2:05 PM</span>
+                    </div>
+                    <div class="notif-card-body">
+                        <div class="notif-card-icon">🔕</div>
+                        <div class="notif-card-text">
+                            <strong>Alerta guardada silenciosamente</strong>
+                            <p>Modo "No molestar" activo. Ábrela al ingresar a la app.</p>
                         </div>
                     </div>
-
-                    <div class="alerts-scenario-item" id="as-item-3" onclick="showAlertScenario(3)">
-                        <div class="alerts-scenario-dot silent"></div>
-                        <div class="alerts-scenario-content">
-                            <span class="alerts-scenario-time">🔕 No molestar</span>
-                            <h4>Alerta guardada silenciosa</h4>
-                            <p>Modo "No molestar" activo. La alerta se guarda y se muestra al abrir la app nuevamente.</p>
-                            <span class="alerts-scenario-badge silent">Silenciada · Ver al abrir app</span>
-                        </div>
-                    </div>
-
+                    <span class="notif-scenario-label">Escenario 3: No molestar</span>
                 </div>
 
             </div>
