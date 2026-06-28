@@ -1,0 +1,277 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+
+}
+
+.background{
+
+    min-height:100vh;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    background:
+        linear-gradient(
+            rgba(247,250,247,0.36),
+            rgba(247,250,247,0.70)
+        ),
+        url("../images/login_fondo.png") center center / cover fixed;
+    background-size: cover;
+  color: #2e6b45;  
+} 
+
+.logo-container{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.logo-container img{
+    width:280px;
+}
+
+.logo-container h1{
+    color:#6B8E50;
+    font-size:2rem;
+}
+
+
+
+.login-card{
+
+    width:100%;
+    max-width:1000px;
+
+    background:white;
+
+    border-radius:25px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+    display:flex;
+
+    overflow:hidden;
+}
+
+
+
+.left-side{
+
+    width:50%;
+
+    padding:50px;
+}
+
+.left-side h2{
+
+    font-size:3rem;
+
+    color:#204B36;
+
+    line-height:1.2;
+}
+
+.line{
+
+    width:70px;
+    height:4px;
+
+    background:#6B8E50;
+
+    margin:20px 0;
+}
+
+.left-side p{
+
+    color:#506850;
+    line-height:1.8;
+}
+
+.city-image{
+
+    width:100%;
+    margin-top:40px;
+}
+
+
+.right-side{
+
+    width:50%;
+
+    padding:50px;
+}
+
+.right-side form{
+
+    display:flex;
+    flex-direction:column;
+}
+
+
+
+label{
+
+    margin-top:15px;
+    margin-bottom:8px;
+
+    font-weight:600;
+
+    color:#3c4d3c;
+}
+
+input{
+
+    padding:15px;
+
+    border:1px solid #d9ddd8;
+
+    border-radius:10px;
+
+    font-size:1rem;
+}
+
+
+
+.forgot{
+
+    text-decoration:none;
+
+    margin-top:10px;
+
+    color:#50784f;
+
+    font-size:.9rem;
+
+    text-align:right;
+}
+
+
+
+button{
+
+    margin-top:25px;
+
+    border:none;
+
+    background:#5B8C4B;
+
+    color:white;
+
+    padding:16px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    font-weight:600;
+
+    font-size:1rem;
+}
+
+button:hover{
+
+    background:#4C7440;
+}
+
+
+
+
+.separator{
+
+    text-align:center;
+
+    margin:25px 0;
+
+    color:#888;
+}
+
+
+
+.register-text{
+
+    text-align:center;
+}
+
+.register-link{
+
+    text-align:center;
+
+    text-decoration:none;
+
+    color:#5B8C4B;
+
+    font-weight:600;
+
+    margin-top:10px;
+}
+
+
+
+.footer-text{
+
+    margin-top:30px;
+
+    color:#5f775e;
+    text-align:center;
+    font-size:.9rem;
+}
+
+.footer-text small{
+    display:block;
+    margin-top:4px;
+}
+
+
+
+@media(max-width:768px){
+
+.logo-container img{
+    width:80px;
+}
+
+
+.login-card{
+
+    flex-direction:column;
+}
+
+.left-side,
+.right-side{
+
+    width:100%;
+    padding:30px;
+}
+
+.left-side h2{
+
+    font-size:2rem;
+    text-align:center;
+}
+
+.left-side p{
+    text-align:center;
+}
+
+.city-image{
+    max-width:280px;
+    display:block;
+    margin:20px auto;
+}
+
+button{
+    width:100%;
+}
+
+.footer-text{
+    padding:15px;
+    text-align:center;
+}
+
+}
