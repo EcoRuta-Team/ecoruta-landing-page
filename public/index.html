@@ -127,6 +127,130 @@
     </section>
  <!-- Fin Sección Home -->
 
+ <!-- Sección: Inicio - Pronóstico por Horas (US-17) -->
+<section class="forecast-section" id="pronostico">
+    <div class="container">
+
+        <div class="forecast-header">
+            <h2 class="forecast-title">Pronóstico de Calidad del Aire</h2>
+            <p class="forecast-subtitle">Planifica tus actividades al aire libre consultando el pronóstico por horas</p>
+        </div>
+
+        <div class="forecast-demo">
+
+            <!-- Tarjeta AQI -->
+            <div class="forecast-card">
+
+                <div class="forecast-card-header">
+                    <h3>Estado Ambiental</h3>
+                </div>
+
+                <div class="forecast-aqi-circle">
+                    <div class="forecast-circle">
+                        <span class="forecast-aqi-label">AQI</span>
+                        <span class="forecast-aqi-value" id="forecast-aqi-value">17</span>
+                        <span class="forecast-aqi-status" id="forecast-aqi-status">Excelente</span>
+                    </div>
+                </div>
+
+                <p class="forecast-aqi-description" id="forecast-description">Aire limpio y saludable</p>
+                <p class="forecast-aqi-recommendation">Ideal para actividades al aire libre</p>
+
+                <div class="forecast-verified">
+                    <span id="forecast-verified-text">✅ Información verificada</span>
+                </div>
+
+                <button class="forecast-compare-btn">Comparar AQI</button>
+
+                <!-- Predicciones por hora -->
+                <div class="forecast-hourly">
+                    <h4>Predicciones por Hora</h4>
+                    <div class="forecast-hours-bar">
+                        <div class="hour-segment good"></div>
+                        <div class="hour-segment good"></div>
+                        <div class="hour-segment good"></div>
+                        <div class="hour-segment moderate"></div>
+                        <div class="hour-segment moderate"></div>
+                        <div class="hour-segment bad"></div>
+                        <div class="hour-segment bad"></div>
+                        <div class="hour-segment moderate"></div>
+                    </div>
+                    <div class="forecast-hour-labels">
+                        <span>11h</span>
+                        <span>17h</span>
+                        <span>19h</span>
+                        <span>23h</span>
+                    </div>
+                </div>
+
+                <!-- Alerta escenario 2 -->
+                <div class="forecast-alert" id="forecast-alert">
+                    <div class="forecast-alert-icon">⚠️</div>
+                    <div>
+                        <strong>Alerta de calidad del aire</strong>
+                        <p>Entre las 19:00 y 20:00 se prevé un incremento del AQI. Procura salir antes de las 18:00 o después de las 21:00.</p>
+                    </div>
+                </div>
+
+                <!-- Banner sin conexión escenario 3 -->
+                <div class="forecast-offline" id="forecast-offline">
+                    <div class="forecast-offline-icon">📶</div>
+                    <div>
+                        <strong>Sin conexión a Internet</strong>
+                        <p>Se muestran los últimos datos disponibles. Los valores podrían no reflejar las condiciones actuales.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Timeline de escenarios -->
+            <div class="forecast-timeline">
+
+                <h3 class="forecast-timeline-title">Tu día con EcoRuta</h3>
+                <p class="forecast-timeline-subtitle">Así te acompaña la app a lo largo del día</p>
+
+                <div class="timeline">
+
+                    <div class="timeline-item active" id="ft-item-1" onclick="showForecastScenario(1)">
+                        <div class="timeline-dot good"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-time">🕐 Mañana · 11:00</span>
+                            <h4>Aire excelente detectado</h4>
+                            <p>El sistema muestra niveles bajos de contaminación y resalta este como el mejor momento para salir.</p>
+                            <span class="timeline-badge good">AQI 17 · Excelente</span>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item" id="ft-item-2" onclick="showForecastScenario(2)">
+                        <div class="timeline-dot moderate"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-time">🕕 Tarde · 19:00</span>
+                            <h4>Horario de riesgo identificado</h4>
+                            <p>El sistema detecta alta contaminación y recomienda evitar actividades físicas en este periodo.</p>
+                            <span class="timeline-badge moderate">AQI 51 · Precaución</span>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item" id="ft-item-3" onclick="showForecastScenario(3)">
+                        <div class="timeline-dot offline"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-time">📶 Sin conexión</span>
+                            <h4>Datos guardados mostrados</h4>
+                            <p>Sin internet, la app muestra la última información disponible y advierte que puede estar desactualizada.</p>
+                            <span class="timeline-badge offline">Última actualización: 10:45</span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+<!-- Fin Sección Pronóstico por Horas (US-17) -->
+
 <!-- Sección Funcionalidades -->
 
 <div class="features-container">
