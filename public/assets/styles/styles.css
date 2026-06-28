@@ -2273,6 +2273,426 @@ US02 - Filtros de contaminación
     opacity: 0.9;
 }
 
+/* =========================
+   US04 - Ver rutas alternativas
+========================= */
+
+.route-compare-btn {
+    width: 100%;
+    padding: 15px 18px;
+    border: none;
+    border-radius: 999px;
+    background: #2f7547;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.route-compare-btn:hover {
+    transform: translateY(-2px);
+    background: #25643b;
+}
+
+.rutas-comparison-panel {
+    width: 100%;
+    max-width: 1120px;
+    margin: 32px auto 0;
+    padding: 34px;
+    background: #ffffff;
+    border-radius: 28px;
+    box-shadow: 0 24px 60px rgba(17, 38, 28, 0.12);
+}
+
+.comparison-header {
+    max-width: 760px;
+    margin-bottom: 28px;
+}
+
+.comparison-header span {
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 7px 14px;
+    border-radius: 999px;
+    background: #e7f4ea;
+    color: #2f7547;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.comparison-header h3 {
+    margin: 0 0 10px;
+    color: #1f2d25;
+    font-size: 34px;
+}
+
+.comparison-header p {
+    margin: 0;
+    color: #5f6f65;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.comparison-layout {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.comparison-card {
+    position: relative;
+    padding: 22px;
+    border: 2px solid #e0e6e1;
+    border-radius: 22px;
+    background: #ffffff;
+    box-shadow: 0 14px 34px rgba(17, 38, 28, 0.08);
+}
+
+.comparison-card.best-route {
+    border-color: #4eb567;
+    background: #f3fff5;
+}
+
+.comparison-card.risky-comparison {
+    border-color: #f0b7b7;
+    background: #fff1f1;
+}
+
+.comparison-check {
+    position: absolute;
+    top: 22px;
+    right: 22px;
+    display: grid;
+    place-items: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 9px;
+    background: #4eb567;
+    color: #ffffff;
+    font-weight: 900;
+}
+
+.gray-check {
+    background: #aab3ad;
+}
+
+.comparison-card-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    padding-right: 44px;
+    margin-bottom: 20px;
+}
+
+.comparison-card-header h4 {
+    margin: 0 0 4px;
+    color: #1f2d25;
+    font-size: 18px;
+}
+
+.comparison-card-header p {
+    margin: 0;
+    color: #5f6f65;
+    font-size: 13px;
+}
+
+.comparison-card-header strong {
+    color: #2f7547;
+    white-space: nowrap;
+}
+
+.comparison-metrics {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+}
+
+.comparison-metrics div {
+    padding: 12px 8px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid #e3ebe5;
+    border-radius: 14px;
+}
+
+.comparison-metrics span {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 20px;
+}
+
+.comparison-metrics strong {
+    display: block;
+    color: #1f2d25;
+    font-size: 13px;
+}
+
+.comparison-metrics p {
+    margin: 3px 0 0;
+    color: #5f6f65;
+    font-size: 11.5px;
+}
+
+.comparison-note {
+    margin-top: 22px;
+    padding: 18px 20px;
+    border-radius: 18px;
+    background: #e7f4ea;
+    border-left: 5px solid #4eb567;
+}
+
+.comparison-note h4 {
+    margin: 0 0 6px;
+    color: #1f2d25;
+    font-size: 18px;
+}
+
+.comparison-note p {
+    margin: 0;
+    color: #4d5d52;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.comparison-actions {
+    display: flex;
+    gap: 14px;
+    margin-top: 24px;
+}
+
+.comparison-actions button {
+    flex: 1;
+    padding: 15px 18px;
+    border-radius: 999px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+#btnIniciarRutaComparada {
+    border: none;
+    background: #2f7547;
+    color: #ffffff;
+}
+
+#btnVolverComparacion {
+    border: 2px solid #2f7547;
+    background: #ffffff;
+    color: #2f7547;
+}
+
+/* =========================
+   Corrección Rutas - Formato landing page
+========================= */
+
+.rutas-content {
+    display: block;
+}
+
+.rutas-phone {
+    width: 100%;
+    max-width: 1120px;
+    margin: 32px auto 0;
+    padding: 36px;
+    background: rgba(255, 255, 255, 0.96);
+    border: 1px solid #dce8df;
+    border-radius: 28px;
+    box-shadow: 0 24px 60px rgba(17, 38, 28, 0.12);
+}
+
+/* Oculta la barra tipo celular */
+.rutas-phone .phone-status {
+    display: none;
+}
+
+.phone-title {
+    max-width: 760px;
+    margin-bottom: 28px;
+}
+
+.phone-title h3 {
+    margin: 0 0 10px;
+    color: #1f7a3a;
+    font-size: 34px;
+    font-weight: 900;
+}
+
+.phone-title p {
+    margin: 0;
+    color: #24563a;
+    font-size: 16px;
+    line-height: 1.6;
+    font-weight: 600;
+}
+
+.route-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    margin-bottom: 18px;
+}
+
+.route-input {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 18px;
+    background: #f8fbf8;
+    border: 1px solid #dce8df;
+    border-radius: 16px;
+}
+
+.route-input span {
+    display: grid;
+    place-items: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: #d8f0df;
+    color: #1f7a3a;
+    font-weight: 900;
+}
+
+.route-input input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #1f2d25;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.route-input input::placeholder {
+    color: #76927e;
+}
+
+.route-actions-row {
+    display: grid;
+    grid-template-columns: 1fr 180px;
+    gap: 16px;
+    margin: 22px 0 28px;
+}
+
+.route-search-btn {
+    width: 100%;
+    padding: 16px 20px;
+    border: none;
+    border-radius: 999px;
+    background: #2f7547;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.route-filter-btn {
+    width: 100%;
+    padding: 16px 20px;
+    border: 2px solid #2f7547;
+    border-radius: 999px;
+    background: #ffffff;
+    color: #2f7547;
+    font-size: 15px;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.route-search-btn:hover,
+.route-filter-btn:hover {
+    transform: translateY(-2px);
+}
+
+.route-map {
+    position: relative;
+    width: 100%;
+    min-height: 420px;
+    border-radius: 24px;
+    border: 1px solid #dce8df;
+    background:
+        linear-gradient(90deg, rgba(74, 124, 89, 0.14) 1px, transparent 1px),
+        linear-gradient(rgba(74, 124, 89, 0.14) 1px, transparent 1px),
+        linear-gradient(135deg, #e8f2ec, #d8e7df);
+    background-size: 54px 54px;
+    overflow: hidden;
+}
+
+.map-zone {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.75;
+}
+
+.green-zone {
+    width: 170px;
+    height: 170px;
+    top: 55px;
+    left: 14%;
+    background: rgba(66, 207, 103, 0.65);
+}
+
+.orange-zone {
+    width: 180px;
+    height: 180px;
+    top: 95px;
+    right: 12%;
+    background: rgba(255, 181, 76, 0.68);
+}
+
+.red-zone {
+    width: 190px;
+    height: 190px;
+    bottom: 55px;
+    left: 25%;
+    background: rgba(255, 91, 91, 0.68);
+}
+
+.map-user {
+    position: absolute;
+    top: 54%;
+    left: 55%;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: #2575ff;
+    border: 5px solid #ffffff;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+}
+
+.map-legend {
+    position: absolute;
+    left: 24px;
+    bottom: 24px;
+    width: 190px;
+    padding: 18px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 14px 30px rgba(17, 38, 28, 0.14);
+}
+
+.map-legend strong {
+    display: block;
+    margin-bottom: 10px;
+    color: #1f2d25;
+    font-size: 14px;
+}
+
+.map-legend p {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 7px 0;
+    color: #1f2d25;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.map-legend span {
+    width: 14px;
+    height: 14px;
+    border-radius: 4px;
+}
+
 /* ============================================
    RESPONSIVE DESIGNE
    ============================================ */
@@ -2780,5 +3200,162 @@ flex-direction: column;
 
     .route-time-info strong {
         font-size: 24px;
+    }
+}
+
+/* Responsive US04 */
+
+@media (max-width: 1000px) {
+    .comparison-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .comparison-card {
+        padding: 20px;
+    }
+
+    .comparison-metrics {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+@media (max-width: 700px) {
+    .rutas-comparison-panel {
+        padding: 24px;
+        border-radius: 22px;
+    }
+
+    .comparison-header h3 {
+        font-size: 26px;
+    }
+
+    .comparison-header p {
+        font-size: 14px;
+    }
+
+    .comparison-card-header {
+        flex-direction: column;
+        padding-right: 44px;
+        gap: 6px;
+    }
+
+    .comparison-metrics {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .comparison-actions {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .rutas-comparison-panel {
+        padding: 18px;
+    }
+
+    .comparison-header h3 {
+        font-size: 23px;
+    }
+
+    .comparison-card {
+        padding: 18px;
+    }
+
+    .comparison-metrics {
+        grid-template-columns: 1fr;
+    }
+
+    .comparison-check {
+        top: 18px;
+        right: 18px;
+    }
+}
+
+/* Responsive corrección Rutas - Landing page */
+
+@media (max-width: 900px) {
+    .rutas-phone {
+        padding: 28px;
+    }
+
+    .route-form {
+        grid-template-columns: 1fr;
+    }
+
+    .route-actions-row {
+        grid-template-columns: 1fr;
+    }
+
+    .route-map {
+        min-height: 380px;
+    }
+
+    .green-zone {
+        left: 8%;
+    }
+
+    .orange-zone {
+        right: 6%;
+    }
+
+    .red-zone {
+        left: 20%;
+    }
+}
+
+@media (max-width: 600px) {
+    .rutas-phone {
+        padding: 22px;
+        border-radius: 22px;
+    }
+
+    .phone-title h3 {
+        font-size: 28px;
+    }
+
+    .phone-title p {
+        font-size: 14px;
+    }
+
+    .route-input {
+        padding: 14px;
+    }
+
+    .route-map {
+        min-height: 340px;
+        border-radius: 18px;
+    }
+
+    .green-zone {
+        width: 125px;
+        height: 125px;
+        top: 50px;
+        left: 8%;
+    }
+
+    .orange-zone {
+        width: 135px;
+        height: 135px;
+        top: 90px;
+        right: 5%;
+    }
+
+    .red-zone {
+        width: 145px;
+        height: 145px;
+        bottom: 55px;
+        left: 18%;
+    }
+
+    .map-user {
+        width: 28px;
+        height: 28px;
+    }
+
+    .map-legend {
+        left: 16px;
+        bottom: 16px;
+        width: 165px;
+        padding: 14px;
     }
 }
