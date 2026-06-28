@@ -127,6 +127,248 @@
     </section>
  <!-- Fin Sección Home -->
 
+ <!-- Sección: Inicio - Comparativa de Distritos (US-20) -->
+<section class="compare-section" id="comparativa">
+    <div class="container">
+
+        <!-- Hero informativo -->
+        <div class="compare-hero">
+            <div class="compare-hero-text">
+                <span class="compare-hero-tag">🌿 Datos en tiempo real</span>
+                <h2 class="compare-title">Comparativa de Distritos</h2>
+                <p class="compare-subtitle">Toma decisiones más saludables conociendo la calidad del aire de cada zona de Lima antes de moverte.</p>
+            </div>
+            <div class="compare-hero-cards">
+                <div class="compare-hero-item">
+                    <div class="compare-hero-icon">🏠</div>
+                    <div>
+                        <strong>Elige dónde vivir</strong>
+                        <p>Encuentra el distrito más saludable para ti y tu familia.</p>
+                    </div>
+                </div>
+                <div class="compare-hero-item">
+                    <div class="compare-hero-icon">💼</div>
+                    <div>
+                        <strong>Planifica tu ruta</strong>
+                        <p>Conoce qué zonas tienen mejor aire en tu trayecto diario.</p>
+                    </div>
+                </div>
+                <div class="compare-hero-item">
+                    <div class="compare-hero-icon">🏃</div>
+                    <div>
+                        <strong>Actívate en zonas limpias</strong>
+                        <p>Encuentra el lugar ideal para correr o andar en bici.</p>
+                    </div>
+                </div>
+                <div class="compare-hero-item">
+                    <div class="compare-hero-icon">📊</div>
+                    <div>
+                        <strong>+40 distritos monitoreados</strong>
+                        <p>AQI actualizado constantemente para info siempre precisa.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="compare-demo">
+
+            <!-- Tarjeta principal -->
+            <div class="compare-card">
+
+                <h3 class="compare-card-title">Comparar Calidad Aire</h3>
+                <p class="compare-card-subtitle">Comparación entre distritos</p>
+
+                <div class="compare-selectors">
+                    <div class="compare-select-wrapper">
+                        <span class="compare-select-dot"></span>
+                        <select class="compare-select" id="district-1">
+                            <option value="">Seleccionar Distrito 1</option>
+                            <option value="san-isidro">San Isidro</option>
+                            <option value="miraflores">Miraflores</option>
+                            <option value="san-borja">San Borja</option>
+                            <option value="surco">Surco</option>
+                            <option value="jesus-maria">Jesús María</option>
+                            <option value="lince">Lince</option>
+                            <option value="los-olivos">Los Olivos</option>
+                        </select>
+                    </div>
+                    <div class="compare-select-wrapper">
+                        <span class="compare-select-dot"></span>
+                        <select class="compare-select" id="district-2">
+                            <option value="">Seleccionar Distrito 2</option>
+                            <option value="san-isidro">San Isidro</option>
+                            <option value="miraflores">Miraflores</option>
+                            <option value="san-borja">San Borja</option>
+                            <option value="surco">Surco</option>
+                            <option value="jesus-maria">Jesús María</option>
+                            <option value="lince">Lince</option>
+                            <option value="los-olivos">Los Olivos</option>
+                        </select>
+                    </div>
+                    <button class="compare-btn" onclick="compareDistricts()">Comparar</button>
+                </div>
+
+                <div class="compare-chart">
+                    <h4>Comparación con el promedio de la ciudad</h4>
+                    <div class="chart-area">
+                        <div class="chart-y-labels">
+                            <span>90</span>
+                            <span>80</span>
+                            <span>70</span>
+                            <span>60</span>
+                            <span>50</span>
+                            <span>40</span>
+                            <span>30</span>
+                        </div>
+                        <div class="chart-content">
+                            <div class="chart-bar-group">
+                                <div class="chart-bar-col">
+                                    <div class="chart-bar district-bar" id="chart-bar-district"></div>
+                                    <span class="chart-bar-label" id="chart-label-district">Los Olivos<br>(Tu distrito 72 AQI)</span>
+                                </div>
+                            </div>
+                            <div class="chart-avg-line">
+                                <span class="chart-avg-label">Promedio Lima (50 AQI)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="compare-attention">
+                        <span>⚠️</span>
+                        <div>
+                            <strong>Atención</strong>
+                            <p>Tu distrito presenta una calidad del aire menos favorable que el promedio de Lima.</p>
+                        </div>
+                    </div>
+                </div>
+<div class="compare-ranking">
+                    <div class="compare-ranking-header">
+                        <h3>Ranking de distritos</h3>
+                        <button class="compare-map-btn" onclick="toggleMap()">Ver en mapa</button>
+                    </div>
+                    <div class="compare-ranking-order">
+                        Ordenar:
+                        <select class="ranking-order-select">
+                            <option>Más saludables</option>
+                            <option>Menos saludables</option>
+                        </select>
+                    </div>
+                    <div class="ranking-grid">
+                        <div class="ranking-item">
+                            <span class="ranking-pos">①</span>
+                            <div>
+                                <span class="ranking-name">San Isidro</span>
+                                <span class="ranking-aqi good">AQI 22</span>
+                            </div>
+                        </div>
+                        <div class="ranking-item">
+                            <span class="ranking-pos">③</span>
+                            <div>
+                                <span class="ranking-name">San Borja</span>
+                                <span class="ranking-aqi good">AQI 25</span>
+                            </div>
+                        </div>
+                        <div class="ranking-item">
+                            <span class="ranking-pos">⑤</span>
+                            <div>
+                                <span class="ranking-name">Jesús María</span>
+                                <span class="ranking-aqi good">AQI 33</span>
+                            </div>
+                        </div>
+                        <div class="ranking-item">
+                            <span class="ranking-pos">②</span>
+                            <div>
+                                <span class="ranking-name">Miraflores</span>
+                                <span class="ranking-aqi good">AQI 22</span>
+                            </div>
+                        </div>
+                        <div class="ranking-item">
+                            <span class="ranking-pos">④</span>
+                            <div>
+                                <span class="ranking-name">Surco</span>
+                                <span class="ranking-aqi good">AQI 41</span>
+                            </div>
+                        </div>
+                        <div class="ranking-item">
+                            <span class="ranking-pos">⑥</span>
+                            <div>
+                                <span class="ranking-name">Lince</span>
+                                <span class="ranking-aqi good">AQI 28</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Mapa -->
+            <div class="compare-map-card" id="compare-map">
+                <h3 class="compare-map-title">Mapa de Calidad de aire en Lima</h3>
+                <div class="map-wrapper">
+                    <img src="assets/images/mapa-lima.jpg" alt="Mapa calidad del aire Lima" class="map-img">
+                    <p class="map-updated">Actualizado hoy · hace 1 min</p>
+                </div>
+                <div class="map-legend">
+                    <span class="legend-title">Leyenda:</span>
+                    <div class="legend-items">
+                        <div class="legend-item">
+                            <span class="legend-dot" style="background:#4caf50"></span>
+                            <div><span>0-50</span><strong>Saludable</strong></div>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-dot" style="background:#ffeb3b"></span>
+                            <div><span>51-100</span><strong>Moderado</strong></div>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-dot" style="background:#ff9800"></span>
+                            <div><span>101-150</span><strong>Insalubre G. sensibles</strong></div>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-dot" style="background:#f44336"></span>
+                            <div><span>151-200</span><strong>Insalubre</strong></div>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-dot" style="background:#9c27b0"></span>
+                            <div><span>200+</span><strong>Muy insalubre</strong></div>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-dot" style="background:#9e9e9e"></span>
+                            <div><span>-</span><strong>No disponible</strong></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="map-ranking-mini">
+                    <div class="ranking-item">
+                        <span class="ranking-pos">②</span>
+                        <div>
+                            <span class="ranking-name">Miraflores</span>
+                            <span class="ranking-aqi good">AQI 22</span>
+                        </div>
+                    </div>
+                    <div class="ranking-item">
+                        <span class="ranking-pos">④</span>
+                        <div>
+                            <span class="ranking-name">Surco</span>
+                            <span class="ranking-aqi good">AQI 41</span>
+                        </div>
+                    </div>
+                    <div class="ranking-item">
+                        <span class="ranking-pos">⑥</span>
+                        <div>
+                            <span class="ranking-name">Lince</span>
+                            <span class="ranking-aqi good">AQI 28</span>
+                        </div>
+                    </div>
+                </div>
+                <button class="compare-map-close-btn" onclick="toggleMap()">Cerrar mapa</button>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+<!-- Fin Sección Comparativa de Distritos (US-20) -->
+                            
+
 <!-- Sección Funcionalidades -->
 
 <div class="features-container">
