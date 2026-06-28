@@ -191,7 +191,7 @@ benefitCards.forEach(function (card, index) {
 });
 
 /* =========================
-   Rutas - US01, US02, US03 y US04
+   Rutas - US01, US02, US03, US04 y US05
 ========================= */
 
 (() => {
@@ -252,6 +252,14 @@ benefitCards.forEach(function (card, index) {
   const btnDesviarRuta = document.getElementById('btnDesviarRuta');
   const btnCancelarRutaCurso = document.getElementById('btnCancelarRutaCurso');
 
+  const btnActualizarMapa = document.getElementById('btnActualizarMapa');
+  const mapUpdateTime = document.getElementById('mapUpdateTime');
+  const mapUpdateToast = document.getElementById('mapUpdateToast');
+
+  const btnZonaNoDisponible = document.getElementById('btnZonaNoDisponible');
+  const mapNoDataModal = document.getElementById('mapNoDataModal');
+  const btnCerrarZonaNoDisponible = document.getElementById('btnCerrarZonaNoDisponible');
+
   function ocultarError() {
     if (routeError) {
       routeError.style.display = 'none';
@@ -278,6 +286,12 @@ benefitCards.forEach(function (card, index) {
     }
   }
 
+  function cerrarZonaNoDisponible() {
+    if (mapNoDataModal) {
+      mapNoDataModal.style.display = 'none';
+    }
+  }
+
   function ocultarPantallasSecundarias() {
     if (screenRutasOpciones) screenRutasOpciones.style.display = 'none';
     if (screenRutaPreferida) screenRutaPreferida.style.display = 'none';
@@ -285,6 +299,8 @@ benefitCards.forEach(function (card, index) {
     if (screenSinResultados) screenSinResultados.style.display = 'none';
     if (screenRutaEnCurso) screenRutaEnCurso.style.display = 'none';
     if (screenCompararRutas) screenCompararRutas.style.display = 'none';
+
+    cerrarZonaNoDisponible();
   }
 
   function validarOrigenDestino() {
@@ -417,6 +433,26 @@ benefitCards.forEach(function (card, index) {
 
     if (rutaOrigen) {
       rutaOrigen.focus();
+    }
+  }
+
+  function actualizarDatosMapa() {
+    if (mapUpdateTime) {
+      mapUpdateTime.textContent = 'Última actualización: ahora';
+    }
+
+    if (mapUpdateToast) {
+      mapUpdateToast.style.display = 'block';
+
+      setTimeout(() => {
+        mapUpdateToast.style.display = 'none';
+      }, 1800);
+    }
+  }
+
+  function mostrarZonaNoDisponible() {
+    if (mapNoDataModal) {
+      mapNoDataModal.style.display = 'block';
     }
   }
 
@@ -568,6 +604,18 @@ benefitCards.forEach(function (card, index) {
 
   if (btnCancelarRutaCurso) {
     btnCancelarRutaCurso.addEventListener('click', volverAOpciones);
+  }
+
+  if (btnActualizarMapa) {
+    btnActualizarMapa.addEventListener('click', actualizarDatosMapa);
+  }
+
+  if (btnZonaNoDisponible) {
+    btnZonaNoDisponible.addEventListener('click', mostrarZonaNoDisponible);
+  }
+
+  if (btnCerrarZonaNoDisponible) {
+    btnCerrarZonaNoDisponible.addEventListener('click', cerrarZonaNoDisponible);
   }
 })();
 
