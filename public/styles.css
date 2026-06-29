@@ -1,0 +1,27 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.filters {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.chart-container {
+    background: #f4f4f4;
+    padding: 40px;
+    text-align: center;
+    border: 1px dashed #ccc;
+    margin-bottom: 20px;
+}
+
+.summary-card {
+    border: 2px solid #2e7d32;
+    padding: 15px;
+    border-radius: 10px;
+}

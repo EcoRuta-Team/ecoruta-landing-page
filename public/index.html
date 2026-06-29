@@ -6,23 +6,31 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Histórico de contaminación</h1>
-    <p>Consulta la evolución de la calidad del aire en tu distrito.</p>
+    <div class="app-container">
+        <h1>Histórico de contaminación</h1>
+        <p>Consulta la evolución de la calidad del aire en tu distrito.</p>
 
-    <div class="filters">
-        <label><input type="radio" name="filtro" checked> Últimos 7 días</label>
-        <label><input type="radio" name="filtro"> Quincenal</label>
-        <label><input type="radio" name="filtro"> Últimos 3 meses</label>
-    </div>
+        <div class="filters">
+            <label><input type="radio" name="filtro" checked> Últimos 7 días</label>
+            <label><input type="radio" name="filtro"> Quincenal</label>
+            <label><input type="radio" name="filtro"> Últimos 3 meses</label>
+        </div>
 
-    <div class="chart-container">
-        <p>Aquí irá tu gráfico (Imagen)</p>
-    </div>
+        <div class="chart-box">
+            <p>Gráfico aquí</p>
+        </div>
 
-    <div class="summary-card">
-        <h3>Resumen</h3>
-        <p>Junio registró un AQI promedio de 68...</p>
-        <button>Descargar reporte</button>
+        <div class="legend">
+            <div class="legend-item"><span class="color-box" style="background: green;"></span>Saludable</div>
+            <div class="legend-item"><span class="color-box" style="background: yellow;"></span>Moderado</div>
+            <div class="legend-item"><span class="color-box" style="background: red;"></span>Insalubre</div>
+        </div>
+
+        <div class="summary-card">
+            <h3>Resumen</h3>
+            <p>Junio registró un AQI promedio de 68...</p>
+            <button class="download-btn">Descargar reporte</button>
+        </div>
     </div>
 </body>
 </html>
