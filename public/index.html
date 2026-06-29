@@ -1,24 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EcoRuta</title>
-
-    <link rel="icon" href="favicon.ico">
-    <link rel="stylesheet" href="assets/styles/styles.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>EcoRuta - Histórico</title>
 </head>
 <body>
+    <div class="app-container">
+        <header>
+            <h1>Histórico de contaminación</h1>
+            <p class="desc">Evolución de la calidad del aire (AQI).</p>
+        </header>
 
-<header>
-    <h1>EcoRuta</h1>
-</header>
+        <div class="filters">
+            <button class="filter-btn active" onclick="render('semanal', this)">7 días</button>
+            <button class="filter-btn" onclick="render('quincenal', this)">Quincenal</button>
+            <button class="filter-btn" onclick="render('mensual', this)">3 meses</button>
+        </div>
 
-<main>
-    <h2>Landing Page Work in Progress</h2>
-</main>
+        <div class="chart-box" id="chart-area"></div>
+        
+        <div class="last-update">Última actualización: Hace 3 min</div>
 
-<script src="assets/scripts/main.js"></script>
+        <div class="legend-card">
+            <div class="legend-item"><span class="dot" style="background:#32cd32"></span>Saludable</div>
+            <div class="legend-item"><span class="dot" style="background:#ffd700"></span>Moderado</div>
+            <div class="legend-item"><span class="dot" style="background:#ffa500"></span>Insalubre</div>
+        </div>
 
+        <div class="summary-card">
+            <div class="summary-header"><span>💡</span> <h3>Resumen Ejecutivo</h3></div>
+            <p id="resumen-text"></p>
+        </div>
+
+        <button class="btn-download">Descargar reporte completo ↓</button>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
